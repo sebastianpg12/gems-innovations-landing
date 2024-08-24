@@ -1,0 +1,319 @@
+/* ========================= */
+/* Estilos globales          */
+/* ========================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0E1A31;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: white;
+}
+
+/* ========================= */
+/* Navbar                    */
+/* ========================= */
+.navbar {
+  background-color: rgba(10, 20, 50, 0.95);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.navbar-brand img {
+  height: 100px;  /* Ajuste de tamaño para mejor estética */
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1CE3F9;
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* Hero Section              */
+/* ========================= */
+.hero-section {
+  margin-top: 7%;
+  padding: 120px 0 80px;  /* Ajustado para que no se vea tan grande en pantallas más pequeñas */
+  text-align: center;
+  background: url('https://www.santanderopenacademy.com/es/blog/ventajas-y-desventajas-de-la-tecnologia.html') no-repeat center center/cover;
+  color: white;
+  position: relative;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.hero-section h1 {
+  font-size: 3rem;  /* Ajustado para ser más amigable en pantallas pequeñas */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  animation: slideUp 2s ease;
+}
+
+.hero-section p {
+  font-size: 1.1rem;  /* Reducción del tamaño del texto */
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-cta {
+  background: linear-gradient(45deg, #1CE3F9, #F94587);
+  padding: 0.8rem 1.8rem;  /* Ajuste del padding para botones más pequeños */
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+}
+
+.btn-cta:hover {
+  transform: scale(1.05);  /* Cambio a un hover más sutil */
+}
+
+/* ========================= */
+/* Icon Section - Nuestras Soluciones */
+/* ========================= */
+.icon-section {
+  padding: 80px 0;  /* Ajustado para un espaciado más amigable */
+  text-align: center;
+  background-color: #16203A;
+}
+
+.icon-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;  /* Ajustado para un mejor espaciado */
+  justify-content: center;
+}
+
+.icon-box {
+  background-color: #1f2d4a;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.icon-box i {
+  font-size: 2.5rem;  /* Tamaño del ícono ajustado para balance visual */
+  background: linear-gradient(45deg, #1CE3F9, #F94587);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.icon-box h4, .icon-box p {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Hover Mejorado - Nuestras Soluciones */
+.icon-box:hover {
+  background: linear-gradient(45deg, #1CE3F9, #F94587);  /* Degradado suave */
+  color: white;  /* Mantener el texto en blanco */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.icon-box:hover i {
+  background: linear-gradient(45deg, #1CE3F9, #F94587);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================= */
+/* Productos Section          */
+/* ========================= */
+.products {
+  background-color: #0E1A31;
+  padding: 80px 0;  /* Ajustado para mejorar el espaciado */
+  text-align: center;
+  color: white;
+}
+
+.products h2 {
+  font-size: 2.2rem;  /* Ajuste de tamaño del título */
+  margin-bottom: 1.5rem;
+}
+
+.product-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product-item {
+  position: relative;
+  width: 240px;  /* Ajuste de tamaño de las tarjetas */
+  height: 330px;
+  background-color: #1f2d4a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.product-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.product-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(45deg, #1CE3F9, #F94587);
+  padding: 15px;
+  color: white;
+  text-align: center;
+  transition: bottom 0.3s ease;
+}
+
+.product-item:hover .product-content {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.product-content h5 {
+  font-size: 1.2rem;  /* Ajuste del tamaño del título */
+  margin-bottom: 0.5rem;
+  color: white;  /* Mantener el texto en blanco durante el hover */
+}
+
+.product-content p {
+  font-size: 1rem;  /* Tamaño de párrafo reducido */
+  color: white;  /* Mantener el texto en blanco durante el hover */
+}
+
+/* ========================= */
+/* Footer                     */
+/* ========================= */
+.footer {
+  background-color: #0E1A31;
+  padding: 60px 0;
+  color: white;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer a {
+  color: #1CE3F9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #F94587;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-links a {
+  font-size: 1.3rem;  /* Ajuste de tamaño */
+}
+
+.footer-logo img {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+/* ========================= */
+/* Responsive Improvements    */
+/* ========================= */
+@media (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 2.2rem;  /* Ajuste de tamaño del título para pantallas pequeñas */
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .icon-section {
+    padding: 50px 0;
+  }
+
+  .product-menu {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* ========================= */
+/* Animaciones en Scroll      */
+/* ========================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
