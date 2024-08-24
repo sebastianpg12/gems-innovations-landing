@@ -2,7 +2,7 @@
 /* Estilos globales          */
 /* ========================= */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif; /* Fuente para párrafos y contenido */
   background-color: #0E1A31;
   color: white;
   margin: 0;
@@ -11,13 +11,13 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: 600;
   color: white;
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1rem;
   color: white;
 }
@@ -35,13 +35,17 @@ p {
   z-index: 999;
   transition: top 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
+/* ========================= */
+/* Navbar - Ajuste del Logo  */
+/* ========================= */
 .navbar-brand img {
-  height: 100px;  /* Ajuste de tamaño para mejor estética */
+  height: auto; /* Mantener la proporción del logo */
+  max-width: 150px; /* Ajustar el tamaño para mayor claridad */
 }
 
+
 .navbar-nav .nav-link {
-  color: white;
+
   padding: 0.5rem 1rem;
   font-size: 1.1rem;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -56,7 +60,7 @@ p {
 /* Hero Section              */
 /* ========================= */
 .hero-section {
-  margin-top: 7%;
+  margin-top: 11%;
   padding: 120px 0 80px;  /* Ajustado para que no se vea tan grande en pantallas más pequeñas */
   text-align: center;
   background: url('https://www.santanderopenacademy.com/es/blog/ventajas-y-desventajas-de-la-tecnologia.html') no-repeat center center/cover;
@@ -97,17 +101,9 @@ p {
 /* ========================= */
 /* Icon Section - Nuestras Soluciones */
 /* ========================= */
-.icon-section {
-  padding: 80px 0;  /* Ajustado para un espaciado más amigable */
-  text-align: center;
-  background-color: #16203A;
-}
-
-.icon-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-}
-
+/* ========================= */
+/* Icon Section - Nuestras Soluciones */
+/* ========================= */
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -125,21 +121,30 @@ p {
 }
 
 .icon-box i {
-  font-size: 2.5rem;  /* Tamaño del ícono ajustado para balance visual */
-  background: linear-gradient(45deg, #1CE3F9, #F94587);
+  font-size: 3rem;  /* Tamaño del ícono ajustado */
+  background: linear-gradient(45deg, #F94587, #1CE3F9);  /* Degradado invertido */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 1rem;
 }
 
-.icon-box h4, .icon-box p {
-  color: white;
-  transition: color 0.3s ease;
+/* Hover Mejorado - Nuestras Soluciones */
+.icon-box:hover {
+  background: linear-gradient(45deg, #1CE3F9, #F94587);  /* Degradado suave */
+  color: white;  /* Mantener el texto en blanco */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.icon-box:hover i {
+  background: linear-gradient(45deg, #1CE3F9, #F94587);  /* Inversión del degradado en hover */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Hover Mejorado - Nuestras Soluciones */
 .icon-box:hover {
-  background: linear-gradient(45deg, #1CE3F9, #F94587);  /* Degradado suave */
+  background: linear-gradient(45deg,#F94587, #1CE3F9);  /* Degradado suave */
   color: white;  /* Mantener el texto en blanco */
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
