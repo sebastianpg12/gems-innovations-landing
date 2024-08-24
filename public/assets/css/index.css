@@ -269,6 +269,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.solutions {
+  font-size: 2.2rem;  /* Ajuste de tamaño del título */
+  margin-bottom: 1.5rem;
+}
 /* ========================= */
 /* Responsive Improvements    */
 /* ========================= */
