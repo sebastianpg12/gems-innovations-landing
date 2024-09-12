@@ -6,6 +6,16 @@
 
 .header__title {
   color: #FFF;
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.header__brand {
+  width: 30px;
+  height: 30px;
 }
 
 .header__nav {
@@ -24,4 +34,10 @@
 
 .header__item:hover {
   color: #FFF;
+}
+
+.header__button-container {
+  flex: 1;
+  display: flex;
+  justify-content: end;
 }
