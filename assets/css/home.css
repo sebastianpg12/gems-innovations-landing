@@ -20,3 +20,19 @@
   font-size: 20px;
   padding: 1rem 1.8rem;
 }
+
+.kfjfjfjf {
+  width: 500px;
+  height: 500px;
+  animation: rotate 5s forwards infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
