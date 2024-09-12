@@ -1,0 +1,27 @@
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: #FFF;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+}
+
+.header__item {
+  color: #9fa1a4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 300ms;
+}
+
+.header__item:hover {
+  color: #FFF;
+}
