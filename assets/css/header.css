@@ -1,3 +1,4 @@
+/* Estilos del header */
 .header {
   position: fixed;
   top: 0;
@@ -7,12 +8,14 @@
   animation-timeline: scroll(root);
   animation-range: 0 200px;
   z-index: 2;
+  backdrop-filter: blur(10px); /* Efecto translúcido */
 }
 
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 20px; /* Ajuste del padding */
 }
 
 .header__title {
@@ -29,22 +32,29 @@
   height: 30px;
 }
 
+/* Menú en modo normal: visibilidad garantizada */
 .header__nav {
-  display: flex;
+  display: flex; /* Asegura que el menú se muestre en modo normal */
   align-items: center;
   gap: 30px;
   list-style: none;
+  background: transparent; /* Fondo transparente en modo normal */
+}
+
+.header__nav-container {
+  display: flex; /* Mantener el menú visible en pantallas grandes */
+  align-items: center;
 }
 
 .header__item {
-  color: #9fa1a4;
+  color: #FFF; /* Color blanco para visibilidad */
   font-weight: 600;
   cursor: pointer;
   transition: color 300ms;
 }
 
 .header__item:hover {
-  color: #FFF;
+  color: #9fa1a4; /* Pequeño efecto hover */
 }
 
 .header__button-container {
@@ -58,5 +68,105 @@
     backdrop-filter: blur(30px);
     box-shadow: 0px -2px 20px 1px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #2b539e;
+  }
+}
+
+/* Estilos para pantallas pequeñas (responsive) */
+.header__toggle {
+  display: none; /* El botón de hamburguesa solo aparece en pantallas pequeñas */
+}
+
+@media (max-width: 768px) {
+  .header__wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .header__nav-container {
+    display: none; /* El menú estará cerrado por defecto en pantallas pequeñas */
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(35, 34, 80, 0.685); /* Fondo oscuro en responsive */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px); 
+    z-index: 10;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .header__nav-container.active {
+    display: flex; /* Mostrar el menú al hacer clic en el botón de hamburguesa */
+  }
+
+  .header__toggle {
+    display: block; /* Mostrar botón de hamburguesa en pantallas pequeñas */
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .header__nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .header__button-container {
+    display: none; /* Ocultar botón "Comenzar" en responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  .header__title {
+    font-size: 20px;
+  }
+
+  .header__item {
+    font-size: 16px;
+  }
+
+  .header__brand {
+    width: 20px;
+    height: 20px;
+  }
+
+  .header__button-container {
+    display: none; /* Ocultar botón "Comenzar" en pantallas pequeñas */
+  }
+}
+
+/* Centrando el gif en pantallas pequeñas */
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 80px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .home__gif {
+    width: 200px;
+    margin: 0 auto;
   }
 }

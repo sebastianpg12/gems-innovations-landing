@@ -1,3 +1,4 @@
+/* Estilos para el contenedor principal .home */
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,4 +28,33 @@
 .home__gif {
   width: 300px;
   margin-left: 150px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr; /* Cambiar a una columna en responsive */
+    padding: 40px 20px;
+  }
+
+  .home__title {
+    font-size: 36px;
+  }
+
+  .home__description {
+    font-size: 16px; /* Ajustar tamaño de la fuente en responsive */
+  }
+
+  .home__button {
+    font-size: 18px;
+  }
+
+  /* Mostrar el GIF encima del título */
+  .home__gif {
+    
+    display: block; /* Aseguramos que esté visible en responsive */
+    width: 150px; /* Tamaño ajustado para pantallas pequeñas */
+    margin: 100px auto 20px auto; /* Centrar el GIF con margen inferior */
+    order: -1; /* Mover el GIF antes del título */
+  }
 }

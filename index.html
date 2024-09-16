@@ -16,7 +16,8 @@
         <img src="./assets/images/brand.png" alt="Gems's Innovations Brain Logo" class="header__brand">
         GEMS Innovations
       </h2>
-      <nav>
+      <button class="header__toggle" aria-label="Abrir menú">&#9776;</button>
+      <nav class="header__nav-container">
         <ul class="header__nav">
           <li class="header__item">Inicio</li>
           <li class="header__item">Productos</li>
@@ -28,7 +29,26 @@
       </div>
     </div>
   </header>
-
+  
+  <script>
+    const toggleButton = document.querySelector('.header__toggle');
+    const navContainer = document.querySelector('.header__nav-container');
+  
+    toggleButton.addEventListener('click', () => {
+      navContainer.classList.toggle('active');
+    });
+  
+    // Cerrar el menú al hacer clic en cualquier enlace
+    document.querySelectorAll('.header__item').forEach(item => {
+      item.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+      });
+    });
+  </script>
+  
+  
+  
+  
   <main>
     <section class="background">
       <div class="home container">
