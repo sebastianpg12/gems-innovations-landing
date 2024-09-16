@@ -57,19 +57,19 @@
 }
 
 .solutions__item:nth-child(1) {
-  background-image: url(/assets/images/img-grid-1.webp);
+  background-image: url(../images/img-grid-1.webp);
 }
 
 .solutions__item:nth-child(2) {
-  background-image: url(/assets/images/img-grid-2.webp);
+  background-image: url(../images/img-grid-2.webp);
 }
 
 .solutions__item:nth-child(3) {
-  background-image: url(/assets/images/img-grid-3.webp);
+  background-image: url(../images/img-grid-3.webp);
 }
 
 .solutions__item:nth-child(4) {
-  background-image: url(/assets/images/img-grid-4.webp);
+  background-image: url(../images/img-grid-4.webp);
 }
 
 .solutions__item::after {
