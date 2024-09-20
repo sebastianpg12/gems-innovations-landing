@@ -12,6 +12,17 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  text-decoration: none; /* Asegura que no haya subrayado */
+  display: inline-block; /* Permite que el botón sea un bloque clicable */
+}
+
+/* Aplicar los estilos a los enlaces dentro del botón */
+.button a {
+  color: white; /* Color del texto blanco */
+  text-decoration: none; /* Elimina subrayado */
+  display: block; /* Asegura que el enlace llene todo el botón */
+  width: 100%;
+  height: 100%;
 }
 
 /* Crear las líneas de borde alrededor del botón */
