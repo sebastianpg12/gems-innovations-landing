@@ -1,0 +1,72 @@
+/* Estilo para la sección de llamado a la acción (CTA) */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #0e1a31;
+    color: #fff;
+    margin: 60px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cta-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .cta-description {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #d1d5db;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .cta-button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .cta-button.primary {
+    background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135));
+    color: white;
+  }
+  
+  .cta-button.secondary {
+    background-color: transparent;
+    color: #d1d5db;
+    border: 2px solid #d1d5db;
+  }
+  
+  .cta-button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Ajustes para pantallas pequeñas */
+  @media (max-width: 768px) {
+    .cta-title {
+      font-size: 36px;
+    }
+  
+    .cta-description {
+      font-size: 16px;
+    }
+  
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .cta-button {
+      font-size: 16px;
+    }
+  }
+  

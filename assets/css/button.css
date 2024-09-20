@@ -6,42 +6,30 @@
   padding: 0.6rem 1.8rem;
   font-weight: bold;
   border: none;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s ease, border 0.3s ease; /* Transiciones para la animación */
+  border-radius: 2cm;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
   z-index: 1;
-  overflow: hidden; /* Asegura que las animaciones se mantengan dentro del botón */
+  overflow: hidden;
 }
 
-/* Hover espectacular */
-.button::before, .button::after {
+/* Crear las líneas de borde alrededor del botón */
+.button::before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  background: white;
-  transition: all 0.4s ease;
-}
-
-.button::before {
   top: 0;
   left: 0;
   right: 0;
-}
-
-.button::after {
   bottom: 0;
-  left: 0;
-  right: 0;
+  border-radius: 28px; /* Aseguramos que las esquinas del borde coincidan con las del botón */
+  border: 2px solid transparent; /* Borde transparente inicialmente */
+  transition: border-color 0.4s ease;
 }
 
+/* Hover espectacular con borde en todos los lados */
 .button:hover::before {
-  width: 100%; /* Línea blanca en la parte superior */
-}
-
-.button:hover::after {
-  width: 100%; /* Línea blanca en la parte inferior */
+  border-color: white; /* Mostrar el borde blanco alrededor del botón */
 }
 
 .button:hover {
@@ -52,14 +40,14 @@
 /* Responsivo: ajustar el tamaño del botón */
 @media (max-width: 768px) {
   .button {
-    font-size: 0.9rem; /* Reducir tamaño del texto */
-    padding: 0.5rem 1.5rem; /* Reducir el padding */
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
   .button {
-    font-size: 0.8rem; /* Aún más pequeño en pantallas muy pequeñas */
+    font-size: 0.8rem;
     padding: 0.4rem 1.2rem;
   }
 }

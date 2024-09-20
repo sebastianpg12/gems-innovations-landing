@@ -1,0 +1,157 @@
+/* Estilos generales de la sección de testimonios */
+.client-testimonials {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #0e1a31;
+  color: #fff;
+}
+
+@keyframes hero-gradient-animation {
+  0% {
+    --s-start-0: 8%;
+    --s-end-0: 83%;
+    --x-0: 57%;
+    --c-0: hsla(220, 77%, 32%, 1);
+    --y-0: 69%;
+    --c-1: hsla(261, 70%, 22%, 1);
+    --x-1: 98%;
+    --s-start-1: 1%;
+    --s-end-1: 80%;
+    --y-1: 39%;
+    --s-start-2: 12%;
+    --s-end-2: 83%;
+    --y-2: 56%;
+    --x-2: 35%;
+    --c-2: hsla(223, 85%, 27%, 1);
+    --y-3: 82%;
+    --s-start-3: 18%;
+    --s-end-3: 71%;
+    --c-3: hsla(214, 92%, 27%, 1);
+    --x-3: 70%;
+    --y-4: 84%;
+    --c-4: hsla(258, 64%, 44%, 1);
+    --x-4: 40%;
+    --s-start-4: 6%;
+    --s-end-4: 72%;
+    opacity: 1;
+  }
+  100% {
+    --s-start-0: 14%;
+    --s-end-0: 54%;
+    --x-0: 69%;
+    --c-0: hsla(241, 70%, 39%, 1);
+    --y-0: 95%;
+    --c-1: hsla(247, 84%, 11%, 1);
+    --x-1: 70%;
+    --s-start-1: 7%;
+    --s-end-1: 51%;
+    --y-1: 42%;
+    --s-start-2: 13%;
+    --s-end-2: 74%;
+    --y-2: 1%;
+    --x-2: 59%;
+    --c-2: hsla(248, 0%, 61%, 1);
+    --y-3: 100%;
+    --s-start-3: 15%;
+    --s-end-3: 60%;
+    --c-3: hsla(261, 68%, 12%, 1);
+    --x-3: 10%;
+    --y-4: 76%;
+    --c-4: hsla(263, 53%, 47%, 1);
+    --x-4: 16%;
+    --s-start-4: 9%;
+    --s-end-4: 72%;
+    opacity: 0.8;
+  }
+}
+
+/* Estilos para el fondo animado */
+.background {
+  --x-0: 57%;
+  --c-0: hsla(220, 77%, 32%, 1);
+  --y-0: 69%;
+  --c-1: hsla(261, 70%, 22%, 1);
+  --x-1: 98%;
+  --y-1: 39%;
+  --y-2: 56%;
+  --x-2: 35%;
+  --c-2: hsla(223, 85%, 27%, 1);
+  --y-3: 82%;
+  --c-3: hsla(214, 92%, 27%, 1);
+  --x-3: 70%;
+  --y-4: 84%;
+  --c-4: hsla(258, 64%, 44%, 1);
+  --x-4: 40%;
+
+  background-color: hsla(262, 82%, 3%, 1);
+  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)),
+    radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)),
+    radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)),
+    radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)),
+    radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
+  animation: hero-gradient-animation 4s ease-in-out infinite alternate;
+  background-blend-mode: normal, normal, normal, normal, normal;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Mejora visual */
+.background:hover {
+  opacity: 0.9;
+}
+
+
+
+.testimonials-description {
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #d1d5db;
+}
+
+/* Grid para los testimonios */
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Estilo para cada testimonio */
+.testimonial-slide {
+  padding: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  max-width: 350px;
+  text-align: left;
+}
+
+.testimonial-slide p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #d1d5db;
+}
+
+.testimonial-slide h4 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.testimonial-slide span {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-slide {
+    min-width: 250px;
+    max-width: 100%;
+  }
+}

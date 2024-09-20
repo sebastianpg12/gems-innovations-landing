@@ -4,7 +4,6 @@
   padding: 60px 40px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  border-top: 1px solid #2b539e;
   position: relative;
   overflow: hidden;
   background-color: #0e1a31;
@@ -12,7 +11,7 @@
 
 /* Ajuste del margen superior del título */
 .title {
-  margin-top: 60px; /* Añadir espacio arriba del título */
+  margin-top: 60px;
   text-align: center;
   font-size: 36px;
   color: white;
@@ -28,21 +27,21 @@
   transform: translateX(-50%);
   width: 80%;
   height: 2px;
-  background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135)); /* Colores del botón "Comenzar" */
-  box-shadow: 0px 0px 15px rgba(43, 83, 158, 0.7); /* Efecto de luz azul suave */
+  background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135));
+  box-shadow: 0px 0px 15px rgba(43, 83, 158, 0.7);
   border-radius: 10px;
 }
 
 /* Cuadrícula para pantallas grandes */
 .solutions__container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr); /* 12 columnas */
-  gap: 40px; /* Espacio entre los elementos */
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
 }
 
 .solutions__item {
   position: relative;
-  border-radius: 10px;
+  
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,36 +49,19 @@
   color: #FFF;
   display: flex;
   align-items: flex-end;
-  height: auto; /* Ajuste de altura automática */
-  transition: transform 0.3s ease, border 0.3s ease; /* Transición suave */
+  height: 180px; /* Aumentar la altura */
+  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
-  border: 2px solid transparent; /* Borde inicial transparente */
+  border: 2px solid transparent;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
 }
 
-/* Rediseño del hover con delineado suave */
+/* Rediseño del hover sin opacidad, solo borde */
 .solutions__item:hover {
-  transform: scale(1.03); /* Efecto de agrandamiento suave */
-  border: 2px solid; /* Aparecerá el borde al hacer hover */
-  border-image: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135)) 1; /* Delineado con los colores del botón */
-}
-
-/* Gradiente suave sobre las imágenes */
-.solutions__item::after {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(transparent, rgba(14, 26, 49, 0.8)); /* Gradiente suave sobre las imágenes */
   border-radius: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-/* Hover sobre la imagen */
-.solutions__item:hover::after {
-  opacity: 1; /* Gradiente visible al hacer hover */
+  border: 2px solid;
+  border-image: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135)) 1;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.699); /* Sombra más fuerte en hover */
 }
 
 /* Fondo de los ítems según el contenido */
@@ -102,7 +84,7 @@
 /* Responsivo para pantallas grandes */
 @media (min-width: 1024px) {
   .solutions__item:nth-child(1) {
-    grid-column: span 6; /* Cada elemento ocupa 6 columnas en pantallas grandes */
+    grid-column: span 6;
   }
 
   .solutions__item:nth-child(2) {
@@ -118,17 +100,18 @@
   }
 }
 
-/* Responsivo para pantallas pequeñas (tablets y móviles) */
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 1024px) {
   .solutions__container {
-    grid-template-columns: 1fr; /* Cambiar a una sola columna */
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 20px; /* Reducir el espacio entre los elementos */
+    gap: 20px;
   }
 
   .solutions__item {
-    grid-column: span 1; /* Cada ítem ocupa el 100% del ancho */
+    grid-column: span 1;
     padding: 20px;
+    height: 170px; /* Ajuste de altura para pantallas pequeñas */
   }
 
   .solutions__item div h3 {
@@ -142,8 +125,8 @@
 
 @media (max-width: 768px) {
   .solutions__container {
-    grid-template-columns: 1fr; /* Una columna */
-    gap: 15px; /* Reducir el espacio entre los elementos */
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   .solutions__item {
@@ -161,8 +144,8 @@
 
 @media (max-width: 480px) {
   .solutions__container {
-    grid-template-columns: 1fr; /* Una columna */
-    gap: 10px; /* Reducir más el espacio */
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .solutions__item {

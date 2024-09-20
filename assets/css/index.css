@@ -5,6 +5,9 @@
 @import './button.css';
 @import './home.css';
 @import './solutions.css';
+@import './about.css';
+@import './footer.css';
+@import './testimonials.css';
 
 html {
   font-family: 'Poppins', sans-serif;
