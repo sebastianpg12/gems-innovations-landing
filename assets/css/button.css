@@ -6,7 +6,7 @@
   padding: 0.6rem 1.8rem;
   font-weight: bold;
   border: none;
-  border-radius: 2cm;
+  border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   position: relative;
@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 28px; /* Aseguramos que las esquinas del borde coincidan con las del botón */
+  border-radius: 7px; /* Aseguramos que las esquinas del borde coincidan con las del botón */
   border: 2px solid transparent; /* Borde transparente inicialmente */
   transition: border-color 0.4s ease;
 }
