@@ -136,7 +136,7 @@
   content: "";
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 35%; /* Reducción del tamaño del GIF */
+  background-size: 28%; /* Reducción del tamaño del GIF */
   opacity: 0.8; /* Ligera transparencia para mejorar la visibilidad */
   position: absolute;
   top: 0;
