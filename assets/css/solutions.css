@@ -193,7 +193,7 @@
   .solutions__item {
     grid-column: span 1;
     padding: 20px;
-    height: 200px; /* Ajuste de altura para pantallas pequeñas */
+   
   }
 
   .solutions__item div h3 {
@@ -233,7 +233,7 @@
 
   .solutions__item {
     padding: 10px;
-    height: 170px; /* Ajuste para pantallas más pequeñas */
+  
     background-size: contain; /* Asegura que los GIFs no se distorsionen */
   }
 

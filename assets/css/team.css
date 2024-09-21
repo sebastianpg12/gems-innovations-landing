@@ -1,0 +1,123 @@
+/* Estilos generales para la sección del equipo */
+.team-section {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #0e1a31;
+}
+
+.team-section__title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+/* Estilos de la grilla del equipo utilizando flexbox */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las tarjetas */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos de cada miembro del equipo */
+.team-member {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+  flex: 1 1 calc(33.333% - 30px); /* Ocupa un tercio del contenedor */
+  max-width: calc(33.333% - 30px);
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Avatar circular de cada miembro */
+.team-member__avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Información de cada miembro */
+.team-member__info {
+  margin-bottom: 15px;
+}
+
+.team-member__name {
+  font-size: 1.25rem;
+  color: #333;
+  margin: 0 0 5px;
+}
+
+.team-member__title {
+  font-size: 1rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Redes sociales de cada miembro */
+.team-member__social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+.team-member__social li {
+  display: inline-block;
+}
+
+.team-member__social a {
+  font-size: 1.2rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.team-member__social a:hover {
+  color: #1da1f2;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .team-section__title {
+    font-size: 2rem;
+  }
+
+  .team-member {
+    flex: 1 1 calc(50% - 30px); /* Dos columnas en pantallas medianas */
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section__title {
+    font-size: 1.75rem;
+  }
+
+  .team-member {
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+    max-width: 100%;
+  }
+
+  .team-member__name {
+    font-size: 1.15rem;
+  }
+
+  .team-member__title {
+    font-size: 0.875rem;
+  }
+}

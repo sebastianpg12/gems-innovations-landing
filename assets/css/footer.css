@@ -18,7 +18,9 @@
 .footer__contact,
 .footer__social {
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
+  max-width: 350px; /* Evita que se estiren demasiado */
+  margin: 0 auto; /* Centrar los elementos */
 }
 
 /* Estilos de la marca */
@@ -51,7 +53,7 @@
 
 .footer__contact ul li i {
   margin-right: 0.5rem;
-  color: #1da1f2; /* Puedes ajustar este color */
+  color: #1da1f2; /* Color para iconos de contacto */
 }
 
 .footer__contact ul li a {
@@ -116,7 +118,43 @@
     text-align: center;
   }
 
-  .footer__contact ul {
-    text-align: center;
+  .footer__brand, .footer__contact, .footer__social {
+    max-width: 100%; /* Asegura que las columnas no se estiren */
+    padding: 0 20px; /* Añadir algo de espacio a los lados */
+  }
+
+  .social-icons {
+    justify-content: center; /* Centrar las redes sociales */
+  }
+
+  .footer__bottom {
+    font-size: 0.8rem; /* Reducir tamaño en pantallas más pequeñas */
+  }
+}
+
+/* Ajustes adicionales para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .footer__content {
+    gap: 1rem;
+  }
+
+  .footer__brand h3 {
+    font-size: 1.5rem; /* Reducir el tamaño del título */
+  }
+
+  .footer__brand p {
+    font-size: 0.9rem;
+  }
+
+  .footer__contact h4, .footer__social h4 {
+    font-size: 1rem; /* Reducir tamaño de los subtítulos */
+  }
+
+  .social-icons li a {
+    font-size: 1.5rem; /* Reducir iconos de redes sociales */
+  }
+
+  .footer__bottom {
+    font-size: 0.7rem;
   }
 }

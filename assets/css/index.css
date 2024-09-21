@@ -8,7 +8,8 @@
 @import './about.css';
 @import './footer.css';
 @import './testimonials.css';
-
+@import './team.css';
+@import './technologies.css';
 html {
   font-family: 'Poppins', sans-serif;
   background-color: #0E1A31;
