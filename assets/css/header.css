@@ -48,7 +48,7 @@
 
 .header__item {
   color: #FFF; /* Color blanco para visibilidad */
-  font-weight: 600;
+
   cursor: pointer;
   transition: color 300ms;
 }

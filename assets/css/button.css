@@ -4,7 +4,7 @@
   font-size: 1rem;
   background: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135));
   padding: 0.6rem 1.8rem;
-  font-weight: bold;
+  font-size: 18px;
   border: none;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
