@@ -21,35 +21,7 @@
     color: #d1d5db;
   }
   
-  .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .cta-button {
-    padding: 15px 25px;
-    font-size: 18px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: background 0.3s ease;
-  }
-  
-  .cta-button.primary {
-    background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135));
-    color: white;
-  }
-  
-  .cta-button.secondary {
-    background-color: transparent;
-    color: #d1d5db;
-    border: 2px solid #d1d5db;
-  }
-  
-  .cta-button:hover {
-    opacity: 0.9;
-  }
-  
+
   /* Ajustes para pantallas pequeñas */
   @media (max-width: 768px) {
     .cta-title {

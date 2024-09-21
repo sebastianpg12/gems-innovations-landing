@@ -1,10 +1,9 @@
-/* Estilos del botón */
+/* Estilos generales para botones */
 .button {
   color: white;
   font-size: 1rem;
   background: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135));
   padding: 0.6rem 1.8rem;
-  font-size: 18px;
   border: none;
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -14,9 +13,10 @@
   overflow: hidden;
   text-decoration: none; /* Asegura que no haya subrayado */
   display: inline-block; /* Permite que el botón sea un bloque clicable */
+  box-sizing: border-box; /* Para que el tamaño incluya borde y padding */
 }
 
-/* Aplicar los estilos a los enlaces dentro del botón */
+/* Aplicar los estilos a los enlaces dentro del botón principal */
 .button a {
   color: white; /* Color del texto blanco */
   text-decoration: none; /* Elimina subrayado */
@@ -25,7 +25,7 @@
   height: 100%;
 }
 
-/* Crear las líneas de borde alrededor del botón */
+/* Estilo de borde animado para el botón principal */
 .button::before {
   content: '';
   position: absolute;
@@ -38,27 +38,65 @@
   transition: border-color 0.4s ease;
 }
 
-/* Hover espectacular con borde en todos los lados */
+/* Hover espectacular con borde blanco en todos los lados */
 .button:hover::before {
   border-color: white; /* Mostrar el borde blanco alrededor del botón */
 }
 
 .button:hover {
-  transform: scale(1.05); /* Efecto de agrandamiento */
   box-shadow: 0px 4px 15px rgba(249, 69, 135, 0.5); /* Sombra en hover */
 }
 
-/* Responsivo: ajustar el tamaño del botón */
+/* Estilos para el botón secundario */
+.secondary {
+  background-color: transparent; /* Fondo transparente */
+  color: #d1d5db; /* Color de texto gris claro */
+  border: 1px solid #d1d5db; /* Borde gris claro */
+  font-size: 1rem;
+  padding: 0.58rem 1.78rem; /* Ajustamos ligeramente el padding */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.4s ease, color 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none; /* Asegura que no haya subrayado */
+  display: inline-block; /* Permite que el botón sea un bloque clicable */
+  box-sizing: border-box; /* Para que el tamaño incluya borde y padding */
+}
+
+/* Aplicar los estilos a los enlaces dentro del botón secundario */
+.secondary a {
+  color: #d1d5db; /* Color del texto del enlace en el botón secundario */
+  text-decoration: none; /* Elimina subrayado */
+  display: block; /* Asegura que el enlace llene todo el botón */
+  width: 100%;
+  height: 100%;
+}
+
+/* Hover del botón secundario con animación de color */
+.secondary:hover {
+  color: white; /* Cambia el color del texto al hacer hover */
+  border-color: white; /* Cambia el borde a blanco en hover */
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.137); /* Sombra más ligera en hover */
+}
+
+/* Hover del botón secundario para los enlaces dentro */
+.secondary:hover a {
+  color: white; /* Cambia el color del enlace en hover */
+}
+
+/* Responsivo: ajustar el tamaño de ambos botones */
 @media (max-width: 768px) {
-  .button {
-    font-size: 0.9rem;
-    padding: 0.5rem 1.5rem;
+  .button, .secondary {
+   
+    margin-bottom: 35px;
   }
 }
 
 @media (max-width: 480px) {
-  .button {
-    font-size: 0.8rem;
-    padding: 0.4rem 1.2rem;
+  .button, .secondary {
+    margin-bottom: 25px;
+
   }
 }
