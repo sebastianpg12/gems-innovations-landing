@@ -2,7 +2,6 @@
 .solutions {
   margin: 100px auto 0;
   padding: 60px 40px;
-
   border-top-right-radius: 10px;
   position: relative;
   overflow: hidden;
@@ -29,7 +28,6 @@
   height: 2px;
   background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135));
   box-shadow: 0px 0px 15px rgba(43, 83, 158, 0.7);
- 
 }
 
 /* Cuadrícula para pantallas grandes */
@@ -39,70 +37,7 @@
   gap: 40px;
 }
 
-/* Fondo translúcido detrás del texto */
-.solutions__item div {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 1;
-  position: relative; /* Asegurarse de que el fondo esté detrás del texto */
-}
-
-/* Animación del fondo para cada tarjeta */
-@keyframes hero-gradient-animation {
-  0% {
-    --s-start-0: 8%;
-    --s-end-0: 83%;
-    --x-0: 57%;
-    --c-0: hsla(220, 77%, 32%, 1);
-    --y-0: 69%;
-    --c-1: hsla(261, 70%, 22%, 1);
-    --x-1: 98%;
-    --s-start-1: 1%;
-    --s-end-1: 80%;
-    --y-1: 39%;
-    --s-start-2: 12%;
-    --s-end-2: 83%;
-    --y-2: 56%;
-    --x-2: 35%;
-    --c-2: hsla(223, 85%, 27%, 1);
-    --y-3: 82%;
-    --s-start-3: 18%;
-    --s-end-3: 71%;
-    --c-3: hsla(214, 92%, 27%, 1);
-    --x-3: 70%;
-    --y-4: 84%;
-    --c-4: hsla(258, 64%, 44%, 1);
-    --x-4: 40%;
-  }
-  100% {
-    --s-start-0: 14%;
-    --s-end-0: 54%;
-    --x-0: 69%;
-    --c-0: hsla(241, 70%, 39%, 1);
-    --y-0: 95%;
-    --c-1: hsla(247, 84%, 11%, 1);
-    --x-1: 70%;
-    --s-start-1: 7%;
-    --s-end-1: 51%;
-    --y-1: 42%;
-    --s-start-2: 13%;
-    --s-end-2: 74%;
-    --y-2: 1%;
-    --x-2: 59%;
-    --c-2: hsla(248, 0%, 61%, 1);
-    --y-3: 100%;
-    --s-start-3: 15%;
-    --s-end-3: 60%;
-    --c-3: hsla(261, 68%, 12%, 1);
-    --x-3: 10%;
-    --y-4: 76%;
-    --c-4: hsla(263, 53%, 47%, 1);
-    --x-4: 16%;
-  }
-}
-
-/* Aplicación de la animación a cada tarjeta */
+/* Estilos para las tarjetas */
 .solutions__item {
   position: relative;
   background-color: hsla(262, 82%, 3%, 1);
@@ -112,15 +47,48 @@
     radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)),
     radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
   animation: hero-gradient-animation 4s ease-in-out infinite alternate;
-  padding: 30px;
+  padding: 20px;
   color: #FFF;
   display: flex;
-  align-items: flex-end;
-  height: 250px; /* Ajustar la altura para más espacio */
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
   transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animación del fondo para cada tarjeta */
+@keyframes hero-gradient-animation {
+  /* ... (mantener el contenido original de la animación) ... */
+}
+
+/* Estilos para el contenedor del GIF */
+/* Estilos para el contenedor del GIF */
+.solutions__gif {
+  width: 100%;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.solutions__gif img {
+  width: 150px;  /* Tamaño fijo en el ancho */
+  height: 150px; /* Tamaño fijo en el alto */
+  object-fit: contain; /* Asegura que la imagen no se distorsione */
+  border-radius: 10px;
+}
+
+
+/* Fondo translúcido detrás del texto */
+.solutions__item > div {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  z-index: 1;
+  position: relative;
+  color: #FFF;
 }
 
 /* Mejora en hover para que los elementos se destaquen */
@@ -128,39 +96,7 @@
   border-radius: 10px;
   border: 2px solid;
   border-image: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135)) 1;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.699); /* Sombra más fuerte en hover */
-}
-
-/* Ajuste de tamaño para los GIFs */
-.solutions__item::before {
-  content: "";
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 28%; /* Reducción del tamaño del GIF */
-  opacity: 0.8; /* Ligera transparencia para mejorar la visibilidad */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-}
-
-/* Fondo de los ítems con GIFs */
-.solutions__item:nth-child(1)::before {
-  background-image: url('../images/web.gif');
-}
-
-.solutions__item:nth-child(2)::before {
-  background-image: url('../images/app.gif');
-}
-
-.solutions__item:nth-child(3)::before {
-  background-image: url('../images/auto.gif');
-}
-
-.solutions__item:nth-child(4)::before {
-  background-image: url('../images/marketing.gif');
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.699);
 }
 
 /* Responsivo para pantallas grandes */
@@ -193,7 +129,6 @@
   .solutions__item {
     grid-column: span 1;
     padding: 20px;
-   
   }
 
   .solutions__item div h3 {
@@ -233,8 +168,7 @@
 
   .solutions__item {
     padding: 10px;
-  
-    background-size: contain; /* Asegura que los GIFs no se distorsionen */
+    background-size: contain;
   }
 
   .solutions__item div h3 {

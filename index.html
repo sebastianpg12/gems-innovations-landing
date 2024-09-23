@@ -27,7 +27,7 @@
       </nav>
       <div class="header__button-container">
         <div class="header__button-container">
-          <a href="https://walink.co/c802b5" target="_blank" class="button">Solicitar</a>
+          <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos</a>
         </div>
         
         
@@ -36,19 +36,22 @@
   </header>
   
   <script>
-    const toggleButton = document.querySelector('.header__toggle');
-    const navContainer = document.querySelector('.header__nav-container');
-  
-    toggleButton.addEventListener('click', () => {
-      navContainer.classList.toggle('active');
-    });
-  
-    // Cerrar el menú al hacer clic en cualquier enlace
-    document.querySelectorAll('.header__item').forEach(item => {
-      item.addEventListener('click', () => {
-        navContainer.classList.remove('active');
-      });
-    });
+const toggleButton = document.querySelector('.header__toggle');
+const navContainer = document.querySelector('.header__nav-container');
+
+toggleButton.addEventListener('click', () => {
+  navContainer.classList.toggle('active');
+  toggleButton.classList.toggle('active'); // Para la rotación del ícono
+});
+
+// Cerrar el menú al hacer clic en cualquier enlace
+document.querySelectorAll('.header__item').forEach(item => {
+  item.addEventListener('click', () => {
+    navContainer.classList.remove('active');
+    toggleButton.classList.remove('active');
+  });
+});
+
   </script>
   
   <main>
@@ -62,7 +65,7 @@
             En Gems Innovations, ofrecemos soluciones tecnológicas personalizadas que ayudan a las empresas a mejorar sus procesos, optimizar recursos y potenciar su crecimiento.
           </p>
           
-            <a href="https://walink.co/c802b5" target="_blank" class="button">Solicitar</a>
+            <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos</a>
           
           
           
@@ -72,36 +75,47 @@
       </div>
     </section>
     
-    <section class="container solutions">
-      <h1 class="title">Soluciones</h1>
-      <section class="solutions__container">
-        <article class="solutions__item">
-          <div class="solutions__text">
-            <h3>Desarrollo Web</h3>
-            <p>Desarrollamos sitios web optimizados y modernos que te ayudarán a mejorar la presencia digital de tu empresa.</p>
-          </div>
-        </article>
-        <article class="solutions__item">
-          <div class="solutions__text">
-            <h3>Aplicaciones Móviles</h3>
-            <p>Nuestras aplicaciones móviles personalizadas proporcionan soluciones a medida para optimizar tus procesos y llegar a más clientes.</p>
-          </div>
-        </article>
-        <article class="solutions__item">
-          <div class="solutions__text">
-            <h3>Automatización</h3>
-            <p>Automatizamos procesos empresariales clave, mejorando la eficiencia y reduciendo costos operativos.</p>
-          </div>
-        </article>
-        <article class="solutions__item">
-          <div class="solutions__text">
-            <h3>Marketing Digital</h3>
-            <p>Impulsamos tu negocio a través de estrategias que conectan con tu público objetivo.</p>
-          </div>
-        </article>
-      </section>
-    </section>
-    
+<section class="container solutions">
+  <h1 class="title">Soluciones</h1>
+  <section class="solutions__container">
+    <article class="solutions__item">
+      <div class="solutions__gif">
+        <img src="assets/images/web.gif" alt="Desarrollo Web">
+      </div>
+      <div>
+        <h3>Desarrollo Web</h3>
+        <p>Desarrollamos sitios web optimizados y modernos que te ayudarán a mejorar la presencia digital de tu empresa.</p>
+      </div>
+    </article>
+    <article class="solutions__item">
+      <div class="solutions__gif">
+        <img src="./assets/images/app.gif" alt="Aplicaciones Móviles">
+      </div>
+      <div>
+        <h3>Aplicaciones Móviles</h3>
+        <p>Nuestras aplicaciones móviles personalizadas proporcionan soluciones a medida para optimizar tus procesos y llegar a más clientes.</p>
+      </div>
+    </article>
+    <article class="solutions__item">
+      <div class="solutions__gif">
+        <img src="assets/images/auto.gif" alt="Automatización">
+      </div>
+      <div>
+        <h3>Automatización</h3>
+        <p>Automatizamos procesos empresariales clave, mejorando la eficiencia y reduciendo costos operativos.</p>
+      </div>
+    </article>
+    <article class="solutions__item">
+      <div class="solutions__gif">
+        <img src="assets/images/marketing.gif" alt="Marketing Digital">
+      </div>
+      <div>
+        <h3>Marketing Digital</h3>
+        <p>Impulsamos tu negocio a través de estrategias que conectan con tu público objetivo.</p>
+      </div>
+    </article>
+  </section>
+</section>
 
     <section class="cta-section">
       <h1 class="cta-title">Llevamos tu empresa al siguiente nivel</h1>
