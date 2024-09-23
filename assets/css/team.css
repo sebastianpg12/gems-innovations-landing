@@ -12,6 +12,8 @@
   margin-bottom: 50px;
 }
 
+
+
 /* Estilos de la grilla del equipo utilizando flexbox */
 .team-grid {
   display: flex;
