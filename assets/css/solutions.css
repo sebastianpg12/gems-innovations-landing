@@ -7,6 +7,10 @@
   overflow: hidden;
   background-color: #0e1a31;
 }
+.title__card {
+  margin-bottom: 10px;
+}
+
 
 /* Ajuste del margen superior del título */
 .title {
