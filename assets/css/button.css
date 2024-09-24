@@ -21,7 +21,7 @@
   color: white; /* Color del texto blanco */
   text-decoration: none; /* Elimina subrayado */
   display: block; /* Asegura que el enlace llene todo el botón */
-  width: 100%;
+  width: 10%;
   height: 100%;
 }
 
