@@ -51,31 +51,36 @@ html {
   align-items: center;
 }
 
-/* Arrow Icon inside the button */
+/* Scroll-to-Top Button Styles */
+.scroll-to-top {
+  display: none; /* Hide by default */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #1da1f2;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+
 .scroll-to-top i {
-  font-size: 18px; /* Icon size */
-  transition: transform 0.3s ease; /* Smooth animation for icon */
+  font-size: 1.5rem;
 }
 
-/* Hover effect: background, size change, icon animation */
 .scroll-to-top:hover {
-  background: linear-gradient(135deg, #ec3261, #2abcec); /* Change gradient on hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-  transform: scale(1.1); /* Slightly enlarge the button on hover */
+  background-color: #0d74b1;
 }
 
-.scroll-to-top:hover i {
-  transform: translateY(-2px); /* Slight upward animation of icon on hover */
-}
-
-/* Fade-in animation for the button */
-.scroll-to-top.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
 
 @keyframes fadeIn {
   100% {
     opacity: 1;
   }
 }
+
+

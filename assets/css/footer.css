@@ -1,4 +1,4 @@
-/* Estilos generales del footer */
+/* General Styles for the Footer */
 .footer {
   background-color: #0d1b2a;
   color: #ffffff;
@@ -12,69 +12,67 @@
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1.5rem;
+  padding: 20px; /* Added general padding */
 }
 
-.footer__brand,
-.footer__contact,
-.footer__social {
+/* Footer Brand Section */
+.footer__brand {
   flex: 1;
   min-width: 250px;
-  max-width: 350px; /* Evita que se estiren demasiado */
-  margin: 0 auto; /* Centrar los elementos */
+  max-width: 350px; 
+  margin: 0 auto;
 }
 
-/* Estilos de la marca */
 .footer__brand h3 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: #ffffff; /* Bright white for better contrast */
 }
 
 .footer__brand p {
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
+  color: #d1d1d1; /* Softer white to balance */
 }
 
-/* Estilos del contacto */
-.footer__contact h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+/* Footer Links with Improved Padding and Contrast */
+.footer__links {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  margin: 0 auto;
+  background-color: #1b263b;
+  padding: 1.5rem; /* Increased padding for better spacing */
+  border-radius: 15px;
+  text-align: left;
+  color: #ffffff; /* Keep text white for contrast */
 }
 
-.footer__contact ul {
+.footer__links ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer__contact ul li {
-  margin-bottom: 0.5rem;
+.footer__links ul li {
+  margin-bottom: 0.8rem; /* Increased space between items */
 }
 
-.footer__contact ul li i {
-  margin-right: 0.5rem;
-  color: #1da1f2; /* Color para iconos de contacto */
-}
-
-.footer__contact ul li a {
-  color: white;
+.footer__links ul li a {
+  color: #ffffff;
   text-decoration: none;
 }
 
-.footer__contact ul li a:hover {
-  color: #1da1f2;
+.footer__links ul li a:hover {
+  color: #1da1f2; /* Color change on hover */
 }
 
-/* Estilos de redes sociales */
-.footer__social h4 {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
+/* Social Media Icons */
 .social-icons {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -86,20 +84,21 @@
 
 .social-icons li a {
   font-size: 1.8rem;
-  color: white;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
 .social-icons li a:hover {
-  color: #1da1f2;
+  color: #1da1f2; /* Add a hover effect to icons */
 }
 
-/* Parte inferior del footer */
+/* Footer Bottom */
 .footer__bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 1rem;
   font-size: 0.9rem;
   margin-top: 2rem;
+  color: #d1d1d1; /* Softer white for bottom text */
 }
 
 .footer__bottom a {
@@ -111,47 +110,51 @@
   text-decoration: underline;
 }
 
-/* Adaptabilidad para pantallas pequeñas */
+/* Improved Responsive Design */
 @media (max-width: 768px) {
   .footer__content {
     flex-direction: column;
     text-align: center;
+    padding: 10px; /* Reduce padding on smaller screens */
   }
 
-  .footer__brand, .footer__contact, .footer__social {
-    max-width: 100%; /* Asegura que las columnas no se estiren */
-    padding: 0 20px; /* Añadir algo de espacio a los lados */
+  .footer__brand, .footer__links {
+    max-width: 100%; 
+    padding: 0 20px; 
   }
 
   .social-icons {
-    justify-content: center; /* Centrar las redes sociales */
+    justify-content: center; 
   }
 
   .footer__bottom {
-    font-size: 0.8rem; /* Reducir tamaño en pantallas más pequeñas */
+    font-size: 0.8rem;
   }
 }
 
-/* Ajustes adicionales para pantallas muy pequeñas */
 @media (max-width: 480px) {
   .footer__content {
     gap: 1rem;
   }
 
   .footer__brand h3 {
-    font-size: 1.5rem; /* Reducir el tamaño del título */
+    font-size: 1.5rem; 
   }
 
   .footer__brand p {
     font-size: 0.9rem;
   }
 
-  .footer__contact h4, .footer__social h4 {
-    font-size: 1rem; /* Reducir tamaño de los subtítulos */
+  .footer__contact h4, .footer__links ul li a {
+    font-size: 1rem;
+  }
+
+  .footer__links {
+    padding: 1rem; /* Reduce padding on small screens */
   }
 
   .social-icons li a {
-    font-size: 1.5rem; /* Reducir iconos de redes sociales */
+    font-size: 1.5rem; /* Reduce social icons size */
   }
 
   .footer__bottom {
