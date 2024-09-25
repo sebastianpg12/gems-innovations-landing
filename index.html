@@ -64,12 +64,13 @@
   </header>
   
   <script>
-const toggleButton = document.querySelector('.header__toggle');
+    
+    const toggleButton = document.querySelector('.header__toggle');
 const navContainer = document.querySelector('.header__nav-container');
 
 toggleButton.addEventListener('click', () => {
   navContainer.classList.toggle('active');
-  toggleButton.classList.toggle('active'); // Para la rotación del ícono
+  toggleButton.classList.toggle('active');
 });
 
 // Cerrar el menú al hacer clic en cualquier enlace
