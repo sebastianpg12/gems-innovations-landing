@@ -7,15 +7,10 @@
     <meta name="description" content="Gems Innovations ofrece soluciones tecnológicas personalizadas para mejorar procesos empresariales, optimizar recursos y potenciar el crecimiento de tu negocio.">
     <meta name="keywords" content="Gems Innovations, tecnología, desarrollo web, aplicaciones móviles, automatización, marketing digital">
     <link rel="canonical" href="https://gems-innovations.com/">
-    <!-- Preconexión a recursos externos -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <!-- Carga diferida del CSS minificado -->
-    <link rel="preload" href="./assets/css/index.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="./assets/css/index.min.css"></noscript>
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Font Awesome Icons -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Gems Innovations - Innovación Tecnológica para tu Negocio">
     <meta property="og:description" content="Ofrecemos soluciones tecnológicas personalizadas para mejorar procesos empresariales.">
@@ -34,7 +29,7 @@
       "@type": "Organization",
       "name": "Gems Innovations",
       "url": "https://gems-innovations.com",
-      "logo": "https://gems-innovations.com/assets/images/brand.webp",
+      "logo": "https://gems-innovations.com/assets/images/brand.png",
       "sameAs": [
         "https://www.facebook.com/profile.php?id=61566125934892",
         "https://www.instagram.com/gemsinnovations/",
@@ -42,16 +37,12 @@
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+TuNúmeroDeTeléfono",
+        "telephone": "+573001382542",
         "contactType": "Customer Service",
         "availableLanguage": ["Spanish", "English"]
       }
     }
     </script>
-    <!-- Critical CSS -->
-    <style>
-      /* Inserta aquí el CSS crítico necesario para el renderizado inicial */
-    </style>
   </head>
 
   <body>
@@ -60,18 +51,39 @@
       <i class="fas fa-chevron-up"></i>
     </button>
 
+    <script>
+      // Scroll-to-Top Button JavaScript
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      
+      // Show the button when the user scrolls down
+      window.onscroll = function() {
+        if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+      // Scroll back to top smoothly when button is clicked
+      scrollToTopBtn.onclick = function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' 
+        });
+      };
+    </script>
+
     <header class="header">
       <div class="header__wrapper container">
         <div class="header__title">
-          <img src="./assets/images/brand.webp" alt="Logo de Gems Innovations" class="header__brand" width="150" height="100" loading="lazy">
+          <img src="./assets/images/brand.png" alt="Logo de Gems Innovations" class="header__brand">
           <span>GEMS Innovations</span>
         </div>
         <button class="header__toggle" aria-label="Abrir menú">&#9776;</button>
         <nav class="header__nav-container">
           <ul class="header__nav">
-            <li class="header__item"><a href="#">Inicio</a></li>
-            <li class="header__item"><a href="#">Soluciones</a></li>
-            <li class="header__item"><a href="#">Contacto</a></li>
+            <li class="header__item">Inicio</li>
+            <li class="header__item">Soluciones</li>
+            <li class="header__item">Contacto</li>
           </ul>
         </nav>
         <div class="header__button-container">
@@ -79,6 +91,24 @@
         </div>
       </div>
     </header>
+
+    <script>
+      const toggleButton = document.querySelector('.header__toggle');
+      const navContainer = document.querySelector('.header__nav-container');
+      
+      toggleButton.addEventListener('click', () => {
+        navContainer.classList.toggle('active');
+        toggleButton.classList.toggle('active');
+      });
+      
+      // Cerrar el menú al hacer clic en cualquier enlace
+      document.querySelectorAll('.header__item').forEach(item => {
+        item.addEventListener('click', () => {
+          navContainer.classList.remove('active');
+          toggleButton.classList.remove('active');
+        });
+      });
+    </script>
 
     <main>
       <section class="background">
@@ -92,7 +122,7 @@
             </p>
             <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos por WhatsApp</a>
           </article>
-          <img class="home__gif" src="./assets/images/brand.webp" alt="Logo de Gems Innovations" loading="lazy" width="150" height="100">
+          <img class="home__gif" src="./assets/images/brand.png" alt="Logo de Gems Innovations">
         </div>
       </section>
 
@@ -101,7 +131,7 @@
         <section class="solutions__container">
           <article class="solutions__item">
             <div class="solutions__gif">
-              <img src="assets/images/web.webp" alt="Icono de Desarrollo Web" loading="lazy" width="300" height="200">
+              <img src="assets/images/web.gif" alt="Icono de Desarrollo Web">
             </div>
             <div>
               <h3 class="title__card">Desarrollo Web</h3>
@@ -110,7 +140,7 @@
           </article>
           <article class="solutions__item">
             <div class="solutions__gif">
-              <img src="./assets/images/app.webp" alt="Icono de Aplicaciones Móviles" loading="lazy" width="300" height="200">
+              <img src="./assets/images/app.gif" alt="Icono de Aplicaciones Móviles">
             </div>
             <div>
               <h3 class="title__card">Aplicaciones Móviles</h3>
@@ -119,7 +149,7 @@
           </article>
           <article class="solutions__item">
             <div class="solutions__gif">
-              <img src="assets/images/auto.webp" alt="Icono de Automatización" loading="lazy" width="300" height="200">
+              <img src="assets/images/auto.gif" alt="Icono de Automatización">
             </div>
             <div>
               <h3 class="title__card">Automatización</h3>
@@ -128,7 +158,7 @@
           </article>
           <article class="solutions__item">
             <div class="solutions__gif">
-              <img src="assets/images/marketing.webp" alt="Icono de Marketing Digital" loading="lazy" width="300" height="200">
+              <img src="assets/images/marketing.gif" alt="Icono de Marketing Digital">
             </div>
             <div>
               <h3 class="title__card">Marketing Digital</h3>
@@ -160,7 +190,7 @@
                   <!-- Testimonio 1 -->
                   <div class="active">
                     <div class="img">
-                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de John Doe" loading="lazy" width="100" height="100">
+                      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto de John Doe">
                     </div>
                     <h2>John Doe</h2>
                     <p>Gracias a Gems Innovations, hemos modernizado nuestra infraestructura tecnológica, permitiéndonos aumentar la eficiencia de nuestras operaciones y mejorar la experiencia de nuestros clientes. Recomendaría sus servicios a cualquier empresa que busque una transformación digital exitosa.</p>                    
@@ -169,7 +199,7 @@
                   <!-- Testimonio 2 -->
                   <div>
                     <div class="img">
-                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Jane Smith" loading="lazy" width="100" height="100">
+                      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto de Jane Smith">
                     </div>
                     <h2>Jane Smith</h2>
                     <p>Los desarrolladores de Gems Innovations hicieron un trabajo increíble con nuestra nueva aplicación móvil. Hemos recibido comentarios positivos de nuestros usuarios y, lo más importante, hemos incrementado la retención de clientes. ¡Son un equipo muy talentoso!</p>                    
@@ -178,7 +208,7 @@
                   <!-- Testimonio 3 -->
                   <div>
                     <div class="img">
-                      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Foto de Robert Johnson" loading="lazy" width="100" height="100">
+                      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Foto de Robert Johnson">
                     </div>
                     <h2>Robert Johnson</h2>
                     <p>La automatización que implementaron en nuestra empresa ha permitido reducir los tiempos de producción y mejorar significativamente la eficiencia operativa. Gems Innovations se ha convertido en un socio clave para nosotros.</p>                    
@@ -187,7 +217,7 @@
                   <!-- Testimonio 4 -->
                   <div>
                     <div class="img">
-                      <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Foto de Alice Turner" loading="lazy" width="100" height="100">
+                      <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Foto de Alice Turner">
                     </div>
                     <h2>Alice Turner</h2>
                     <p>La nueva estrategia de marketing digital desarrollada por Gems Innovations nos ha permitido conectar mejor con nuestro público objetivo. ¡Vimos un aumento del 35% en nuestras conversiones online en los primeros meses!</p>                    
@@ -196,7 +226,7 @@
                   <!-- Testimonio 5 -->
                   <div>
                     <div class="img">
-                      <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Foto de Michael Green" loading="lazy" width="100" height="100">
+                      <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Foto de Michael Green">
                     </div>
                     <h2>Michael Green</h2>
                     <p>El equipo de Gems Innovations trabajó con nosotros para desarrollar un sitio web completamente nuevo y funcional que ha mejorado nuestra presencia en línea. Son extremadamente profesionales y atentos a los detalles.</p>                    
@@ -209,13 +239,73 @@
         </div>
       </section>
 
+      <script>
+        const testimDots = Array.from(document.querySelectorAll('#testim-dots .dot')); // Dots
+        const testimContent = Array.from(document.querySelectorAll('#testim-content > div')); // Testimonials
+        const testimLeftArrow = document.querySelector('#left-arrow');
+        const testimRightArrow = document.querySelector('#right-arrow');
+        let currentSlide = 0; // Start with the first testimonial
+        let testimSpeed = 4500; // Slide interval speed
+        let testimTimer;
+
+        // Function to update the active slide
+        function playSlide(slideIndex) {
+          // Reset all active classes
+          testimContent.forEach((content, index) => {
+            content.classList.remove('active');
+            content.style.opacity = '0'; // Ensure all testimonials are hidden
+            testimDots[index].classList.remove('active');
+          });
+
+          // Set the active class for the current slide
+          testimContent[slideIndex].classList.add('active');
+          testimContent[slideIndex].style.opacity = '1'; // Show the active testimonial
+          testimDots[slideIndex].classList.add('active');
+
+          // Update the current slide index
+          currentSlide = slideIndex;
+
+          // Reset the timer
+          clearTimeout(testimTimer);
+          testimTimer = setTimeout(() => {
+            nextSlide();
+          }, testimSpeed);
+        }
+
+        // Function to go to the next slide
+        function nextSlide() {
+          currentSlide = (currentSlide + 1) % testimContent.length;
+          playSlide(currentSlide);
+        }
+
+        // Function to go to the previous slide
+        function prevSlide() {
+          currentSlide = (currentSlide - 1 + testimContent.length) % testimContent.length;
+          playSlide(currentSlide);
+        }
+
+        // Event listeners for arrows
+        testimLeftArrow.addEventListener('click', prevSlide);
+        testimRightArrow.addEventListener('click', nextSlide);
+
+        // Event listeners for dots
+        testimDots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            playSlide(index);
+          });
+        });
+
+        // Start the slider
+        playSlide(currentSlide);
+      </script>
+
       <section class="container team-section">
         <h2 class="title">Conoce a Nuestro Equipo</h2>
         <div class="team-grid">
           <!-- Miembro 1 -->
           <div class="team-member">
             <div class="team-member__avatar">
-              <img src="assets/images/gems_luisa.webp" alt="Luisa Fernanda Estrada" loading="lazy" width="200" height="200">
+              <img src="assets/images/gems_luisa.webp" alt="Luisa Fernanda Estrada">
             </div>
             <div class="team-member__info">
               <h3 class="team-member__name">Luisa Fernanda Estrada</h3>
@@ -229,7 +319,7 @@
           <!-- Miembro 2 -->
           <div class="team-member">
             <div class="team-member__avatar">
-              <img src="assets/images/gems_jhan.webp" alt="Jhan Pool Agudelo" loading="lazy" width="200" height="200">
+              <img src="assets/images/gems_jhan.webp" alt="Jhan Pool Agudelo">
             </div>
             <div class="team-member__info">
               <h3 class="team-member__name">Jhan Pool Agudelo</h3>
@@ -243,7 +333,7 @@
           <!-- Miembro 3 -->
           <div class="team-member">
             <div class="team-member__avatar">
-              <img src="assets/images/gems_mauro.webp" alt="Mauricio Ciro" loading="lazy" width="200" height="200">
+              <img src="assets/images/gems_mauro.webp" alt="Mauricio Ciro">
             </div>
             <div class="team-member__info">
               <h3 class="team-member__name">Mauricio Ciro</h3>
@@ -257,20 +347,21 @@
           <!-- Miembro 4 -->
           <div class="team-member">
             <div class="team-member__avatar">
-              <img src="assets/images/gems_david.webp" alt="David Perez" loading="lazy" width="200" height="200">
+              <img src="assets/images/gems_david.webp" alt="David Perez">
             </div>
             <div class="team-member__info">
               <h3 class="team-member__name">David Perez</h3>
               <p class="team-member__title">Co-Fundador y Diseñador</p>
               <ul class="team-member__social">
                 <li><a href="https://www.instagram.com/alvarez_david_02/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <!-- Agrega el enlace de LinkedIn si está disponible -->
               </ul>
             </div>
           </div>
           <!-- Miembro 5 -->
           <div class="team-member centered">
             <div class="team-member__avatar">
-              <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín" loading="lazy" width="200" height="200">
+              <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín">
             </div>
             <div class="team-member__info">
               <h3 class="team-member__name">Sebastián Pulgarín</h3>
@@ -289,47 +380,47 @@
           <h2 class="title">Tecnologías que Usamos</h2>
           <div class="technologies-grid">
             <div class="technology-item">
-              <img src="assets/images/icons/python-original.svg" alt="Python" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/python-original.svg" alt="Python">
               <p>Python</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/nodejs-original.svg" alt="Node.js" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/nodejs-original.svg" alt="Node.js">
               <p>Node.js</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/express-original.svg" alt="Express.js" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/express-original.svg" alt="Express.js">
               <p>Express.js</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/wordpress-logo-svgrepo-com.svg" alt="WordPress" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/wordpress-logo-svgrepo-com.svg" alt="WordPress">
               <p>WordPress</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/javascript-original.svg" alt="JavaScript" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/javascript-original.svg" alt="JavaScript">
               <p>JavaScript</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/react-original.svg" alt="React" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/react-original.svg" alt="React">
               <p>React</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/angularjs-original.svg" alt="Angular" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/angularjs-original.svg" alt="Angular">
               <p>Angular</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/html5-original.svg" alt="HTML5" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/html5-original.svg" alt="HTML5">
               <p>HTML5</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/css3-original.svg" alt="CSS3" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/css3-original.svg" alt="CSS3">
               <p>CSS3</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/java-original.svg" alt="Java" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/java-original.svg" alt="Java">
               <p>Java</p>
             </div>
             <div class="technology-item">
-              <img src="assets/images/icons/csharp-original.svg" alt="C#" loading="lazy" width="64" height="64">
+              <img src="assets/images/icons/csharp-original.svg" alt="C#">
               <p>C#</p>
             </div>
           </div>
@@ -377,113 +468,8 @@
         </div>
       </footer>
 
+      <!-- Inserta aquí el script de Google Analytics y otros scripts necesarios -->
+
     </main>
-
-    <!-- Scripts al final del body con defer -->
-    <!-- Scroll-to-Top Script -->
-    <script defer>
-      // Scroll-to-Top Button JavaScript
-      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-      
-      // Show the button when the user scrolls down
-      window.addEventListener('scroll', function() {
-        if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      });
-
-      // Scroll back to top smoothly when button is clicked
-      scrollToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth' // smooth scroll effect
-        });
-      });
-    </script>
-
-    <!-- Navigation Script -->
-    <script defer>
-      const toggleButton = document.querySelector('.header__toggle');
-      const navContainer = document.querySelector('.header__nav-container');
-      
-      toggleButton.addEventListener('click', () => {
-        navContainer.classList.toggle('active');
-        toggleButton.classList.toggle('active');
-      });
-      
-      // Cerrar el menú al hacer clic en cualquier enlace
-      document.querySelectorAll('.header__item').forEach(item => {
-        item.addEventListener('click', () => {
-          navContainer.classList.remove('active');
-          toggleButton.classList.remove('active');
-        });
-      });
-    </script>
-
-    <!-- Testimonials Script -->
-    <script defer>
-      const testimDots = Array.from(document.querySelectorAll('#testim-dots .dot')); // Dots
-      const testimContent = Array.from(document.querySelectorAll('#testim-content > div')); // Testimonials
-      const testimLeftArrow = document.querySelector('#left-arrow');
-      const testimRightArrow = document.querySelector('#right-arrow');
-      let currentSlide = 0; // Start with the first testimonial
-      let testimSpeed = 4500; // Slide interval speed
-      let testimTimer;
-
-      // Function to update the active slide
-      function playSlide(slideIndex) {
-        // Reset all active classes
-        testimContent.forEach((content, index) => {
-          content.classList.remove('active');
-          content.style.opacity = '0'; // Ensure all testimonials are hidden
-          testimDots[index].classList.remove('active');
-        });
-
-        // Set the active class for the current slide
-        testimContent[slideIndex].classList.add('active');
-        testimContent[slideIndex].style.opacity = '1'; // Show the active testimonial
-        testimDots[slideIndex].classList.add('active');
-
-        // Update the current slide index
-        currentSlide = slideIndex;
-
-        // Reset the timer
-        clearTimeout(testimTimer);
-        testimTimer = setTimeout(() => {
-          nextSlide();
-        }, testimSpeed);
-      }
-
-      // Function to go to the next slide
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % testimContent.length;
-        playSlide(currentSlide);
-      }
-
-      // Function to go to the previous slide
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + testimContent.length) % testimContent.length;
-        playSlide(currentSlide);
-      }
-
-      // Event listeners for arrows
-      testimLeftArrow.addEventListener('click', prevSlide);
-      testimRightArrow.addEventListener('click', nextSlide);
-
-      // Event listeners for dots
-      testimDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-          playSlide(index);
-        });
-      });
-
-      // Start the slider
-      playSlide(currentSlide);
-    </script>
-
-    <!-- Google Analytics -->
-    
   </body>
 </html>
