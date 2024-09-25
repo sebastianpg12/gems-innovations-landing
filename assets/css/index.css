@@ -27,3 +27,55 @@ html {
   font-size: 40px;
   margin-bottom: 50px;
 }
+
+/* Scroll-to-Top Button Styles */
+.scroll-to-top {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99; /* Stay on top of other elements */
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: linear-gradient(135deg, #ff3366, #33ccff); /* Gradient background */
+  color: white;
+  border-radius: 50%; /* Round button */
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  font-size: 24px;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Arrow Icon inside the button */
+.scroll-to-top i {
+  font-size: 18px; /* Icon size */
+  transition: transform 0.3s ease; /* Smooth animation for icon */
+}
+
+/* Hover effect: background, size change, icon animation */
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, #ec3261, #2abcec); /* Change gradient on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+  transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+.scroll-to-top:hover i {
+  transform: translateY(-2px); /* Slight upward animation of icon on hover */
+}
+
+/* Fade-in animation for the button */
+.scroll-to-top.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}

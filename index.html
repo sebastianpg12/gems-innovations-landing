@@ -11,6 +11,34 @@
   
 
 <body>
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Go to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+  
+    <script>
+      // Scroll-to-Top Button JavaScript
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      
+      // Show the button when the user scrolls down
+      window.onscroll = function() {
+        if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+  
+      // Scroll back to top smoothly when button is clicked
+      scrollToTopBtn.onclick = function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // smooth scroll effect
+        });
+      };
+
+      
+    </script>
   <header class="header">
     <div class="header__wrapper container">
       <h2 class="header__title">
@@ -252,14 +280,14 @@ document.querySelectorAll('.header__item').forEach(item => {
       <div class="team-grid">
         <div class="team-member">
           <div class="team-member__avatar">
-            <img src="assets/images/luisa.jpg" alt="Luisa Fernanda Estrada">
+            <img src="assets/images/gems_luisa.webp">
           </div>
           <div class="team-member__info">
             <h3 class="team-member__name">Luisa Fernanda Estrada</h3>
             <p class="team-member__title"> Co-Fundadora y Desarrolladora</p>
             <ul class="team-member__social">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/le3ey_?igsh=MWpreHd2Y3B6cjFwZg==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/luisa-estrada-52b225298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
@@ -267,14 +295,14 @@ document.querySelectorAll('.header__item').forEach(item => {
         <!-- Miembro 2 -->
         <div class="team-member">
           <div class="team-member__avatar">
-            <img src="assets/images/jhan.jpg" alt="Jhan Pool Agudelo">
+            <img src="assets/images/gems_jhan.webp" alt="Jhan Pool Agudelo">
           </div>
           <div class="team-member__info">
             <h3 class="team-member__name">Jhan Pool Agudelo</h3>
             <p class="team-member__title">Co-Fundador, Comercial y Desarrollador </p>
             <ul class="team-member__social">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/jpool_11?igsh=aGU4cXFvZmd6OHl2" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/jhan-pool-agudelo-triana-29500a225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
@@ -282,14 +310,14 @@ document.querySelectorAll('.header__item').forEach(item => {
         <!-- Miembro 3 -->
         <div class="team-member">
           <div class="team-member__avatar">
-            <img src="/assets/images/mauro.jpg" alt="Mauricio Ciro">
+            <img src="/assets/images/gems_mauro.webp" alt="Mauricio Ciro">
           </div>
           <div class="team-member__info">
             <h3 class="team-member__name">Mauricio Ciro</h3>
             <p class="team-member__title">Co-fundador y Desarrollador</p>
             <ul class="team-member__social">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/mauro08.12?igsh=MXAxNzhrNTFnMzZnbA==" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/mauricio-ciro-394738250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
@@ -297,14 +325,14 @@ document.querySelectorAll('.header__item').forEach(item => {
         <!-- Miembro 4 -->
         <div class="team-member">
           <div class="team-member__avatar">
-            <img src="assets/images/david.jpg" alt="David Perez">
+            <img src="assets/images/gems_david.webp" alt="David Perez">
           </div>
           <div class="team-member__info">
             <h3 class="team-member__name">David Perez</h3>
             <p class="team-member__title">Co-Fundador y Diseñador </p>
             <ul class="team-member__social">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/alvarez_david_02?igsh=bmFuMXkwY2IxZ2hw&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>
@@ -312,14 +340,14 @@ document.querySelectorAll('.header__item').forEach(item => {
         <!-- Miembro 5, centrado -->
         <div class="team-member centered">
           <div class="team-member__avatar">
-            <img src="assets/images/sebas.jpg" alt="Sebastián Pulgarín">
+            <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín">
          
           <div class="team-member__info">
             <h3 class="team-member__name">Sebastián Pulgarín</h3>
             <p class="team-member__title">Co-Fundador y Líder</p>
             <ul class="team-member__social">
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              <li><a href="https://www.instagram.com/sebastianpulgaring/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/sebasti%C3%A1n-pulgar%C3%ADn-g%C3%B3mez-4b76471aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
           </div>
         </div>

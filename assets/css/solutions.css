@@ -79,8 +79,8 @@
 }
 
 .solutions__gif img {
-  width: 150px;  /* Tamaño fijo en el ancho */
-  height: 150px; /* Tamaño fijo en el alto */
+  width: 170px;  /* Tamaño fijo en el ancho */
+  height: 170px; /* Tamaño fijo en el alto */
   object-fit: contain; /* Asegura que la imagen no se distorsione */
   border-radius: 10px;
 }
