@@ -39,6 +39,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 40px;
+  padding-bottom: 7%;
 }
 
 /* Estilos para las tarjetas */
@@ -97,7 +98,7 @@
 
 /* Mejora en hover para que los elementos se destaquen */
 .solutions__item:hover {
-  border-radius: 10px;
+
   border: 2px solid;
   border-image: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135)) 1;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.699);

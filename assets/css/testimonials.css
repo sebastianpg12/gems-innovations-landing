@@ -1,157 +1,207 @@
-/* Estilos generales de la sección de testimonios */
-.client-testimonials {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #0e1a31;
+/* General settings for the testimonial section */
+.testim {
+  width: 100%;
+  max-width: 1200px; /* To keep it responsive */
+  padding: 60px 20px;
+  margin: 0 auto; /* Ensure centering */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05); /* Light transparent background */
+  position: relative;
+}
+
+/* Agregar línea superior con degradado */
+.testim::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #29abe2, #ffffff); /* Línea degradada */
+  margin: 0 auto 30px;
+  border-radius: 4px;
+}
+
+.testim .wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: auto;
+  padding-bottom: 40px; /* Add some space to avoid overlap */
+}
+
+/* Arrows */
+.testim .arrow {
+  display: inline-block;
   color: #fff;
+  cursor: pointer;
+  font-size: 2em;
+  margin: 0 20px;
+  padding: 5px;
+  z-index: 1;
+  transition: all .3s ease-in-out;
 }
 
-@keyframes hero-gradient-animation {
-  0% {
-    --s-start-0: 8%;
-    --s-end-0: 83%;
-    --x-0: 57%;
-    --c-0: hsla(220, 77%, 32%, 1);
-    --y-0: 69%;
-    --c-1: hsla(261, 70%, 22%, 1);
-    --x-1: 98%;
-    --s-start-1: 1%;
-    --s-end-1: 80%;
-    --y-1: 39%;
-    --s-start-2: 12%;
-    --s-end-2: 83%;
-    --y-2: 56%;
-    --x-2: 35%;
-    --c-2: hsla(223, 85%, 27%, 1);
-    --y-3: 82%;
-    --s-start-3: 18%;
-    --s-end-3: 71%;
-    --c-3: hsla(214, 92%, 27%, 1);
-    --x-3: 70%;
-    --y-4: 84%;
-    --c-4: hsla(258, 64%, 44%, 1);
-    --x-4: 40%;
-    --s-start-4: 6%;
-    --s-end-4: 72%;
-    opacity: 1;
-  }
-  100% {
-    --s-start-0: 14%;
-    --s-end-0: 54%;
-    --x-0: 69%;
-    --c-0: hsla(241, 70%, 39%, 1);
-    --y-0: 95%;
-    --c-1: hsla(247, 84%, 11%, 1);
-    --x-1: 70%;
-    --s-start-1: 7%;
-    --s-end-1: 51%;
-    --y-1: 42%;
-    --s-start-2: 13%;
-    --s-end-2: 74%;
-    --y-2: 1%;
-    --x-2: 59%;
-    --c-2: hsla(248, 0%, 61%, 1);
-    --y-3: 100%;
-    --s-start-3: 15%;
-    --s-end-3: 60%;
-    --c-3: hsla(261, 68%, 12%, 1);
-    --x-3: 10%;
-    --y-4: 76%;
-    --c-4: hsla(263, 53%, 47%, 1);
-    --x-4: 16%;
-    --s-start-4: 9%;
-    --s-end-4: 72%;
-    opacity: 0.8;
-  }
+.testim .arrow:hover {
+  color: #ffffff;
 }
 
-/* Estilos para el fondo animado */
-.background {
-  --x-0: 57%;
-  --c-0: hsla(220, 77%, 32%, 1);
-  --y-0: 69%;
-  --c-1: hsla(261, 70%, 22%, 1);
-  --x-1: 98%;
-  --y-1: 39%;
-  --y-2: 56%;
-  --x-2: 35%;
-  --c-2: hsla(223, 85%, 27%, 1);
-  --y-3: 82%;
-  --c-3: hsla(214, 92%, 27%, 1);
-  --x-3: 70%;
-  --y-4: 84%;
-  --c-4: hsla(258, 64%, 44%, 1);
-  --x-4: 40%;
+.testim .arrow.left {
+  float: left;
+}
 
-  background-color: hsla(262, 82%, 3%, 1);
-  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)),
-    radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)),
-    radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)),
-    radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)),
-    radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
-  animation: hero-gradient-animation 4s ease-in-out infinite alternate;
-  background-blend-mode: normal, normal, normal, normal, normal;
-  opacity: 1;
+.testim .arrow.right {
+  float: right;
+}
+
+/* Dots for navigation */
+.testim .dots {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.testim .dots .dot {
+  list-style-type: none;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+.testim .dots .dot.active,
+.testim .dots .dot:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Contenedor de los testimonios */
+.testim .cont {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.testim .cont > div {
+  display: none;
+  opacity: 0;
+  padding: 20px 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Mejora visual */
-.background:hover {
-  opacity: 0.9;
+/* Active testimonial */
+.testim .cont > div.active {
+  display: block;
+  opacity: 1;
 }
 
+.testim .cont div .img img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  object-fit: cover; /* Make sure the images are not stretched */
+}
 
-
+/* Descripción de los testimonios */
 .testimonials-description {
   font-size: 18px;
   margin-bottom: 40px;
   color: #d1d5db;
 }
 
-/* Grid para los testimonios */
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  justify-items: center;
+/* Heading of each testimonial */
+.testim .cont div h2 {
+  color: #fff;
+  font-size: 1.5em; /* Aumentar el tamaño de la fuente */
+  margin: 15px 0;
+  font-weight: bold;
 }
 
-/* Estilo para cada testimonio */
-.testimonial-slide {
-  padding: 20px;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  max-width: 350px;
-  text-align: left;
+/* Text of each testimonial */
+.testim .cont div p {
+  font-size: 1.15em;
+  color: #eee;
+  width: 80%;
+  margin: auto;
 }
 
-.testimonial-slide p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #d1d5db;
+.rol {
+  color: #29abe2;
+  font-style: italic; /* Añadir estilo al cargo */
 }
 
-.testimonial-slide h4 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.testimonial-slide span {
-  font-size: 14px;
-  color: #d1d5db;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .testimonial-grid {
-    grid-template-columns: 1fr;
+/* Animaciones */
+@keyframes testim-scale {
+  0% {
+      box-shadow: 0px 0px 0px 0px #eee;
+  }
+  35% {
+      box-shadow: 0px 0px 10px 5px #eee;
+  }
+  70% {
+      box-shadow: 0px 0px 10px 5px #ffffff;
+  }
+  100% {
+      box-shadow: 0px 0px 0px 0px #ffffff;
   }
 }
 
-@media (max-width: 480px) {
-  .testimonial-slide {
-    min-width: 250px;
-    max-width: 100%;
+@keyframes testim-content-in {
+  from {
+      opacity: 0;
+      transform: translateY(100%);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes testim-content-out {
+  from {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateY(-100%);
+  }
+}
+
+@keyframes testim-show {
+  from {
+      opacity: 0;
+      transform: scale(0);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes testim-hide {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0);
+  }
+}
+
+/* Responsive styles */
+@media all and (max-width: 500px) {
+  .testim .arrow {
+      font-size: 1.5em;
+  }
+  .testim .cont div p {
+      line-height: 25px;
+  }
+  
+  .testim .wrap {
+      padding-bottom: 20px; /* Reduce padding on smaller screens */
   }
 }
