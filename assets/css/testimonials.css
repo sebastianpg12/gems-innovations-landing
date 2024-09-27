@@ -1,4 +1,9 @@
 /* General settings for the testimonial section */
+
+.client-testimonials {
+  padding-bottom: 7%;
+}
+
 .testim {
   width: 100%;
   max-width: 1200px; /* To keep it responsive */
@@ -7,6 +12,7 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.05); /* Light transparent background */
   position: relative;
+  
 }
 
 /* Agregar línea superior con degradado */
