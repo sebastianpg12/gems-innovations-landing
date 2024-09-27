@@ -57,6 +57,34 @@
   color: #ffffff; /* Pequeño efecto hover */
 }
 
+/* Inicialmente, el cursor estará oculto */
+.cursor {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease, opacity 0.1s ease;
+  z-index: 1000;
+  opacity: 0; /* Oculto por defecto */
+}
+
+/* Cuando el cursor está dentro del header, se muestra */
+.header:hover ~ .cursor {
+  opacity: 1; /* Mostrar cuando el mouse está sobre el header */
+}
+
+/* Ampliar el cursor cuando esté sobre los elementos del menú */
+.header__item:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(3);
+}
+
+/* Mantén el resto de los estilos intactos */
+
+
 .header__button-container {
   flex: 1;
   display: flex;
