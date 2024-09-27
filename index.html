@@ -51,26 +51,7 @@
       <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script>
-      // Scroll-to-Top Button JavaScript
-      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-      
-      // Show the button when the user scrolls down
-      window.onscroll = function() {
-        if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      };
-      // Scroll back to top smoothly when button is clicked
-      scrollToTopBtn.onclick = function() {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth' 
-        });
-      };
-    </script>
+    <script src="assets/js/scroll.js"></script>
 
     <header class="header">
       <div class="header__wrapper container">
@@ -92,23 +73,7 @@
       </div>
     </header>
 
-    <script>
-      const toggleButton = document.querySelector('.header__toggle');
-      const navContainer = document.querySelector('.header__nav-container');
-      
-      toggleButton.addEventListener('click', () => {
-        navContainer.classList.toggle('active');
-        toggleButton.classList.toggle('active');
-      });
-      
-      // Cerrar el menú al hacer clic en cualquier enlace
-      document.querySelectorAll('.header__item').forEach(item => {
-        item.addEventListener('click', () => {
-          navContainer.classList.remove('active');
-          toggleButton.classList.remove('active');
-        });
-      });
-    </script>
+    <script src="assets/js/menu.js"></script>
 
     <main>
       <section class="background">
@@ -239,7 +204,7 @@
         </div>
       </section>
 
-      <script>
+      <script src="assets/js/carrousel-testimonials.js">
         const testimDots = Array.from(document.querySelectorAll('#testim-dots .dot')); // Dots
         const testimContent = Array.from(document.querySelectorAll('#testim-content > div')); // Testimonials
         const testimLeftArrow = document.querySelector('#left-arrow');
@@ -430,6 +395,7 @@
       </section>
       
 
+      <script src="assets/js/carrousel-tech.js"></script>
       <footer class="footer">
         <div class="footer__content container">
           <!-- Footer Brand Section -->
