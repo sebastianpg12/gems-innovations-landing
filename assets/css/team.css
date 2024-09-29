@@ -22,21 +22,19 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
-/* Estilos de cada miembro del equipo */
 .team-member {
-  background-color: #ffffff;
+  background-color: #2626260d;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra detrás */
+  box-shadow: 0 8px 15px rgb(0 0 0 / 42%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   position: relative;
-  flex: 1 1 calc(33.333% - 30px); /* Ocupa un tercio del contenedor */
+  flex: 1 1 calc(33.333% - 30px);
   max-width: calc(33.333% - 30px);
   overflow: hidden;
-  border: 2px solid transparent; /* Inicialmente sin borde */
-  background-clip: padding-box; /* Hace que el borde esté dentro del padding */
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .team-member::before {
@@ -59,8 +57,8 @@
 
 /* Avatar circular */
 .team-member__avatar img {
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #3ba3bd;
   object-fit: cover;
@@ -75,7 +73,7 @@
 .team-member__name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333;
+  color: #f7f7f7;
   margin: 0 0 10px;
 }
 
