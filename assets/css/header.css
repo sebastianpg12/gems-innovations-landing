@@ -48,13 +48,63 @@
 
 .header__item {
   color: #c4c4c5; /* Color blanco para visibilidad */
-
   cursor: pointer;
   transition: color 300ms;
+  display: inline-flex; /* Asegurar que el texto y la flecha estén alineados */
+  align-items: center; /* Alineación vertical centrada */
 }
 
 .header__item:hover {
   color: #ffffff; /* Pequeño efecto hover */
+}
+
+/* Botón de submenú (flecha) */
+.submenu-toggle {
+  font-size: 12px;
+  margin-left: 5px; /* Espacio entre texto y flecha */
+  cursor: pointer;
+  color: #c4c4c5; /* Color para la flecha */
+}
+
+.header__item--submenu.active .submenu-toggle {
+  transform: rotate(180deg); /* Rotar la flecha cuando el submenú esté activo */
+  transition: transform 0.3s ease;
+}
+
+/* Submenú */
+.header__submenu {
+  display: none; /* Ocultar por defecto */
+  position: absolute;
+  background-color: rgba(35, 34, 80, 0.9); /* Fondo oscuro translúcido */
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  top: 100%; /* Alinear el submenú con el menú principal */
+  left: 0;
+  z-index: 100;
+}
+
+.header__item--submenu {
+  position: relative; /* Necesario para que el submenú se posicione correctamente */
+}
+
+.header__item--submenu.active .header__submenu {
+  display: block; /* Mostrar submenú cuando está activo */
+}
+
+.header__submenu li {
+  padding: 5px 10px;
+}
+
+.header__submenu li a {
+  color: #c4c4c5; /* Color de los enlaces */
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+.header__submenu li a:hover {
+  color: #ffffff; /* Color blanco al hacer hover */
 }
 
 /* Inicialmente, el cursor estará oculto */
@@ -81,9 +131,6 @@
 .header__item:hover ~ .cursor {
   transform: translate(-50%, -50%) scale(3);
 }
-
-/* Mantén el resto de los estilos intactos */
-
 
 .header__button-container {
   flex: 1;
@@ -150,6 +197,19 @@
     align-items: flex-start;
     gap: 15px;
     width: 100%;
+  }
+
+  .header__submenu {
+    position: static; /* Submenús deben ser estáticos en móviles */
+    display: none; /* Ocultar inicialmente */
+  }
+
+  .header__item--submenu.active .header__submenu {
+    display: block; /* Mostrar submenús cuando se haga clic en la flecha */
+  }
+
+  .header__item--submenu .submenu-toggle {
+    display: inline-block; /* Asegurar que el botón de flecha esté visible */
   }
 
   .header__button-container {
