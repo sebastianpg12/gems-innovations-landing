@@ -156,40 +156,47 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 15px 20px;
   }
 
   .header__title {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    margin-bottom: 0;
+    gap: 8px;
+  }
+  
+  .header__brand {
+    width: 25px;
+    height: 25px;
   }
 
   .header__nav-container {
-    display: none; /* El menú estará cerrado por defecto en pantallas pequeñas */
+    display: none;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(35, 34, 80, 0.685); /* Fondo oscuro en responsive */
+    background-color: rgba(35, 34, 80, 0.95);
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     padding: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
     z-index: 10;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 15px 15px;
   }
 
   .header__nav-container.active {
-    display: flex; /* Mostrar el menú al hacer clic en el botón de hamburguesa */
+    display: flex;
   }
 
   .header__toggle {
-    display: block; /* Mostrar botón de hamburguesa en pantallas pequeñas */
-    font-size: 30px;
+    display: block;
+    font-size: 24px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
-    margin-left: auto;
+    padding: 5px;
   }
 
   .header__nav {
@@ -198,41 +205,70 @@
     gap: 15px;
     width: 100%;
   }
+  
+  .header__item {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .header__item:last-child {
+    border-bottom: none;
+  }
 
   .header__submenu {
-    position: static; /* Submenús deben ser estáticos en móviles */
-    display: none; /* Ocultar inicialmente */
+    position: static;
+    display: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    margin-top: 10px;
+    padding: 15px;
   }
 
   .header__item--submenu.active .header__submenu {
-    display: block; /* Mostrar submenús cuando se haga clic en la flecha */
+    display: block;
   }
 
   .header__item--submenu .submenu-toggle {
-    display: inline-block; /* Asegurar que el botón de flecha esté visible */
+    display: inline-block;
+    margin-left: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .header__item--submenu.active .submenu-toggle {
+    transform: rotate(180deg);
   }
 
   .header__button-container {
-    display: none; /* Ocultar botón "Comenzar" en responsive */
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .header__title {
-    font-size: 20px;
+  .header__wrapper {
+    padding: 12px 15px;
   }
-
-  .header__item {
-    font-size: 16px;
+  
+  .header__title {
+    font-size: 18px;
   }
 
   .header__brand {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
   }
 
-  .header__button-container {
-    display: none; /* Ocultar botón "Comenzar" en pantallas pequeñas */
+  .header__toggle {
+    font-size: 22px;
+  }
+  
+  .header__nav-container {
+    padding: 15px;
+  }
+  
+  .header__item {
+    font-size: 15px;
+    padding: 8px 0;
   }
 }
 

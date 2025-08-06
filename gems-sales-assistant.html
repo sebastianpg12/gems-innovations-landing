@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gems Sales Assistant - Bot de WhatsApp con IA para Ventas</title>
+    <meta name="description" content="Automatiza tus ventas con nuestro bot inteligente de WhatsApp. Respuestas automáticas 24/7, gestión multi-cliente y base de conocimiento personalizada.">
+    <meta name="keywords" content="bot whatsapp, ventas automatizadas, IA, chatbot, WhatsApp Business, automatización">
+    <link rel="canonical" href="https://gems-innovations.com/gems-sales-assistant.html">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/sales-assistant.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gems Sales Assistant - Bot de WhatsApp con IA">
+    <meta property="og:description" content="Automatiza tus ventas con nuestro bot inteligente de WhatsApp.">
+    <meta property="og:image" content="https://gems-innovations.com/assets/images/whatsapp-bot-og.jpg">
+    <meta property="og:url" content="https://gems-innovations.com/gems-sales-assistant.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Ir al inicio">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/scroll.js"></script>
+
+    <header class="header">
+        <div class="header__wrapper container">
+            <div class="header__title">
+                <img src="./assets/images/brand.webp" alt="Logo de Gems Innovations" class="header__brand">
+                <span>GEMS Innovations</span>
+            </div>
+            <button class="header__toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="header__nav-container">
+                <ul class="header__nav">
+                    <li class="header__item"><a href="./index.html" style="color: white; text-decoration: none;">Inicio</a></li>
+                    <li class="header__item header__item--submenu">
+                        <span class="header__link">Servicios <span class="submenu-toggle">▼</span></span>
+                        <ul class="header__submenu">
+                            <li><a href="./index.html#solutions">Desarrollo Web</a></li>
+                            <li><a href="./index.html#solutions">Aplicaciones Móviles</a></li>
+                            <li><a href="./index.html#solutions">Automatización</a></li>
+                            <li><a href="./index.html#solutions">Marketing Digital</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__item header__item--submenu">
+                        <span class="header__link">Productos <span class="submenu-toggle">▼</span></span>
+                        <ul class="header__submenu">
+                            <li><a href="./gems-sales-assistant.html">Gems Sales Assistant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__button-container">
+                <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos</a>
+            </div>
+        </div>
+        <!-- Cursor personalizado -->
+        <div class="cursor"></div>
+    </header>
+
+    <script src="assets/js/menu.js"></script>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero background">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Nuevo Producto</span>
+                    </div>
+                    <h1 class="hero__title">
+                        Gems Sales Assistant
+                    </h1>
+                    <h2 class="hero__subtitle">
+                        Bot de WhatsApp con IA para Automatizar tus Ventas
+                    </h2>
+                    <p class="hero__description">
+                        Transforma tu WhatsApp Business en una máquina de ventas 24/7. Nuestro asistente inteligente responde automáticamente a tus clientes, gestiona múltiples conversaciones y aumenta tus conversiones usando IA personalizada.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="https://walink.co/c802b5" target="_blank" class="button button--primary">
+                            <i class="fab fa-whatsapp"></i> Solicitar Demo Gratis
+                        </a>
+                        <a href="#features" class="button button--secondary">
+                            <i class="fas fa-play"></i> Ver Características
+                        </a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <div class="stat__number">24/7</div>
+                            <div class="stat__label">Disponibilidad</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">+300%</div>
+                            <div class="stat__label">Respuestas más rápidas</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">∞</div>
+                            <div class="stat__label">Clientes simultáneos</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="whatsapp-interface">
+                                <div class="whatsapp-header">
+                                    <img src="./assets/images/brand.webp" alt="Bot Avatar">
+                                    <div>
+                                        <div class="contact-name">Sales Assistant</div>
+                                        <div class="status">en línea</div>
+                                    </div>
+                                </div>
+                                <div class="whatsapp-messages">
+                                    <div class="message incoming">
+                                        <div class="message-text">¡Hola! ¿Tienen información sobre sus servicios?</div>
+                                        <div class="message-time">10:30</div>
+                                    </div>
+                                    <div class="message outgoing">
+                                        <div class="message-text">¡Hola! Claro, ofrecemos desarrollo web, apps móviles, automatización y marketing digital. ¿Qué servicio te interesa más?</div>
+                                        <div class="message-time">10:30 ✓✓</div>
+                                    </div>
+                                    <div class="message incoming">
+                                        <div class="message-text">Me interesa una app móvil</div>
+                                        <div class="message-time">10:31</div>
+                                    </div>
+                                    <div class="message outgoing">
+                                        <div class="message-text">Perfecto! Desarrollamos apps nativas e híbridas. El costo inicial es desde $2,500 USD. ¿Te gustaría agendar una consulta gratuita?</div>
+                                        <div class="message-time">10:31 ✓✓</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features container">
+            <div class="section-header">
+                <h2 class="title">¿Por qué elegir Gems Sales Assistant?</h2>
+                <p class="section-description">
+                    Nuestro bot combina inteligencia artificial avanzada con una interfaz fácil de usar para maximizar tus ventas en WhatsApp
+                </p>
+            </div>
+            
+            <div class="features__grid">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="feature__title">IA Personalizada</h3>
+                    <p class="feature__description">
+                        Bot entrenado específicamente con la información de tu negocio. Responde como un experto en tus productos y servicios.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature__title">Multi-Cliente</h3>
+                    <p class="feature__description">
+                        Gestiona múltiples negocios desde una sola plataforma. Cada cliente tiene su propio dashboard y configuraciones independientes.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="feature__title">Base de Conocimiento</h3>
+                    <p class="feature__description">
+                        Configura fácilmente información sobre productos, precios, FAQ y políticas. El bot aprende y mejora constantemente.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="feature__title">Disponibilidad 24/7</h3>
+                    <p class="feature__description">
+                        Nunca pierdas una venta por horarios de atención. Tu bot trabaja mientras duermes, los fines de semana y festivos.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature__title">Análisis Detallados</h3>
+                    <p class="feature__description">
+                        Obtén reportes completos sobre conversaciones, productos más consultados y métricas de conversión en tiempo real.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature__title">Seguro y Confiable</h3>
+                    <p class="feature__description">
+                        Integración oficial con WhatsApp Business API y Twilio. Cumplimos con todas las políticas de privacidad y seguridad.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section class="how-it-works background">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="title">¿Cómo Funciona?</h2>
+                    <p class="section-description">
+                        Configurar tu asistente de ventas es más fácil de lo que imaginas
+                    </p>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Configuración Inicial</h3>
+                            <p class="step__description">
+                                Conectamos tu número de WhatsApp Business y configuramos la integración con nuestra plataforma.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fas fa-cog"></i>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step__number">2</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Entrenamiento del Bot</h3>
+                            <p class="step__description">
+                                Cargas información sobre tus productos, servicios, precios y políticas. El bot aprende automáticamente.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <div class="step__content">
+                            <h3 class="step__title">¡Listo para Vender!</h3>
+                            <p class="step__description">
+                                Tu bot comienza a responder automáticamente. Puedes monitorear y tomar control cuando sea necesario.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing container">
+            <div class="section-header">
+                <h2 class="title">Planes y Precios</h2>
+                <p class="section-description">
+                    Elige el plan que mejor se adapte a las necesidades de tu negocio
+                </p>
+            </div>
+
+            <div class="pricing__grid">
+                <div class="pricing__card">
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Básico</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">200,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Hasta 1,000 mensajes/mes</li>
+                        <li><i class="fas fa-check"></i> 1 número de WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Base de conocimiento básica</li>
+                        <li><i class="fas fa-check"></i> Soporte por email</li>
+                        <li><i class="fas fa-check"></i> Dashboard básico</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--outline">Empezar Prueba</a>
+                </div>
+
+                <div class="pricing__card pricing__card--featured">
+                    <div class="pricing__badge">Más Popular</div>
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Profesional</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">400,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Hasta 5,000 mensajes/mes</li>
+                        <li><i class="fas fa-check"></i> 3 números de WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Base de conocimiento avanzada</li>
+                        <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                        <li><i class="fas fa-check"></i> Analytics completos</li>
+                        <li><i class="fas fa-check"></i> Integraciones CRM</li>
+                        <li><i class="fas fa-check"></i> Respuestas personalizadas</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--primary">Empezar Ahora</a>
+                </div>
+
+                <div class="pricing__card">
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Enterprise</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">800,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Mensajes ilimitados</li>
+                        <li><i class="fas fa-check"></i> Números ilimitados</li>
+                        <li><i class="fas fa-check"></i> IA personalizada</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                        <li><i class="fas fa-check"></i> API completa</li>
+                        <li><i class="fas fa-check"></i> Multi-tenant</li>
+                        <li><i class="fas fa-check"></i> Onboarding dedicado</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--outline">Contactar Ventas</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta background">
+            <div class="container">
+                <div class="cta__content">
+                    <h2 class="cta__title">¿Listo para Automatizar tus Ventas?</h2>
+                    <p class="cta__description">
+                        Únete a más de 100 empresas que ya están aumentando sus ventas con Gems Sales Assistant. 
+                        Prueba gratis por 14 días sin compromiso.
+                    </p>
+                    <div class="cta__actions">
+                        <a href="https://walink.co/c802b5" target="_blank" class="button button--primary button--large">
+                            <i class="fab fa-whatsapp"></i> Solicitar Demo Gratis
+                        </a>
+                        <div class="cta__guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>14 días gratis • Sin permanencia • Soporte incluido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content container">
+            <!-- Footer Brand Section -->
+            <div class="footer__brand">
+                <h3>Gems Innovations</h3>
+                <p>Soluciones tecnológicas para la optimización de procesos empresariales y el crecimiento de tu negocio.</p>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=61566125934892" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/gemsinnovations/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/gems-innovations/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                <p>2024 &copy; Todos los derechos reservados</p>
+            </div>
+
+            <!-- Footer Links Section 1 -->
+            <div class="footer__links">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html#about">Sobre nosotros</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos del servicio</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Links Section 2 -->
+            <div class="footer__links">
+                <ul>
+                    <li><a href="./index.html#solutions">Servicios</a></li>
+                    <li><a href="./gems-sales-assistant.html">Productos</a></li>
+                    <li><a href="#">Únete a nuestro equipo</a></li>
+                    <li><a href="#">Asóciate con nosotros</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <p>Desarrollado por <a href="https://gems-innovations.com">@gemsinnovations</a></p>
+        </div>
+    </footer>
+
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'ceRAE47tRGAzSEyRv';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+</body>
+</html>

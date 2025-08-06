@@ -1,9 +1,39 @@
+/* Estilos para la sección de tecnologías */
+.technologies-section {
+  padding: 100px 0;
+  margin: 150px 0;
+}
+
+.technologies-section .title {
+  color: white;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+  position: relative;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.technologies-section .title::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #64b5f6, #007bff);
+  border-radius: 2px;
+  box-shadow: 0px 0px 25px rgba(0, 123, 255, 0.7);
+  z-index: 1;
+}
+
 /* Ajuste del contenedor del carrusel */
 .technologies-carousel {
   overflow: hidden;
   position: relative;
   width: 100%;
-  padding-bottom: 7%;
+  padding: 50px 0;
 }
 
 /* Carrusel en formato horizontal */
@@ -58,4 +88,83 @@
   color: #fff;
   margin-top: auto;
   margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .technologies-section {
+    padding: 80px 0;
+    margin: 120px 0;
+  }
+  
+  .technology-item {
+    max-width: 130px;
+    flex: 0 0 130px;
+    min-height: 200px;
+    padding: 25px;
+  }
+  
+  .technology-item img {
+    width: 60px;
+  }
+  
+  .technology-item p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .technologies-section {
+    padding: 60px 0;
+    margin: 80px 0;
+  }
+  
+  .technologies-section .title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .technology-item {
+    max-width: 110px;
+    flex: 0 0 110px;
+    min-height: 170px;
+    padding: 20px;
+  }
+  
+  .technology-item img {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .technology-item p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologies-section {
+    padding: 40px 0;
+    margin: 60px 0;
+  }
+  
+  .technologies-section .title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .technology-item {
+    max-width: 90px;
+    flex: 0 0 90px;
+    min-height: 140px;
+    padding: 15px;
+  }
+  
+  .technology-item img {
+    width: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .technology-item p {
+    font-size: 0.85rem;
+  }
 }

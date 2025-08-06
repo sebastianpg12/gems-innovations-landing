@@ -1,53 +1,70 @@
-/* General settings for the testimonial section */
+/* Gener.client-testimonials::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #64b5f6, #007bff);
+  border-radius: 2px;
+  box-shadow: 0px 0px 25px rgba(0, 123, 255, 0.7);
+  z-index: 1;
+}or the testimonial section */
 
 .client-testimonials {
-  padding-bottom: 7%;
+  padding: 100px 0;
+  margin: 150px 0;
+  position: relative;
+}
+
+.client-testimonials::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #64b5f6, #007bff);
+  border-radius: 2px;
+  box-shadow: 0px 0px 25px rgba(0, 123, 255, 0.7);
+  z-index: 10;
 }
 
 .testim {
   width: 100%;
-  max-width: 1200px; /* To keep it responsive */
-  padding: 60px 20px;
-  margin: 0 auto; /* Ensure centering */
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05); /* Light transparent background */
+  max-width: 1200px;
+  padding: 80px 40px;
+  margin: 0 auto;
+  border-radius: 25px;
   position: relative;
-  
 }
 
-/* Agregar línea superior con degradado */
-.testim::before {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(90deg, #29abe2, #ffffff); /* Línea degradada */
-  margin: 0 auto 30px;
-  border-radius: 4px;
-}
-
-.testim .wrap {
-  position: relative;
-  width: 100%;
-  max-width: 1020px;
-  margin: auto;
-  padding-bottom: 40px; /* Add some space to avoid overlap */
-}
-
-/* Arrows */
+/* Arrows mejoradas - más pequeñas */
 .testim .arrow {
   display: inline-block;
-  color: #fff;
+  color: #64b5f6;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0 20px;
-  padding: 5px;
+  padding: 10px;
   z-index: 1;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: rgba(100, 181, 246, 0.1);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testim .arrow:hover {
   color: #ffffff;
+  background: rgba(100, 181, 246, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(100, 181, 246, 0.3);
 }
 
 .testim .arrow.left {
@@ -58,84 +75,156 @@
   float: right;
 }
 
-/* Dots for navigation */
+/* Dots mejorados */
 .testim .dots {
   text-align: center;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .testim .dots .dot {
   list-style-type: none;
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  border: 1px solid #eee;
-  margin: 0 5px;
+  border: 2px solid rgba(100, 181, 246, 0.5);
+  margin: 0 8px;
   cursor: pointer;
-  transition: all .5s ease-in-out;
+  transition: all 0.4s ease;
+  background: transparent;
 }
 
 .testim .dots .dot.active,
 .testim .dots .dot:hover {
-  background: #ffffff;
-  border-color: #ffffff;
+  background: linear-gradient(135deg, #007bff, #64b5f6);
+  border-color: #64b5f6;
+  transform: scale(1.2);
+  box-shadow: 0 5px 15px rgba(100, 181, 246, 0.4);
 }
 
-/* Contenedor de los testimonios */
+/* Contenedor de los testimonios mejorado */
+.testim .wrap {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
 .testim .cont {
   text-align: center;
-  margin: 20px 0;
+  margin: 30px 0;
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .testim .cont > div {
   display: none;
   opacity: 0;
-  padding: 20px 0;
-  transition: opacity 0.5s ease-in-out;
+  padding: 30px 0;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Active testimonial */
+/* Active testimonial mejorado */
 .testim .cont > div.active {
   display: block;
   opacity: 1;
+  animation: testimonialFadeIn 0.8s ease-out;
+}
+
+@keyframes testimonialFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testim .cont div .img {
+  margin-bottom: 30px;
 }
 
 .testim .cont div .img img {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin: auto;
   border-radius: 50%;
-  object-fit: cover; /* Make sure the images are not stretched */
+  object-fit: cover;
+  border: 4px solid rgba(100, 181, 246, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Descripción de los testimonios */
+.testim .cont div .img img:hover {
+  transform: scale(1.05);
+  border-color: rgba(100, 181, 246, 0.6);
+  box-shadow: 0 15px 40px rgba(100, 181, 246, 0.2);
+}
+
+/* Descripción de los testimonios mejorada */
 .testimonials-description {
-  font-size: 18px;
-  margin-bottom: 40px;
-  color: #d1d5db;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: #e1ecf7;
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-/* Heading of each testimonial */
+/* Heading mejorado */
 .testim .cont div h2 {
   color: #fff;
-  font-size: 1.5em; /* Aumentar el tamaño de la fuente */
-  margin: 15px 0;
-  font-weight: bold;
+  font-size: 1.8rem;
+  margin: 25px 0 15px;
+  font-weight: 600;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Text of each testimonial */
+/* Text mejorado */
 .testim .cont div p {
-  font-size: 1.15em;
-  color: #eee;
-  width: 80%;
-  margin: auto;
+  font-size: 1.2rem;
+  color: #e8f0fe;
+  width: 85%;
+  margin: 25px auto;
+  line-height: 1.8;
+  font-weight: 400;
+  font-style: italic;
+  position: relative;
+}
+
+.testim .cont div p::before {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(100, 181, 246, 0.3);
+  position: absolute;
+  left: -40px;
+  top: -20px;
+  font-family: Georgia, serif;
+}
+
+.testim .cont div p::after {
+  content: '"';
+  font-size: 4rem;
+  color: rgba(100, 181, 246, 0.3);
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  font-family: Georgia, serif;
 }
 
 .rol {
-  color: #29abe2;
-  font-style: italic; /* Añadir estilo al cargo */
+  color: #64b5f6;
+  font-style: italic;
+  font-weight: 500;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Animaciones */
@@ -198,16 +287,100 @@
   }
 }
 
-/* Responsive styles */
-@media all and (max-width: 500px) {
-  .testim .arrow {
-      font-size: 1.5em;
+/* Responsive styles mejorados */
+@media (max-width: 1024px) {
+  .client-testimonials {
+    padding: 80px 0;
+    margin: 120px 0;
   }
+  
+  .testim {
+    padding: 60px 30px;
+  }
+  
+  .testim .arrow {
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-testimonials {
+    padding: 60px 0;
+    margin: 80px 0;
+  }
+  
+  .testim {
+    padding: 40px 20px;
+    margin: 0 10px;
+  }
+  
+  .testim .arrow {
+    font-size: 1.3em;
+    width: 35px;
+    height: 35px;
+    margin: 0 10px;
+    padding: 8px;
+  }
+  
   .testim .cont div p {
-      line-height: 25px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+  }
+  
+  .testim .cont div h2 {
+    font-size: 1.3rem;
+  }
+  
+  .testimonials-description {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-testimonials {
+    padding: 40px 0;
+    margin: 60px 0;
+  }
+  
+  .testim {
+    padding: 30px 15px;
+  }
+  
+  .testim .arrow {
+    font-size: 1.2em;
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    padding: 6px;
+  }
+  
+  .testim .cont div p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  
+  .testim .cont div h2 {
+    font-size: 1.1rem;
+  }
+  
+  .testim .cont div .rol {
+    font-size: 0.8rem;
   }
   
   .testim .wrap {
-      padding-bottom: 20px; /* Reduce padding on smaller screens */
+    padding-bottom: 15px;
+  }
+  
+  .testimonials-description {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
   }
 }

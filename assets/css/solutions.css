@@ -1,186 +1,263 @@
 /* Estilos generales para la sección .solutions */
 .solutions {
-  margin: 100px auto 0;
-  padding: 60px 40px;
-  border-top-right-radius: 10px;
+  margin: 150px auto 150px;
+  padding: 100px 40px;
   position: relative;
   overflow: hidden;
-  background-color: #0e1a31;
-}
-.title__card {
-  margin-bottom: 10px;
 }
 
-
-/* Ajuste del margen superior del título */
-.title {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 36px;
-  color: white;
-  position: relative;
-}
-
-/* Línea sutil sobre el título con efecto de luz azul */
-.title::before {
-  content: '';
+/* Título de fondo transparente */
+.solutions::before {
+  content: 'SOLUCIONES';
   position: absolute;
-  top: -10px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  width: 80%;
-  height: 2px;
-  background: linear-gradient(90deg, rgb(22, 182, 200), rgb(249, 69, 135));
-  box-shadow: 0px 0px 15px rgba(43, 83, 158, 0.7);
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  user-select: none;
 }
 
-/* Cuadrícula para pantallas grandes */
+.solutions > * {
+  position: relative;
+  z-index: 1;
+}
+
+.title__card {
+  margin-bottom: 15px;
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ocultar el título principal */
+.solutions .title {
+  display: none;
+}
+
+/* Grid cuadrado 2x2 para pantallas grandes */
 .solutions__container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
-  padding-bottom: 7%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 35px;
+  padding-bottom: 40px;
+  padding-top: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Estilos para las tarjetas */
+/* Estilos para las tarjetas - todas del mismo tamaño */
 .solutions__item {
   position: relative;
-  background-color: hsla(262, 82%, 3%, 1);
-  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)),
-    radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)),
-    radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)),
-    radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3)),
-    radial-gradient(circle at var(--x-4) var(--y-4), var(--c-4) var(--s-start-4), transparent var(--s-end-4));
-  animation: hero-gradient-animation 4s ease-in-out infinite alternate;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 45px 35px;
   color: #FFF;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 280px;
   height: 100%;
-  transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 
+              0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Animación del fondo para cada tarjeta */
-@keyframes hero-gradient-animation {
-  /* ... (mantener el contenido original de la animación) ... */
+.solutions__item::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    rgba(0, 123, 255, 0.3), 
+    rgba(100, 181, 246, 0.3), 
+    rgba(0, 123, 255, 0.3));
+  z-index: -1;
+  border-radius: 25px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-/* Estilos para el contenedor del GIF */
+.solutions__item:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), 
+              0 15px 35px rgba(0, 123, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 123, 255, 0.5);
+}
+
+.solutions__item:hover::before {
+  opacity: 1;
+}
+
 /* Estilos para el contenedor del GIF */
 .solutions__gif {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: center;
+  position: relative;
+  flex-shrink: 0;
 }
 
 .solutions__gif img {
-  width: 170px;  /* Tamaño fijo en el ancho */
-  height: 170px; /* Tamaño fijo en el alto */
-  object-fit: contain; /* Asegura que la imagen no se distorsione */
-  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 20px;
+  padding: 25px;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(100, 181, 246, 0.15));
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.solutions__item:hover .solutions__gif img {
+  transform: scale(1.2) rotate(8deg);
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.25), rgba(100, 181, 246, 0.25));
+  box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
+  border-color: rgba(0, 123, 255, 0.4);
+}
 
-/* Fondo translúcido detrás del texto */
 .solutions__item > div {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 1;
-  position: relative;
-  color: #FFF;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Mejora en hover para que los elementos se destaquen */
-.solutions__item:hover {
-
-  border: 2px solid;
-  border-image: linear-gradient(45deg, rgb(22, 182, 200), rgb(249, 69, 135)) 1;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.699);
+.solutions__item p {
+  color: #e8f0fe;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  opacity: 0.95;
 }
 
-/* Responsivo para pantallas grandes */
-@media (min-width: 1024px) {
-  .solutions__item:nth-child(1) {
-    grid-column: span 6;
-  }
-
-  .solutions__item:nth-child(2) {
-    grid-column: span 6;
-  }
-
-  .solutions__item:nth-child(3) {
-    grid-column: span 8;
-  }
-
-  .solutions__item:nth-child(4) {
-    grid-column: span 4;
-  }
+.solutions__item:hover p {
+  color: #ffffff;
+  opacity: 1;
 }
 
-/* Responsivo para pantallas pequeñas */
+/* Responsividad mejorada */
 @media (max-width: 1024px) {
-  .solutions__container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
+  .solutions {
+    padding: 60px 30px;
   }
-
+  
+  .solutions__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    max-width: 800px;
+  }
+  
   .solutions__item {
-    grid-column: span 1;
+    min-height: 250px;
+    padding: 35px 25px;
+  }
+  
+  .solutions__gif img {
+    width: 85px;
+    height: 85px;
     padding: 20px;
   }
-
-  .solutions__item div h3 {
-    font-size: 20px;
+  
+  .title__card {
+    font-size: 1.4rem;
   }
-
-  .solutions__item div p {
-    font-size: 14px;
+  
+  .solutions__item p {
+    font-size: 1rem;
   }
 }
 
-/* Responsivo para pantallas más pequeñas */
 @media (max-width: 768px) {
+  .solutions {
+    padding: 50px 20px;
+  }
+  
   .solutions__container {
     grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
   }
-
+  
   .solutions__item {
-    padding: 15px;
+    min-height: 220px;
+    padding: 30px 20px;
   }
-
-  .solutions__item div h3 {
-    font-size: 18px;
+  
+  .solutions__gif img {
+    width: 75px;
+    height: 75px;
+    padding: 18px;
   }
-
-  .solutions__item div p {
-    font-size: 14px;
+  
+  .title {
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+  }
+  
+  .title__card {
+    font-size: 1.3rem;
+    margin-top: 15px;
+  }
+  
+  .solutions__item p {
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
+  .solutions {
+    padding: 40px 15px;
+  }
+  
   .solutions__container {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 15px;
   }
-
+  
   .solutions__item {
-    padding: 10px;
-    background-size: contain;
+    min-height: 180px;
+    padding: 20px 15px;
   }
-
-  .solutions__item div h3 {
-    font-size: 16px;
+  
+  .solutions__gif img {
+    width: 55px;
+    height: 55px;
+    padding: 12px;
   }
-
-  .solutions__item div p {
-    font-size: 12px;
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .title__card {
+    font-size: 1.1rem;
+    margin-top: 12px;
+  }
+  
+  .solutions__item p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 }
