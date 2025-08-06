@@ -3,6 +3,7 @@
   padding: 100px 0;
   margin: 150px 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Título de fondo como en soluciones */
@@ -127,11 +128,49 @@
   font-size: 1rem;
 }
 
-/* Responsive Design */
+/* Responsive Design mejorado */
+@media (max-width: 1024px) {
+  .marketing-services {
+    padding: 80px 0;
+    margin: 120px 0;
+  }
+  
+  .marketing-services::before {
+    font-size: 8rem;
+  }
+  
+  .marketing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  .marketing-item {
+    padding: 35px 25px;
+  }
+  
+  .marketing-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+  
+  .marketing-description {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .marketing-services {
     padding: 60px 0;
     margin: 80px 0;
+    overflow-x: hidden;
+  }
+  
+  .marketing-services::before {
+    font-size: 4rem;
+    white-space: normal;
+    word-wrap: break-word;
   }
   
   .marketing-grid {
@@ -141,6 +180,7 @@
   
   .marketing-item {
     padding: 30px 20px;
+    margin: 0 10px;
   }
   
   .marketing-icon {
@@ -152,12 +192,25 @@
   .marketing-description {
     font-size: 1rem;
     margin-bottom: 40px;
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
+  .marketing-services {
+    padding: 40px 0;
+    margin: 60px 0;
+    overflow-x: hidden;
+  }
+  
+  .marketing-services::before {
+    font-size: 2.5rem;
+    opacity: 0.08;
+  }
+  
   .marketing-item {
     padding: 25px 15px;
+    margin: 0 5px;
   }
   
   .marketing-item h3 {
@@ -166,5 +219,16 @@
   
   .marketing-item p {
     font-size: 0.9rem;
+  }
+  
+  .marketing-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .marketing-description {
+    font-size: 0.9rem;
+    padding: 0 10px;
   }
 }
