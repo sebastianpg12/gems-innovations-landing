@@ -91,6 +91,10 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .team-member:hover {
