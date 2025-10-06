@@ -8,7 +8,7 @@
   animation-timeline: scroll(root);
   animation-range: 0 200px;
   z-index: 2;
-  backdrop-filter: blur(10px); /* Efecto translúcido */
+  background-color: rgba(35, 34, 80, 0.8); /* Fondo semitransparente en lugar de blur */
 }
 
 .header__wrapper {
@@ -140,7 +140,7 @@
 
 @keyframes scrolling-header {
   to {
-    backdrop-filter: blur(30px);
+    background-color: rgba(35, 34, 80, 0.9); /* Fondo más oscuro al hacer scroll */
     box-shadow: 0px -2px 20px 1px rgba(0, 0, 0, 0.25);
     border-bottom: 1px solid #2b539e;
   }
@@ -174,13 +174,12 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(35, 34, 80, 0.95);
+    background-color: rgba(35, 34, 80, 0.98); /* Fondo más oscuro para mejor legibilidad */
     position: absolute;
     top: 100%;
     left: 0;
     padding: 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(15px);
     z-index: 10;
     border-radius: 0 0 15px 15px;
   }

@@ -26,8 +26,20 @@ body {
 
 .container {
   max-width: 1250px;
-  padding: 10px;
+  padding: 15px;
   margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
 }
 
 .title {

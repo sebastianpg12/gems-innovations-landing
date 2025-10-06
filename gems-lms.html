@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEMS LMS - Transformando la Educación Digital con IA</title>
+    <meta name="description" content="Plataforma educativa de vanguardia que reinventa completamente la experiencia de aprendizaje en entornos digitales con inteligencia artificial y diseño moderno.">
+    <meta name="keywords" content="LMS, educación digital, plataforma educativa, IA en educación, aprendizaje digital, plataforma de cursos, sistema de gestión de aprendizaje">
+    <link rel="canonical" href="https://gems-innovations.com/gems-lms.html">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/lms.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GEMS LMS - Transformando la Educación Digital con IA">
+    <meta property="og:description" content="Reinventa la experiencia de aprendizaje con nuestra plataforma educativa potenciada con IA. Diseño moderno, personalización y herramientas colaborativas avanzadas.">
+    <meta property="og:image" content="https://gems-innovations.com/assets/images/lms-og.jpg">
+    <meta property="og:url" content="https://gems-innovations.com/gems-lms.html">
+    <meta property="og:type" content="website">
+</head>
+
+<body>
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" title="Ir al inicio">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="assets/js/scroll.js"></script>
+
+    <header class="header">
+        <div class="header__wrapper container">
+            <div class="header__title">
+                <img src="./assets/images/brand.webp" alt="Logo de Gems Innovations" class="header__brand">
+                <span>GEMS Innovations</span>
+            </div>
+            <button class="header__toggle" aria-label="Abrir menú">&#9776;</button>
+            <nav class="header__nav-container">
+                <ul class="header__nav">
+                    <li class="header__item"><a href="./index.html" style="color: white; text-decoration: none;">Inicio</a></li>
+                    <li class="header__item header__item--submenu">
+                        <span class="header__link">Servicios <span class="submenu-toggle">▼</span></span>
+                        <ul class="header__submenu">
+                            <li><a href="./index.html#solutions">Desarrollo Web</a></li>
+                            <li><a href="./index.html#solutions">Aplicaciones Móviles</a></li>
+                            <li><a href="./index.html#solutions">Automatización</a></li>
+                            <li><a href="./index.html#solutions">Marketing Digital</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__item header__item--submenu">
+                        <span class="header__link">Productos <span class="submenu-toggle">▼</span></span>
+                        <ul class="header__submenu">
+                            <li><a href="./gems-sales-assistant.html">Gems Sales Assistant</a></li>
+                            <li><a href="./gems-lms.html">GEMS LMS</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__button-container">
+                <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos</a>
+            </div>
+        </div>
+        <!-- Cursor personalizado -->
+        <div class="cursor"></div>
+    </header>
+
+    <script src="assets/js/menu.js"></script>
+
+    <main>
+        <!-- Hero Section - First section with GEMS LMS intro -->
+        <section class="hero background">
+            <div class="hero__container container mobile-container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Nuevo Producto</span>
+                    </div>
+                    <h1 class="hero__title">
+                        GEMS LMS
+                    </h1>
+                    <h2 class="hero__subtitle">
+                        Transformando la Educación Digital
+                    </h2>
+                    <p class="hero__description">
+                        Plataforma educativa de vanguardia que reinventa completamente la experiencia de aprendizaje en entornos digitales. Combina un diseño moderno e intuitivo con potentes herramientas de inteligencia artificial para crear un ecosistema educativo completo y adaptativo.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="https://walink.co/c802b5" target="_blank" class="button button--primary">
+                            <i class="fas fa-rocket"></i> Solicitar Demo Gratis
+                        </a>
+                        <a href="#features" class="button button--secondary">
+                            <i class="fas fa-play"></i> Ver Características
+                        </a>
+                    </div>
+                    <div class="hero__stats">
+                        <div class="stat">
+                            <div class="stat__number">+95%</div>
+                            <div class="stat__label">Satisfacción usuarios</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">+60%</div>
+                            <div class="stat__label">Mejora en aprendizaje</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat__number">24/7</div>
+                            <div class="stat__label">Disponibilidad</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="lms-mockup">
+                        <div class="lms-screen">
+                            <div class="lms-interface">
+                                <div class="lms-header">
+                                    <div class="lms-logo">
+                                        <img src="./assets/images/icons/gemslms.png" alt="GEMS LMS Logo">
+                                        <span>GEMS LMS</span>
+                                    </div>
+                                    <div class="lms-nav">
+                                        <span class="active">Cursos</span>
+                                        <span>Calendario</span>
+                                        <span>Mensajes</span>
+                                        <span>Perfil</span>
+                                    </div>
+                                </div>
+                                <div class="lms-content">
+                                    <div class="lms-sidebar">
+                                        <div class="sidebar-item">
+                                            <i class="fas fa-book"></i>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <i class="fas fa-tasks"></i>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <i class="fas fa-certificate"></i>
+                                        </div>
+                                    </div>
+                                    <div class="lms-main">
+                                        <div class="lms-main-header">
+                                            <h3><i class="fas fa-book"></i> Mis Cursos</h3>
+                                        </div>
+                                        <div class="course-grid">
+                                            <div class="course-card">
+                                                <div class="course-progress">75%</div>
+                                                <h4>Desarrollo Web Frontend</h4>
+                                                <p>Aprende HTML5, CSS3 y JavaScript</p>
+                                            </div>
+                                            <div class="course-card">
+                                                <div class="course-progress">40%</div>
+                                                <h4>Python para Data Science</h4>
+                                                <p>Análisis de datos con Python</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Showcase Section - Second position -->
+        <section class="video-showcase background">
+            <div class="container mobile-container">
+                <div class="section-header">
+                    <h2 class="title">GEMS en Acción</h2>
+                    <p class="section-description">
+                        Observa cómo nuestra plataforma educativa transforma el aprendizaje digital en una experiencia inmersiva y efectiva
+                    </p>
+                </div>
+                
+                <div class="video-showcase__container">
+                    <div class="video-player">
+                        <div class="video-wrapper" id="videoWrapper">
+                            <div class="video-overlay">
+                                <div class="video-highlight" id="highlight1">
+                                    <span class="highlight-label">1. Interfaz intuitiva</span>
+                                </div>
+                                <div class="video-highlight" id="highlight2">
+                                    <span class="highlight-label">2. Evaluación IA</span>
+                                </div>
+                                <div class="video-highlight" id="highlight3">
+                                    <span class="highlight-label">3. Personalización avanzada</span>
+                                </div>
+                            </div>
+                            <iframe id="gemsDemoVideo" src="https://www.youtube.com/embed/pZcck5DS6HM?autoplay=1&mute=1&controls=0&loop=1&playlist=pZcck5DS6HM" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-features">
+                        <h3>Descubre la diferencia GEMS</h3>
+                        <ul class="video-feature-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Interfaz moderna con alto contraste para mejor legibilidad</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sistema de navegación intuitivo que reduce la curva de aprendizaje</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Evaluaciones automatizadas con retroalimentación instantánea</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Adaptación del contenido según el ritmo de cada estudiante</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <span>Integración con herramientas externas y dispositivos móviles</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features container mobile-container">
+            <div class="section-header">
+                <h2 class="title">Características Principales</h2>
+                <p class="section-description">
+                    GEMS LMS representa un salto evolutivo en la educación digital, combinando tecnología de punta con diseño centrado en el usuario
+                </p>
+            </div>
+            
+            <div class="features__grid">
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="feature__title">Gestión Curricular Avanzada</h3>
+                    <p class="feature__description">
+                        Crea rutas de aprendizaje interactivas y personalizadas. Organiza contenidos con visualización jerárquica y sistema de documentación integrado.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="feature__title">Herramientas para Educadores</h3>
+                    <p class="feature__description">
+                        Panel centralizado, notificaciones configurables, evaluación automática y estadísticas detalladas de rendimiento estudiantil.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature__title">Interacción y Colaboración</h3>
+                    <p class="feature__description">
+                        Chat interno, integración con WhatsApp, actividades colaborativas por equipos y foros de discusión temáticos moderados.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="feature__title">Adaptabilidad y Personalización</h3>
+                    <p class="feature__description">
+                        Perfiles personalizables, temas ajustables con modo oscuro, dashboards configurables y controles de accesibilidad mejorados.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="feature__title">Inteligencia Artificial</h3>
+                    <p class="feature__description">
+                        Personalización del aprendizaje mediante IA, recomendaciones de recursos, análisis predictivo y adaptación a diferentes estilos de aprendizaje.
+                    </p>
+                </div>
+
+                <div class="feature__card">
+                    <div class="feature__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature__title">Seguridad y Cumplimiento</h3>
+                    <p class="feature__description">
+                        Protección de datos educativos, cumplimiento con normativas internacionales y controles de privacidad avanzados.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it Works Section -->
+        <section class="how-it-works background">
+            <div class="container mobile-container">
+                <div class="section-header">
+                    <h2 class="title">Características Innovadoras</h2>
+                    <p class="section-description">
+                        GEMS LMS incorpora tecnologías de vanguardia que transforman completamente la experiencia de enseñanza y aprendizaje
+                    </p>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <div class="step__number">1</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Experiencia de Usuario Inmersiva</h3>
+                            <p class="step__description">
+                                Interfaz intuitiva con modo oscuro y claro, accesibilidad mejorada y diseño adaptable a cualquier dispositivo para una experiencia de aprendizaje sin fricción.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step__number">2</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Asistente IA para Aprendizaje</h3>
+                            <p class="step__description">
+                                Inteligencia artificial que revisa tareas, código y proporciona retroalimentación instantánea, adaptando el contenido al ritmo y estilo de aprendizaje de cada estudiante.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step__number">3</div>
+                        <div class="step__content">
+                            <h3 class="step__title">Integración con WhatsApp</h3>
+                            <p class="step__description">
+                                Recibe notificaciones, entrega tareas y consulta al asistente IA directamente desde WhatsApp, manteniendo el aprendizaje accesible desde cualquier lugar.
+                            </p>
+                        </div>
+                        <div class="step__visual">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing container mobile-container">
+            <div class="section-header">
+                <h2 class="title">Planes y Precios</h2>
+                <p class="section-description">
+                    Soluciones adaptadas para diferentes necesidades educativas, desde pequeñas academias hasta grandes instituciones
+                </p>
+            </div>
+
+            <div class="pricing__grid">
+                <div class="pricing__card">
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Básico</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">300,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Hasta 100 estudiantes</li>
+                        <li><i class="fas fa-check"></i> 5 profesores</li>
+                        <li><i class="fas fa-check"></i> 10 cursos simultáneos</li>
+                        <li><i class="fas fa-check"></i> Herramientas básicas</li>
+                        <li><i class="fas fa-check"></i> Soporte por email</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--outline">Empezar Prueba</a>
+                </div>
+
+                <div class="pricing__card pricing__card--featured">
+                    <div class="pricing__badge">Más Popular</div>
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Institucional</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">750,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Hasta 500 estudiantes</li>
+                        <li><i class="fas fa-check"></i> 25 profesores</li>
+                        <li><i class="fas fa-check"></i> Cursos ilimitados</li>
+                        <li><i class="fas fa-check"></i> Todas las características</li>
+                        <li><i class="fas fa-check"></i> Integración con WhatsApp</li>
+                        <li><i class="fas fa-check"></i> Soporte prioritario</li>
+                        <li><i class="fas fa-check"></i> Personalización de marca</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--primary">Empezar Ahora</a>
+                </div>
+
+                <div class="pricing__card">
+                    <div class="pricing__header">
+                        <h3 class="pricing__title">Enterprise</h3>
+                        <div class="pricing__price">
+                            <span class="currency">$</span>
+                            <span class="amount">1,500,000</span>
+                            <span class="period">/mes</span>
+                        </div>
+                        <p class="pricing__currency-note">COP (Pesos Colombianos)</p>
+                    </div>
+                    <ul class="pricing__features">
+                        <li><i class="fas fa-check"></i> Estudiantes ilimitados</li>
+                        <li><i class="fas fa-check"></i> Profesores ilimitados</li>
+                        <li><i class="fas fa-check"></i> API personalizada</li>
+                        <li><i class="fas fa-check"></i> IA avanzada</li>
+                        <li><i class="fas fa-check"></i> Implementación a medida</li>
+                        <li><i class="fas fa-check"></i> Soporte 24/7</li>
+                        <li><i class="fas fa-check"></i> Consultoría educativa</li>
+                    </ul>
+                    <a href="https://walink.co/c802b5" target="_blank" class="button button--outline">Contactar Ventas</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Impact Section -->
+        <section class="impact background">
+            <div class="container mobile-container">
+                <div class="section-header">
+                    <h2 class="title">Impacto Educativo</h2>
+                    <p class="section-description">
+                        GEMS LMS no es solo una herramienta tecnológica, sino un motor de transformación educativa
+                    </p>
+                </div>
+                
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-universal-access"></i>
+                        </div>
+                        <h3>Democratiza la Educación</h3>
+                        <p>Facilita el acceso a educación de calidad a través de una plataforma intuitiva y accesible para todos.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Potencia a Educadores</h3>
+                        <p>Proporciona herramientas avanzadas que permiten a los profesores enfocarse en lo importante: enseñar.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>Aprendizaje Personalizado</h3>
+                        <p>Se adapta a diferentes ritmos y estilos de aprendizaje, maximizando el potencial de cada estudiante.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Fomenta la Colaboración</h3>
+                        <p>Facilita la comunicación y trabajo en equipo entre todos los participantes del proceso educativo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta background">
+            <div class="container mobile-container">
+                <div class="cta__content">
+                    <h2 class="cta__title">Transforma la Experiencia Educativa</h2>
+                    <p class="cta__description">
+                        Únete a las instituciones educativas que ya están revolucionando su enseñanza con GEMS LMS.
+                        Prueba gratis por 30 días sin compromiso.
+                    </p>
+                    <div class="cta__actions">
+                        <a href="https://walink.co/c802b5" target="_blank" class="button button--primary button--large">
+                            <i class="fas fa-rocket"></i> Solicitar Demo Gratis
+                        </a>
+                        <div class="cta__guarantee">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>30 días gratis • Sin compromiso • Soporte incluido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content container">
+            <!-- Footer Brand Section -->
+            <div class="footer__brand">
+                <h3>Gems Innovations</h3>
+                <p>Soluciones tecnológicas para la optimización de procesos empresariales y el crecimiento de tu negocio.</p>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=61566125934892" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/gemsinnovations/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/gems-innovations/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+                <p>2025 &copy; Todos los derechos reservados</p>
+            </div>
+
+            <!-- Footer Links Section 1 -->
+            <div class="footer__links">
+                <h3 class="text-white font-semibold mb-4">Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html#about">Sobre nosotros</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="#">Términos del servicio</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Links Section 2 -->
+            <div class="footer__links">
+                <h3 class="text-white font-semibold mb-4">Contáctanos</h3>
+                <ul>
+                    <li><a href="./index.html#solutions">Servicios</a></li>
+                    <li><a href="./gems-sales-assistant.html">Productos</a></li>
+                    <li><a href="#">Únete a nuestro equipo</a></li>
+                    <li><a href="https://walink.co/c802b5" target="_blank">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <p>Desarrollado por <a href="https://gems-innovations.com">@gemsinnovations</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/video-showcase.js"></script>
+    
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'ceRAE47tRGAzSEyRv';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+</body>
+</html>

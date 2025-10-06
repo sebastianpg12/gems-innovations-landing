@@ -1,0 +1,160 @@
+/* Efectos cósmicos para la sección del equipo */
+.cosmic-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  overflow: hidden;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  filter: blur(0.5px);
+  opacity: 0;
+  animation: twinkle var(--duration, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: var(--opacity, 0.8); }
+}
+
+.cosmic-badge {
+  position: relative;
+  display: inline-block;
+}
+
+.cosmic-badge::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, 
+    rgba(0, 123, 255, 0.2) 10%, 
+    rgba(0, 123, 255, 0.1) 50%, 
+    rgba(0, 123, 255, 0) 70%);
+  animation: pulseBadge 3s ease-in-out infinite;
+  z-index: -1;
+  transform: scale(1.5);
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1.5); opacity: 0.3; }
+  50% { transform: scale(1.8); opacity: 0.5; }
+}
+
+.team-member__badge i {
+  position: relative;
+  z-index: 1;
+}
+
+/* Clase para los iconos espaciales - centrados y optimizados */
+.team-member__badge .fa-star {
+  color: #FFD700;
+  text-shadow: 0 0 5px #FFD700, 0 0 10px rgba(255, 215, 0, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.team-member__badge .fa-globe {
+  color: #80D8FF;
+  text-shadow: 0 0 5px #80D8FF, 0 0 10px rgba(128, 216, 255, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.team-member__badge .fa-rocket {
+  color: #90CAF9;
+  text-shadow: 0 0 5px #90CAF9, 0 0 10px rgba(144, 202, 249, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: auto;
+  height: auto;
+}
+
+.team-member__badge .fa-meteor {
+  color: #B39DDB;
+  text-shadow: 0 0 5px #B39DDB, 0 0 10px rgba(179, 157, 219, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.team-member__badge .fa-space-shuttle {
+  color: #FFF176;
+  text-shadow: 0 0 5px #FFF176, 0 0 10px rgba(255, 241, 118, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+.team-member__badge .fa-lightbulb {
+  color: #F48FB1;
+  text-shadow: 0 0 5px #F48FB1, 0 0 10px rgba(244, 143, 177, 0.5);
+  font-size: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+}
+
+/* Partículas cósmicas flotantes */
+.cosmic-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(135deg, #007bff, #64b5f6);
+  border-radius: 50%;
+  filter: blur(0.5px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  animation: floatParticle var(--duration, 15s) linear var(--delay, 0s) infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    opacity: 0;
+    transform: translate(var(--x-start, 0), var(--y-start, 0)) scale(0.2);
+  }
+  20% {
+    opacity: var(--opacity, 0.3);
+  }
+  80% {
+    opacity: var(--opacity, 0.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x-end, 100px), var(--y-end, -100px)) scale(0.5);
+  }
+}

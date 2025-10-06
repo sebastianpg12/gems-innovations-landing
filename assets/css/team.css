@@ -1,41 +1,51 @@
-/* Estilos generales para la sección del equipo */
+/* Estilos generales para la sección del equipo - estilo innovador y animado */
 .team-section {
-  padding: 100px 20px;
+  padding: 80px 20px;
   text-align: center;
-  margin: 150px 0;
+  margin: 60px 0;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
+  overflow: hidden;
+  min-height: 700px;
+  perspective: 1200px;
 }
 
 /* Fondo con "GEMS INNOVATIONS" */
 .team-section::before {
-  content: 'GEMS INNOVATIONS';
+  content: 'GEMS TEAM';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
+  transform: translate(-50%, -50%) rotate(-5deg);
+  font-size: 10rem;
   font-weight: 900;
-  background: linear-gradient(45deg, #e91e63, #2196f3, #e91e63, #2196f3);
-  background-size: 400% 400%;
+  background: linear-gradient(45deg, #e91e63, #2196f3);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.15;
+  opacity: 0.08;
   z-index: -1;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
-  animation: gradientShift 3s ease-in-out infinite;
+  /* Eliminamos la animación aquí para mejorar el rendimiento */
 }
 
-@keyframes gradientShift {
+@keyframes floatAnimation {
   0%, 100% {
-    background-position: 0% 50%;
+    transform: translateY(0);
   }
   50% {
-    background-position: 100% 50%;
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(33, 150, 243, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(33, 150, 243, 0.4);
   }
 }
 
@@ -43,10 +53,11 @@
   font-size: 2.8rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   position: relative;
   z-index: 1;
+  /* Eliminamos la animación para mejorar el rendimiento */
 }
 
 .team-section .title::before {
@@ -62,76 +73,330 @@
   box-shadow: 0px 0px 20px rgba(0, 123, 255, 0.6);
 }
 
-/* Estilos de la grilla del equipo - 3 arriba, 1 centrado abajo */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* Descripción del equipo */
+.team-description {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.2rem;
+  color: #eaeaea;
+  line-height: 1.6;
   position: relative;
+  z-index: 2;
+}
+
+/* Estilo del carrusel 3D - Optimizado para rendimiento */
+.team-carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
   z-index: 1;
+  overflow: hidden; /* Previene efectos no deseados fuera del contenedor */
 }
 
-/* El cuarto miembro (Sebastian) centrado en la segunda fila */
-.team-member:nth-child(4) {
-  grid-column: 2 / 3;
-  grid-row: 2;
+/* Controles del carrusel - Mejorados visualmente */
+.team-carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 20px;
+  z-index: 10;
+  position: relative;
 }
 
-.team-member {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 40px 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  text-align: center;
+.team-carousel-prev,
+.team-carousel-next {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(0, 123, 255, 0.2), rgba(100, 181, 246, 0.4));
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1.4rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  min-height: 350px;
+}
+
+/* Efecto de brillo al pasar el cursor */
+.team-carousel-prev:before,
+.team-carousel-next:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.3) 50%, 
+    rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.team-carousel-prev:hover:before,
+.team-carousel-next:hover:before {
+  left: 100%;
+}
+
+.team-carousel-prev:hover,
+.team-carousel-next:hover {
+  background: linear-gradient(135deg, #007bff, #64b5f6);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.team-carousel-indicators {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 12px;
+  margin-top: 25px;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 123, 255, 0.3);
-}
-
-/* Avatar circular */
-.team-member__avatar img {
-  width: 120px;
-  height: 120px;
+.team-carousel-indicator {
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.team-member:hover .team-member__avatar img {
-  transform: scale(1.05);
-  border-color: rgba(0, 123, 255, 0.5);
-  box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+.team-carousel-indicator.active {
+  background: linear-gradient(135deg, #64b5f6, #007bff);
+  transform: scale(1.3);
+  box-shadow: 0 0 10px #64b5f6;
 }
 
-/* Información de cada miembro */
-.team-member__info {
+/* Contenedor principal del carrusel */
+.team-carousel {
+  height: 550px;
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+/* Slides del carrusel */
+.team-slide {
+  position: absolute;
+  width: 100%;
+  max-width: 800px;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+}
+
+.team-slide.active {
+  z-index: 3;
+  opacity: 1;
+  transform: translateX(-50%) translateZ(0) scale(1);
+  pointer-events: all;
+}
+
+.team-slide.prev {
+  z-index: 2;
+  opacity: 0.7;
+  transform: translateX(-110%) translateZ(-100px) rotateY(10deg) scale(0.9);
+  filter: brightness(0.7);
+}
+
+.team-slide.next {
+  z-index: 2;
+  opacity: 0.7;
+  transform: translateX(10%) translateZ(-100px) rotateY(-10deg) scale(0.9);
+  filter: brightness(0.7);
+}
+
+.team-slide.highlight {
+  animation: pulseCard 2s infinite alternate;
+}
+
+@keyframes pulseCard {
+  0%, 100% {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 20px 70px rgba(0, 123, 255, 0.5);
+  }
+}
+
+/* Diseño del slide - Tarjeta de miembro del equipo */
+.team-member {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(0, 0, 0, 0.1));
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  text-align: left;
+  transition: all 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Efecto de brillo en el borde al estar activo - optimizado */
+.team-slide.active .team-member {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(100, 181, 246, 0.3);
+}
+
+.team-slide.active .team-member:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(45deg, #007bff, transparent, #64b5f6);
+  border-radius: 32px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  /* Eliminamos el blur y la animación para mejorar rendimiento */
+}
+
+.team-slide.active .team-member:hover:before {
+  opacity: 0.6;
+}
+
+/* Avatar con efecto 3D avanzado */
+.team-member__avatar-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.team-member__avatar {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-out;
   margin-bottom: 15px;
 }
 
+.team-member__avatar img {
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  filter: brightness(1.05);
+}
+
+.team-slide.active .team-member__avatar img {
+  transform: translateZ(20px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Efecto brillante en hover */
+.team-slide.active .team-member__avatar:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.1) 50%, 
+    rgba(255,255,255,0) 100%
+  );
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border-radius: 20px;
+  transform: rotate(-25deg) translateY(-50%);
+  pointer-events: none;
+}
+
+.team-slide.active .team-member__avatar:hover:after {
+  opacity: 1;
+  transform: rotate(-25deg) translateY(50%);
+}
+
+.team-member__badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(20, 20, 50, 0.9));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  border: 2px solid rgba(100, 181, 246, 0.6);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.4), inset 0 0 10px rgba(0, 123, 255, 0.2);
+  z-index: 3;
+  transition: all 0.3s ease;
+  transform: translateZ(30px);
+  overflow: hidden;
+}
+
+/* Asegurando que el ícono esté perfectamente centrado */
+.team-member__badge i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+}
+
+.team-slide.active .team-member__avatar:hover .team-member__badge {
+  transform: scale(1.1) translateZ(40px);
+}
+
+/* Información de cada miembro - diseño mejorado */
+.team-member__info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
 .team-member__name {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 700;
   color: #fff;
-  margin: 20px 0 10px;
+  margin: 0 0 8px;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #fff, #e0e0e0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .team-member__title {
@@ -142,52 +407,199 @@
   -webkit-text-fill-color: transparent;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 10px 0;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
 }
 
-/* Redes sociales de cada miembro */
+.team-member__official-title {
+  display: block;
+  font-size: 0.7rem;
+  color: #a0c3ff;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  opacity: 0.8;
+  text-transform: none;
+  background: none;
+  -webkit-text-fill-color: #a0c3ff;
+}
+
+.team-member__title:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #64b5f6);
+  border-radius: 3px;
+}
+
+/* Mensaje personal con efectos avanzados */
+.team-member__message {
+  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  margin: 10px 0 20px;
+  flex: 1;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.team-slide.active .team-member__message {
+  /* Eliminada la animación de flotación para mejorar rendimiento */
+  transform: translateZ(0); /* Forzar aceleración por hardware */
+}
+
+.team-member__message p {
+  color: #e0e0e0;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-style: italic;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.team-member__message::before {
+  content: '"';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.05);
+  font-family: 'Georgia', serif;
+  line-height: 1;
+}
+
+.team-member__message::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(100, 181, 246, 0.2) 0%, rgba(100, 181, 246, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Redes sociales con efectos 3D y animaciones */
 .team-member__social {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 18px;
+  margin-top: auto;
   padding: 0;
   list-style: none;
 }
 
 .team-member__social li {
   display: inline-block;
+  position: relative;
 }
 
-/* Colores degradados en los íconos de redes sociales */
+/* Eliminamos el efecto flotante para mejorar el rendimiento */
+.team-slide.active .team-member__social li {
+  transition: transform 0.3s ease;
+}
+
+.team-slide.active .team-member__social li:hover {
+  transform: translateY(-5px);
+}
+
+/* Iconos de redes sociales modernos */
 .team-member__social a {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.team-member__social a i {
   font-size: 1.3rem;
   background: linear-gradient(135deg, #007bff, #64b5f6);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
-  padding: 8px;
-  border-radius: 8px;
-  display: inline-block;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+/* Efecto de brillo al pasar el mouse */
+.team-member__social a:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255,255,255,0) 0%, 
+    rgba(255,255,255,0.2) 50%, 
+    rgba(255,255,255,0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: all 0.75s ease;
 }
 
 .team-member__social a:hover {
-  transform: scale(1.1);
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.15), rgba(100, 181, 246, 0.15));
+  border-color: rgba(100, 181, 246, 0.3);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 0 0 5px rgba(100, 181, 246, 0.1);
+}
+
+.team-member__social a:hover:before {
+  left: 100%;
+}
+
+.team-member__social a:hover i {
   background: linear-gradient(135deg, #64b5f6, #007bff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(1.2);
 }
 
-/* Responsividad */
-/* Responsividad mejorada */
-/* Responsive mejorado */
+/* Responsividad adaptada al nuevo carrusel 3D */
+@media (max-width: 1200px) {
+  .team-carousel {
+    height: 500px;
+  }
+  
+  .team-member {
+    grid-template-columns: 1fr 1.5fr;
+    padding: 30px;
+    gap: 15px;
+  }
+  
+  .team-member__avatar img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
 @media (max-width: 1024px) {
   .team-section {
-    padding: 80px 15px;
-    margin: 120px 0;
+    padding: 70px 15px;
+    margin: 60px 0;
   }
   
   .team-section::before {
@@ -196,32 +608,79 @@
   
   .team-section .title {
     font-size: 2.4rem;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
   }
   
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto;
-    gap: 25px;
+  .team-description {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .team-carousel {
+    height: 700px;
+  }
+  
+  .team-slide {
     max-width: 700px;
   }
   
-  .team-member:nth-child(4) {
-    grid-column: 1 / 3;
-    grid-row: 3;
-    max-width: 320px;
+  .team-member {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+  }
+  
+  .team-member__avatar-container {
     margin: 0 auto;
   }
   
-  .team-member {
-    padding: 35px 25px;
+  .team-member__avatar {
+    margin: 0 auto 10px;
+  }
+  
+  .team-member__title:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team-member__official-title {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.65rem;
+  }
+  
+  .team-member__message {
+    text-align: center;
+    margin: 15px auto;
+    width: 100%;
+  }
+  
+  .team-member__message p {
+    text-align: center;
+  }
+  
+  .team-member__social {
+    justify-content: center;
+  }
+  
+  .team-slide.prev {
+    transform: translateX(-80%) translateZ(-80px) rotateY(10deg) scale(0.85);
+    display: none;
+  }
+  
+  .team-slide.next {
+    transform: translateX(0%) translateZ(-80px) rotateY(-10deg) scale(0.85);
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .team-section {
     padding: 60px 15px;
-    margin: 80px 0;
+    margin: 50px 0;
   }
   
   .team-section::before {
@@ -230,43 +689,87 @@
   
   .team-section .title {
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
   
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .team-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
   }
   
-  .team-member:nth-child(4) {
-    grid-column: 1;
-    grid-row: auto;
+  .team-carousel {
+    height: 650px;
+  }
+  
+  .team-slide {
+    max-width: 90%;
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+  
+  .team-slide.prev, .team-slide.next {
+    display: none !important;
+    opacity: 0;
   }
   
   .team-member {
-    padding: 30px 20px;
-    max-width: 350px;
-    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    gap: 10px;
   }
   
   .team-member__avatar img {
-    width: 100px;
-    height: 100px;
+    width: 140px;
+    height: 140px;
+  }
+  
+  .team-member__avatar {
+    margin-bottom: 5px;
+  }
+  
+  .team-member__badge {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    right: -10px;
+    bottom: -10px;
   }
   
   .team-member__name {
-    font-size: 1.3rem;
+    font-size: 1.7rem;
   }
   
   .team-member__title {
-    font-size: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .team-member__official-title {
+    font-size: 0.6rem;
+    margin-top: 3px;
+  }
+  
+  .team-member__message {
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .team-member__message p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+  
+  .team-carousel-controls {
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .team-section {
     padding: 40px 10px;
-    margin: 60px 0;
+    margin: 40px 0;
+    min-height: 580px;
   }
   
   .team-section::before {
@@ -275,24 +778,72 @@
   
   .team-section .title {
     font-size: 1.7rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .team-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  
+  .team-carousel {
+    height: 600px;
+  }
+  
+  .team-slide {
+    max-width: 100%;
+    padding: 0 10px;
   }
   
   .team-member {
-    padding: 25px 15px;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0;
+    gap: 8px;
   }
   
   .team-member__avatar img {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
+    border-radius: 15px;
+  }
+  
+  .team-member__avatar {
+    margin-bottom: 0;
+  }
+  
+  .team-member__badge {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+    right: -5px;
+    bottom: -5px;
   }
   
   .team-member__name {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
   
   .team-member__title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .team-member__official-title {
+    font-size: 0.55rem;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+    line-height: 1.3;
+  }
+  
+  .team-member__message {
+    padding: 15px;
+    margin: 10px 0;
+  }
+  
+  .team-member__message p {
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
   
   .team-member__social {
@@ -302,6 +853,26 @@
   .team-member__social a {
     width: 35px;
     height: 35px;
-    font-size: 0.9rem;
+  }
+  
+  .team-member__social a i {
+    font-size: 1rem;
+  }
+  
+  .team-carousel-prev,
+  .team-carousel-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .team-carousel-indicators {
+    gap: 8px;
+    padding: 8px 15px;
+  }
+  
+  .team-carousel-indicator {
+    width: 12px;
+    height: 12px;
   }
 }

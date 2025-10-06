@@ -1,7 +1,7 @@
 /* Marketing Services Section */
 .marketing-services {
   padding: 100px 0;
-  margin: 150px 0;
+  margin: 0;
   position: relative;
   overflow-x: hidden;
 }
@@ -65,8 +65,8 @@
 
 .marketing-item {
   background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
   border-radius: 20px;
   padding: 40px 30px;
   text-align: center;
@@ -132,7 +132,7 @@
 @media (max-width: 1024px) {
   .marketing-services {
     padding: 80px 0;
-    margin: 120px 0;
+    margin: 0;
   }
   
   .marketing-services::before {
@@ -163,7 +163,7 @@
 @media (max-width: 768px) {
   .marketing-services {
     padding: 60px 0;
-    margin: 80px 0;
+    margin: 0;
     overflow-x: hidden;
   }
   
@@ -199,7 +199,7 @@
 @media (max-width: 480px) {
   .marketing-services {
     padding: 40px 0;
-    margin: 60px 0;
+    margin: 0;
     overflow-x: hidden;
   }
   

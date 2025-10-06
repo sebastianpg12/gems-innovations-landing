@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>GEMS LMS Education Icon</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient">
+            <stop stop-color="#c084fc" offset="0%"></stop>
+            <stop stop-color="#9333ea" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M12,3 L22,8 L12,13 L2,8 L12,3 Z M5.4,9.4 L5.4,14.8 C5.4,16.31 8.4,17.4 12,17.4 C15.6,17.4 18.6,16.31 18.6,14.8 L18.6,9.4 L12,13 L5.4,9.4 Z M5,19 L5,15 L3,15 L3,19 C3,19.55 3.45,20 4,20 L20,20 C20.55,20 21,19.55 21,19 L21,15 L19,15 L19,19 L5,19 Z" fill="url(#linearGradient)"></path>
+    </g>
+</svg>
