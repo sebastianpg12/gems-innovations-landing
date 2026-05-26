@@ -163,9 +163,21 @@
         <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20hablar%20sobre%20GEMS%20Hub" target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GEMS%20Hub" target="_blank" class="btn btn-primary">Agendar demo</a>
       </div>
+      <button class="g-nav__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+<div class="g-nav__mobile" id="mobileMenu">
+  <a href="./index.html">Inicio</a>
+  <a href="#modulos">Módulos</a>
+  <a href="#faq">FAQ</a>
+  <div class="g-nav__mobile-cta">
+    <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20hablar%20sobre%20GEMS%20Hub" target="_blank" class="btn btn-primary" style="justify-content:center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20agendar%20una%20demo%20de%20GEMS%20Hub" target="_blank" class="btn btn-ghost" style="justify-content:center;">Agendar demo</a>
+  </div>
+</div>
 
 <!-- ── HERO ────────────────────────────────────────────────────────────── -->
 <section class="hub-hero">
@@ -287,27 +299,6 @@
   </div>
 </section>
 
-<!-- ── COMPARATIVA ──────────────────────────────────────────────────────── -->
-<section class="hub-section" id="precios">
-  <div class="container">
-    <div class="sh center"><div class="sh-label">Comparativa</div><h2 class="sh-title">Deja de pagar de más</h2><p class="sh-sub">Obtén todo lo que necesitas a una fracción del costo de las alternativas enterprise.</p></div>
-    <div class="hub-pricing-wrap">
-      <table class="hub-pricing-table">
-        <thead>
-          <tr><th></th><th class="hub-col-gems" style="color:var(--purple-light)">⚡ GEMS Hub</th><th>HubSpot Pro</th><th>Salesforce</th></tr>
-        </thead>
-        <tbody>
-          <tr><td style="text-align:left;color:var(--text-2)">Precio / mes</td><td class="hub-col-gems"><span class="hub-price-highlight">Desde $0</span></td><td>~$800</td><td>~$1.500</td></tr>
-          <tr><td style="text-align:left;color:var(--text-2)">Módulos operativos</td><td class="hub-col-gems"><i class="fas fa-check-circle hub-check"></i> Completos</td><td><i class="fas fa-times-circle hub-cross"></i> Solo ventas</td><td><i class="fas fa-times-circle hub-cross"></i> Solo enterprise</td></tr>
-          <tr><td style="text-align:left;color:var(--text-2)">Personalización</td><td class="hub-col-gems"><i class="fas fa-check-circle hub-check"></i> Total</td><td><i class="fas fa-exclamation-circle hub-warn"></i> Limitada</td><td><i class="fas fa-exclamation-circle hub-warn"></i> Costosa</td></tr>
-          <tr><td style="text-align:left;color:var(--text-2)">En español nativo</td><td class="hub-col-gems"><i class="fas fa-check-circle hub-check"></i></td><td><i class="fas fa-times-circle hub-cross"></i></td><td><i class="fas fa-times-circle hub-cross"></i></td></tr>
-          <tr><td style="text-align:left;color:var(--text-2)">Propiedad del sistema</td><td class="hub-col-gems"><i class="fas fa-check-circle hub-check"></i> Tuya</td><td><i class="fas fa-times-circle hub-cross"></i> Del vendor</td><td><i class="fas fa-times-circle hub-cross"></i> Del vendor</td></tr>
-          <tr><td style="text-align:left;color:var(--text-2)">Soporte directo</td><td class="hub-col-gems"><i class="fas fa-check-circle hub-check"></i> WhatsApp directo</td><td><i class="fas fa-exclamation-circle hub-warn"></i> Tickets con espera</td><td><i class="fas fa-exclamation-circle hub-warn"></i> Planes adicionales</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
 
 <!-- ── CÓMO FUNCIONA ────────────────────────────────────────────────────── -->
 <section class="hub-section hub-section-alt">
@@ -439,6 +430,18 @@
     document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 300);
   });
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }));
 
   function toggleFaq(el) {
     const item = el.parentElement;

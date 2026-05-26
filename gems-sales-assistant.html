@@ -111,9 +111,22 @@
         <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary">Demo gratis</a>
       </div>
+      <button class="g-nav__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+<div class="g-nav__mobile" id="mobileMenu">
+  <a href="./index.html">Inicio</a>
+  <a href="#features">Características</a>
+  <a href="#como-funciona">Cómo funciona</a>
+  <a href="#precios">Precios</a>
+  <div class="g-nav__mobile-cta">
+    <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary" style="justify-content:center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost" style="justify-content:center;">Demo gratis</a>
+  </div>
+</div>
 
 <!-- ── HERO ────────────────────────────────────────────────────────────── -->
 <section class="sa-hero">
@@ -359,6 +372,19 @@
     document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 300);
   });
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }));
+
   const ro = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
   }, {threshold: 0.1});

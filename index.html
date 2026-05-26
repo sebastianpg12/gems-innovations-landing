@@ -45,9 +45,22 @@
         <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary">Agendar demo</a>
       </div>
+      <button class="g-nav__hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+<div class="g-nav__mobile" id="mobileMenu">
+  <a href="#servicios">Servicios</a>
+  <a href="#productos">Productos</a>
+  <a href="#marketing">Marketing</a>
+  <a href="#equipo">Equipo</a>
+  <div class="g-nav__mobile-cta">
+    <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary" style="justify-content:center;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost" style="justify-content:center;">Agendar demo</a>
+  </div>
+</div>
 
 <!-- ── HERO ────────────────────────────────────────────────────────────── -->
 <section class="g-hero">
@@ -482,6 +495,18 @@
 
   // Scroll to top
   document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Mobile hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  }));
 
   // Scroll reveal
   const ro = new IntersectionObserver(entries => {
