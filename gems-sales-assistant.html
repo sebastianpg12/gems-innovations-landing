@@ -9,6 +9,7 @@
     <link rel="canonical" href="https://gems-innovations.com/gems-sales-assistant.html">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/sales-assistant.css">
+    <link rel="stylesheet" href="./assets/css/enhancements.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -52,6 +53,7 @@
                         <ul class="header__submenu">
                             <li><a href="./gems-sales-assistant.html">Gems Sales Assistant</a></li>
                             <li><a href="./gems-lms.html">GEMS LMS</a></li>
+                            <li><a href="./gems-hub.html">GEMS Hub</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -408,6 +410,15 @@
             <p>Desarrollado por <a href="https://gems-innovations.com">@gemsinnovations</a></p>
         </div>
     </footer>
+
+    <script>
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    </script>
 
     <script>
         (function(d, w, c) {

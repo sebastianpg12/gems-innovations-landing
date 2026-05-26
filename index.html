@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/cosmos.css">
     <link rel="stylesheet" href="./assets/css/badge-enhancements.css">
+    <link rel="stylesheet" href="./assets/css/enhancements.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -79,6 +80,7 @@
               <ul class="header__submenu">
                 <li><a href="./gems-sales-assistant.html">Gems Sales Assistant</a></li>
                 <li><a href="./gems-lms.html">GEMS LMS</a></li>
+                <li><a href="./gems-hub.html">GEMS Hub</a></li>
               </ul>
             </li>
             <li class="header__item header__item--submenu">
@@ -106,15 +108,36 @@
       <section class="background">
         <div class="home container">
           <article>
+            <div class="product-badge" style="margin-bottom:20px;">
+              <i class="fas fa-rocket"></i> Innovación · Tecnología · Resultados
+            </div>
             <h1 class="home__title">
               Innovación tecnológica para tu negocio
             </h1>
             <p class="home__description">
               En Gems Innovations, ofrecemos soluciones tecnológicas personalizadas que ayudan a las empresas a mejorar sus procesos, optimizar recursos y potenciar su crecimiento.
             </p>
-            <a href="https://walink.co/c802b5" target="_blank" class="button">
-              <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-            </a>   </article>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
+              <a href="https://walink.co/c802b5" target="_blank" class="button button--cta-primary">
+                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
+              </a>
+              <a href="#solutions" class="button button--secondary">Ver nuestros servicios</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat__number">3+</span>
+                <span class="hero-stat__label">Productos propios</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat__number">100%</span>
+                <span class="hero-stat__label">En español nativo</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat__number">24/7</span>
+                <span class="hero-stat__label">Soporte directo</span>
+              </div>
+            </div>
+          </article>
           <img class="home__gif" src="./assets/images/brand.webp" alt="Logo de Gems Innovations">
         </div>
       </section>
@@ -122,7 +145,7 @@
       <section id="solutions" class="container solutions">
         <h2 class="title">Soluciones</h2>
         <section class="solutions__container">
-          <article class="solutions__item">
+          <article class="solutions__item reveal">
             <div class="solutions__gif">
               <img src="assets/images/web.webp" alt="Icono de Desarrollo Web">
             </div>
@@ -131,7 +154,7 @@
               <p>Desarrollamos sitios web optimizados y modernos que te ayudarán a mejorar la presencia digital de tu empresa.</p>
             </div>
           </article>
-          <article class="solutions__item">
+          <article class="solutions__item reveal reveal-delay-1">
             <div class="solutions__gif">
               <img src="./assets/images/app.webp" alt="Icono de Aplicaciones Móviles">
             </div>
@@ -140,7 +163,7 @@
               <p>Nuestras aplicaciones móviles personalizadas proporcionan soluciones a medida para optimizar tus procesos y llegar a más clientes.</p>
             </div>
           </article>
-          <article class="solutions__item">
+          <article class="solutions__item reveal reveal-delay-2">
             <div class="solutions__gif">
               <img src="assets/images/auto.webp" alt="Icono de Automatización">
             </div>
@@ -149,7 +172,7 @@
               <p>Automatizamos procesos empresariales clave, mejorando la eficiencia y reduciendo costos operativos.</p>
             </div>
           </article>
-          <article class="solutions__item">
+          <article class="solutions__item reveal reveal-delay-3">
             <div class="solutions__gif">
               <img src="assets/images/marketing.webp" alt="Icono de Marketing Digital">
             </div>
@@ -164,11 +187,13 @@
       <section class="container products">
         <h2 class="title">Nuestros Productos</h2>
         <section class="products__container">
-          <article class="products__item">
+
+          <article class="products__item reveal">
             <div class="products__image">
               <img src="assets/images/whatsapp-bot.svg" alt="Gems Sales Assistant - Bot de WhatsApp con IA">
             </div>
             <div class="products__content">
+              <div class="product-badge"><i class="fas fa-robot"></i> IA · WhatsApp</div>
               <h3 class="title__card">Gems Sales Assistant</h3>
               <p class="products__description">
                 Asistente de ventas inteligente para WhatsApp Business. Automatiza respuestas, gestiona conversaciones y aumenta tus ventas con IA personalizada para tu negocio.
@@ -187,12 +212,13 @@
               </div>
             </div>
           </article>
-          
-          <article class="products__item">
+
+          <article class="products__item reveal reveal-delay-1">
             <div class="products__image">
               <img src="assets/images/icons/gemslms.png" alt="GEMS LMS - Plataforma educativa con IA">
             </div>
             <div class="products__content">
+              <div class="product-badge badge-new"><i class="fas fa-graduation-cap"></i> Educación · IA</div>
               <h3 class="title__card">GEMS LMS</h3>
               <p class="products__description">
                 Plataforma educativa de vanguardia que reinventa la experiencia de aprendizaje digital. Combina diseño moderno con potentes herramientas de inteligencia artificial.
@@ -211,6 +237,34 @@
               </div>
             </div>
           </article>
+
+          <article class="products__item reveal reveal-delay-2">
+            <div class="products__image">
+              <div style="width:100px;height:100px;background:linear-gradient(135deg,#7c3aed,#9f60f7);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:42px;box-shadow:0 12px 32px rgba(124,58,237,0.35);transition:transform 0.35s ease,box-shadow 0.35s ease;">
+                <i class="fas fa-gem" style="color:white;"></i>
+              </div>
+            </div>
+            <div class="products__content">
+              <div class="product-badge badge-hub"><i class="fas fa-bolt"></i> CRM · Operaciones</div>
+              <h3 class="title__card">GEMS Hub</h3>
+              <p class="products__description">
+                El sistema operativo de tu equipo de servicio. Centraliza clientes, tickets, tareas y comunicación en una sola plataforma. Sin los precios de HubSpot.
+              </p>
+              <div class="products__features">
+                <ul>
+                  <li><i class="fas fa-check"></i> Clientes, tickets y tareas</li>
+                  <li><i class="fas fa-check"></i> Chat interno del equipo</li>
+                  <li><i class="fas fa-check"></i> Reportes en tiempo real</li>
+                  <li><i class="fas fa-check"></i> IA integrada desde $0</li>
+                </ul>
+              </div>
+              <div class="products__actions">
+                <a href="./gems-hub.html" class="button">Ver Más Detalles</a>
+                <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20una%20demo%20de%20GEMS%20Hub" target="_blank" class="button button--secondary">Solicitar Demo</a>
+              </div>
+            </div>
+          </article>
+
         </section>
       </section>
 
@@ -505,6 +559,33 @@
       <script src="assets/js/carrousel-tech.js"></script>
       <script src="assets/js/team-carousel.js"></script>
       <script src="assets/js/cosmos-effects.js"></script>
+      <script>
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Products icon hover
+        document.querySelectorAll('.products__item').forEach(card => {
+          const icon = card.querySelector('.products__image div');
+          if (icon) {
+            card.addEventListener('mouseenter', () => {
+              icon.style.transform = 'scale(1.12) translateY(-6px)';
+              icon.style.boxShadow = '0 18px 40px rgba(124,58,237,0.45)';
+            });
+            card.addEventListener('mouseleave', () => {
+              icon.style.transform = '';
+              icon.style.boxShadow = '0 12px 32px rgba(124,58,237,0.35)';
+            });
+          }
+        });
+      </script>
       <footer class="footer">
         <div class="footer__content container">
           <!-- Footer Brand Section -->
