@@ -1,647 +1,513 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEMS Innovations - Innovación Tecnológica para tu Negocio</title>
-    <meta name="description" content="Gems Innovations ofrece soluciones tecnológicas personalizadas para mejorar procesos empresariales, optimizar recursos y potenciar el crecimiento de tu negocio.">
-    <meta name="keywords" content="Gems Innovations, tecnología, desarrollo web, aplicaciones móviles, automatización, marketing digital">
-    <link rel="canonical" href="https://gems-innovations.com/">
-    <link rel="stylesheet" href="./assets/css/index.css">
-    <link rel="stylesheet" href="./assets/css/cosmos.css">
-    <link rel="stylesheet" href="./assets/css/badge-enhancements.css">
-    <link rel="stylesheet" href="./assets/css/enhancements.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Gems Innovations - Innovación Tecnológica para tu Negocio">
-    <meta property="og:description" content="Ofrecemos soluciones tecnológicas personalizadas para mejorar procesos empresariales.">
-    <meta property="og:image" content="https://gems-innovations.com/assets/images/og-image.jpg">
-    <meta property="og:url" content="https://gems-innovations.com/">
-    <meta property="og:type" content="website">
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Gems Innovations - Innovación Tecnológica para tu Negocio">
-    <meta name="twitter:description" content="Ofrecemos soluciones tecnológicas personalizadas para mejorar procesos empresariales.">
-    <meta name="twitter:image" content="https://gems-innovations.com/assets/images/twitter-image.jpg">
-    <!-- Datos Estructurados -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Gems Innovations",
-      "url": "https://gems-innovations.com",
-      "logo": "https://gems-innovations.com/assets/images/brand.png",
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61566125934892",
-        "https://www.instagram.com/gemsinnovations/",
-        "https://www.linkedin.com/company/gems-innovations/"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+573001382542",
-        "contactType": "Customer Service",
-        "availableLanguage": ["Spanish", "English"]
-      }
-    }
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEMS Innovations — Tecnología que transforma tu negocio</title>
+  <meta name="description" content="Desarrollamos soluciones tecnológicas a medida — desde plataformas operativas hasta bots de IA — para que tu empresa crezca sin fricción.">
+  <meta name="keywords" content="Gems Innovations, tecnología, desarrollo web, aplicaciones móviles, automatización, marketing digital">
+  <link rel="canonical" href="https://gems-innovations.com/">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/gems-design-system.css">
+  <!-- Open Graph -->
+  <meta property="og:title" content="GEMS Innovations — Tecnología que transforma tu negocio">
+  <meta property="og:description" content="Soluciones tecnológicas personalizadas para empresas que quieren crecer.">
+  <meta property="og:url" content="https://gems-innovations.com/">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Gems Innovations","url":"https://gems-innovations.com","sameAs":["https://www.facebook.com/profile.php?id=61566125934892","https://www.instagram.com/gemsinnovations/","https://www.linkedin.com/company/gems-innovations/"]}
+  </script>
+</head>
+<body>
 
-  <body>
-    <!-- Scroll-to-Top Button -->
-    <button id="scrollToTopBtn" class="scroll-to-top" title="Ir al inicio">
-      <i class="fas fa-chevron-up"></i>
-    </button>
+<!-- Scroll to top -->
+<button class="g-scroll-top" id="scrollTop" aria-label="Ir al inicio"><i class="fas fa-chevron-up"></i></button>
 
-    <script src="assets/js/scroll.js"></script>
+<!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
+<nav class="g-nav" id="nav">
+  <div class="container">
+    <div class="g-nav__inner">
+      <a href="./index.html" class="g-nav__logo">
+        <div class="g-nav__logo-mark"><i class="fas fa-gem" style="color:#fff;font-size:14px;"></i></div>
+        GEMS Innovations
+      </a>
+      <ul class="g-nav__links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#marketing">Marketing</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+      </ul>
+      <div class="g-nav__cta">
+        <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary">Agendar demo</a>
+      </div>
+    </div>
+  </div>
+</nav>
 
-    <header class="header">
-      <div class="header__wrapper container">
-        <div class="header__title">
-          <img src="./assets/images/brand.webp" alt="Logo de Gems Innovations" class="header__brand">
-          <span>GEMS Innovations</span>
+<!-- ── HERO ────────────────────────────────────────────────────────────── -->
+<section class="g-hero">
+  <div class="g-hero-blob-1"></div>
+  <div class="g-hero-blob-2"></div>
+  <div class="g-hero-grid"></div>
+  <div class="container">
+    <div class="g-hero-inner">
+      <div class="g-eyebrow">
+        <span class="g-eyebrow-dot"></span>
+        Tecnología · Innovación · Resultados
+      </div>
+      <h1 class="g-hero-title">
+        Tecnología que<br>
+        <span class="accent">transforma</span><br>
+        tu negocio
+      </h1>
+      <p class="g-hero-sub">
+        Desarrollamos soluciones digitales a medida — desde plataformas operativas hasta bots de IA — para que tu empresa crezca sin fricción.
+      </p>
+      <div class="g-hero-actions">
+        <a href="#productos" class="btn btn-primary btn-lg">
+          <i class="fas fa-rocket"></i> Ver nuestros productos
+        </a>
+        <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost btn-lg">
+          <i class="fab fa-whatsapp"></i> Hablar con el equipo
+        </a>
+      </div>
+      <div class="g-hero-proof">
+        <div class="g-proof-item"><i class="fas fa-check-circle"></i> En español nativo</div>
+        <div class="g-proof-item"><i class="fas fa-check-circle"></i> Sin contratos largos</div>
+        <div class="g-proof-item"><i class="fas fa-check-circle"></i> Soporte directo 24/7</div>
+      </div>
+      <div class="g-stats">
+        <div class="g-stat">
+          <div class="g-stat-number">3+</div>
+          <div class="g-stat-label">Productos propios</div>
         </div>
-        <button class="header__toggle" aria-label="Abrir menú">&#9776;</button>
-        <nav class="header__nav-container">
-          <ul class="header__nav">
-            <li class="header__item"><span>Inicio</span></li>
-            <li class="header__item header__item--submenu">
-              <span class="header__link">Servicios <span class="submenu-toggle">▼</span></span>
-              <ul class="header__submenu">
-                <li><a href="#">Desarrollo Web</a></li>
-                <li><a href="#">Aplicaciones Móviles</a></li>
-                <li><a href="#">Automatización</a></li>
-                <li><a href="#">Marketing Digital</a></li>
-              </ul>
-            </li>
-            <li class="header__item header__item--submenu">
-              <span class="header__link">Productos <span class="submenu-toggle">▼</span></span>
-              <ul class="header__submenu">
-                <li><a href="./gems-sales-assistant.html">Gems Sales Assistant</a></li>
-                <li><a href="./gems-lms.html">GEMS LMS</a></li>
-                <li><a href="./gems-hub.html">GEMS Hub</a></li>
-              </ul>
-            </li>
-            <li class="header__item header__item--submenu">
-              <span class="header__link">Sobre Nosotros <span class="submenu-toggle">▼</span></span>
-              <ul class="header__submenu">
-                <li><a href="#">Términos del Servicio</a></li>
-                <li><a href="#">Política de Privacidad</a></li>
-                <li><a href="#">Nuestra Misión</a></li>
-                <li><a href="#">Nuestros 3 Pilares</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__button-container">
-          <a href="https://walink.co/c802b5" target="_blank" class="button">Contáctanos</a>
+        <div class="g-stat">
+          <div class="g-stat-number">100%</div>
+          <div class="g-stat-label">En español</div>
+        </div>
+        <div class="g-stat">
+          <div class="g-stat-number">24/7</div>
+          <div class="g-stat-label">Soporte directo</div>
         </div>
       </div>
-      <!-- Cursor personalizado -->
-      <div class="cursor"></div>
-    </header>
-    
-    <script src="assets/js/menu.js"></script>
+    </div>
+  </div>
+</section>
 
-    <main>
-      <section class="background">
-        <div class="home container">
-          <article>
-            <div class="product-badge" style="margin-bottom:20px;">
-              <i class="fas fa-rocket"></i> Innovación · Tecnología · Resultados
-            </div>
-            <h1 class="home__title">
-              Innovación tecnológica para tu negocio
-            </h1>
-            <p class="home__description">
-              En Gems Innovations, ofrecemos soluciones tecnológicas personalizadas que ayudan a las empresas a mejorar sus procesos, optimizar recursos y potenciar su crecimiento.
-            </p>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;">
-              <a href="https://walink.co/c802b5" target="_blank" class="button button--cta-primary">
-                <i class="fab fa-whatsapp"></i> Contáctanos por WhatsApp
-              </a>
-              <a href="#solutions" class="button button--secondary">Ver nuestros servicios</a>
-            </div>
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <span class="hero-stat__number">3+</span>
-                <span class="hero-stat__label">Productos propios</span>
-              </div>
-              <div class="hero-stat">
-                <span class="hero-stat__number">100%</span>
-                <span class="hero-stat__label">En español nativo</span>
-              </div>
-              <div class="hero-stat">
-                <span class="hero-stat__number">24/7</span>
-                <span class="hero-stat__label">Soporte directo</span>
-              </div>
-            </div>
-          </article>
-          <img class="home__gif" src="./assets/images/brand.webp" alt="Logo de Gems Innovations">
+<!-- ── TECH MARQUEE ─────────────────────────────────────────────────────── -->
+<div class="g-marquee">
+  <div class="g-marquee-track">
+    <div class="g-marquee-item"><i class="fab fa-react" style="color:#61dafb;font-size:18px;"></i> React</div>
+    <div class="g-marquee-item"><i class="fab fa-node-js" style="color:#68a063;font-size:18px;"></i> Node.js</div>
+    <div class="g-marquee-item"><i class="fab fa-python" style="color:#3776ab;font-size:18px;"></i> Python</div>
+    <div class="g-marquee-item"><i class="fab fa-js" style="color:#f7df1e;font-size:18px;"></i> JavaScript</div>
+    <div class="g-marquee-item"><i class="fas fa-database" style="color:#336791;font-size:18px;"></i> PostgreSQL</div>
+    <div class="g-marquee-item"><i class="fab fa-aws" style="color:#ff9900;font-size:18px;"></i> AWS</div>
+    <div class="g-marquee-item"><i class="fab fa-docker" style="color:#0db7ed;font-size:18px;"></i> Docker</div>
+    <div class="g-marquee-item"><i class="fas fa-robot" style="color:#a78bfa;font-size:18px;"></i> IA / LLMs</div>
+    <div class="g-marquee-item"><i class="fab fa-angular" style="color:#dd0031;font-size:18px;"></i> Angular</div>
+    <div class="g-marquee-item"><i class="fab fa-wordpress" style="color:#21759b;font-size:18px;"></i> WordPress</div>
+    <div class="g-marquee-item"><i class="fab fa-react" style="color:#61dafb;font-size:18px;"></i> React</div>
+    <div class="g-marquee-item"><i class="fab fa-node-js" style="color:#68a063;font-size:18px;"></i> Node.js</div>
+    <div class="g-marquee-item"><i class="fab fa-python" style="color:#3776ab;font-size:18px;"></i> Python</div>
+    <div class="g-marquee-item"><i class="fab fa-js" style="color:#f7df1e;font-size:18px;"></i> JavaScript</div>
+    <div class="g-marquee-item"><i class="fas fa-database" style="color:#336791;font-size:18px;"></i> PostgreSQL</div>
+    <div class="g-marquee-item"><i class="fab fa-aws" style="color:#ff9900;font-size:18px;"></i> AWS</div>
+    <div class="g-marquee-item"><i class="fab fa-docker" style="color:#0db7ed;font-size:18px;"></i> Docker</div>
+    <div class="g-marquee-item"><i class="fas fa-robot" style="color:#a78bfa;font-size:18px;"></i> IA / LLMs</div>
+    <div class="g-marquee-item"><i class="fab fa-angular" style="color:#dd0031;font-size:18px;"></i> Angular</div>
+    <div class="g-marquee-item"><i class="fab fa-wordpress" style="color:#21759b;font-size:18px;"></i> WordPress</div>
+  </div>
+</div>
+
+<!-- ── SERVICIOS ────────────────────────────────────────────────────────── -->
+<section class="section section--alt" id="servicios">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label">Servicios</div>
+      <h2 class="sh-title">Lo que construimos<br>para tu empresa</h2>
+      <p class="sh-sub">Soluciones tecnológicas personalizadas que ayudan a las empresas a crecer, automatizar y diferenciarse.</p>
+    </div>
+    <div class="g-services-grid">
+      <div class="g-card g-service-card reveal">
+        <div class="g-service-icon"><i class="fas fa-globe"></i></div>
+        <div class="g-service-name">Desarrollo Web</div>
+        <div class="g-service-desc">Sitios y aplicaciones web modernas, optimizadas para rendimiento y conversión. Desde landing pages hasta plataformas complejas.</div>
+        <div class="g-service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+      </div>
+      <div class="g-card g-service-card reveal reveal-d1">
+        <div class="g-service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="g-service-name">Aplicaciones Móviles</div>
+        <div class="g-service-desc">Apps iOS y Android personalizadas que conectan tu operación con tus clientes en cualquier lugar y momento.</div>
+        <div class="g-service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+      </div>
+      <div class="g-card g-service-card reveal reveal-d2">
+        <div class="g-service-icon"><i class="fas fa-cogs"></i></div>
+        <div class="g-service-name">Automatización</div>
+        <div class="g-service-desc">Automatizamos flujos de trabajo, integraciones y procesos repetitivos para que tu equipo se enfoque en lo que importa.</div>
+        <div class="g-service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+      </div>
+      <div class="g-card g-service-card reveal reveal-d3">
+        <div class="g-service-icon"><i class="fas fa-bullseye"></i></div>
+        <div class="g-service-name">Marketing Digital</div>
+        <div class="g-service-desc">Estrategias de crecimiento digital: redes sociales, ads, SEO y email marketing alineadas con tus objetivos de negocio.</div>
+        <div class="g-service-arrow"><i class="fas fa-arrow-up-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRODUCTOS ────────────────────────────────────────────────────────── -->
+<section class="section" id="productos">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label">Productos</div>
+      <h2 class="sh-title">Nuestros productos,<br>listos para usar</h2>
+      <p class="sh-sub">Herramientas construidas por GEMS que resuelven problemas reales de equipos reales.</p>
+    </div>
+    <div class="g-products-grid">
+
+      <div class="g-card g-product-card reveal">
+        <div class="g-product-tag tag-purple"><i class="fas fa-robot"></i> IA · WhatsApp</div>
+        <div class="g-product-icon icon-purple">
+          <i class="fab fa-whatsapp" style="color:#a78bfa;"></i>
         </div>
-      </section>
+        <div class="g-product-name">Sales Assistant</div>
+        <div class="g-product-desc">Bot inteligente para WhatsApp Business. Automatiza respuestas, gestiona conversaciones y cierra ventas 24/7 con IA personalizada.</div>
+        <div class="g-product-features">
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Bot de IA personalizado</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Gestión multi-cliente</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Respuestas automáticas 24/7</div>
+        </div>
+        <div class="g-product-actions">
+          <a href="./gems-sales-assistant.html" class="btn btn-primary btn-sm" style="flex:1;justify-content:center;">Ver producto</a>
+          <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost btn-sm">Demo</a>
+        </div>
+      </div>
 
-      <section id="solutions" class="container solutions">
-        <h2 class="title">Soluciones</h2>
-        <section class="solutions__container">
-          <article class="solutions__item reveal">
-            <div class="solutions__gif">
-              <img src="assets/images/web.webp" alt="Icono de Desarrollo Web">
+      <div class="g-card g-product-card reveal reveal-d1">
+        <div class="g-product-tag tag-indigo"><i class="fas fa-graduation-cap"></i> Educación · IA</div>
+        <div class="g-product-icon icon-indigo">
+          <i class="fas fa-book-open" style="color:#a5b4fc;"></i>
+        </div>
+        <div class="g-product-name">GEMS LMS</div>
+        <div class="g-product-desc">Plataforma educativa que reinventa el aprendizaje con IA, diseño moderno y herramientas colaborativas para instituciones y empresas.</div>
+        <div class="g-product-features">
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Gestión curricular avanzada</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Personalización con IA</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Interacción colaborativa</div>
+        </div>
+        <div class="g-product-actions">
+          <a href="./gems-lms.html" class="btn btn-primary btn-sm" style="flex:1;justify-content:center;">Ver producto</a>
+          <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost btn-sm">Demo</a>
+        </div>
+      </div>
+
+      <div class="g-card g-product-card reveal reveal-d2">
+        <div class="g-product-tag tag-violet"><i class="fas fa-bolt"></i> CRM · Operaciones</div>
+        <div class="g-product-icon icon-violet">
+          <i class="fas fa-gem" style="color:#d8b4fe;"></i>
+        </div>
+        <div class="g-product-name">GEMS Hub</div>
+        <div class="g-product-desc">El sistema operativo de tu equipo de servicio. Clientes, tickets, tareas, chat y reportes en una sola plataforma. Desde $0.</div>
+        <div class="g-product-features">
+          <div class="g-product-feature"><i class="fas fa-circle"></i> 9 módulos integrados</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> IA integrada nativa</div>
+          <div class="g-product-feature"><i class="fas fa-circle"></i> Sin los precios de HubSpot</div>
+        </div>
+        <div class="g-product-actions">
+          <a href="./gems-hub.html" class="btn btn-primary btn-sm" style="flex:1;justify-content:center;">Ver producto</a>
+          <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20una%20demo%20de%20GEMS%20Hub" target="_blank" class="btn btn-ghost btn-sm">Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── MARKETING ────────────────────────────────────────────────────────── -->
+<section class="section section--alt" id="marketing">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label">Marketing Digital</div>
+      <h2 class="sh-title">Potencia tu<br>presencia digital</h2>
+      <p class="sh-sub">Estrategias integrales de marketing que impulsan el crecimiento real de tu negocio.</p>
+    </div>
+    <div class="g-marketing-grid">
+      <div class="g-card g-marketing-card reveal">
+        <div class="g-marketing-icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="g-marketing-name">Gestión de Redes Sociales</div>
+        <div class="g-marketing-desc">Creamos y gestionamos contenido atractivo para todas tus plataformas sociales, aumentando tu engagement y comunidad.</div>
+      </div>
+      <div class="g-card g-marketing-card reveal reveal-d1">
+        <div class="g-marketing-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="g-marketing-name">Publicidad Digital</div>
+        <div class="g-marketing-desc">Campañas efectivas en Google Ads, Facebook Ads e Instagram que maximizan tu retorno de inversión.</div>
+      </div>
+      <div class="g-card g-marketing-card reveal reveal-d2">
+        <div class="g-marketing-icon"><i class="fas fa-palette"></i></div>
+        <div class="g-marketing-name">Diseño Gráfico</div>
+        <div class="g-marketing-desc">Diseños creativos y profesionales: posts, banners, flyers y todo el material promocional que necesitas.</div>
+      </div>
+      <div class="g-card g-marketing-card reveal">
+        <div class="g-marketing-icon"><i class="fas fa-stamp"></i></div>
+        <div class="g-marketing-name">Branding</div>
+        <div class="g-marketing-desc">Desarrollamos la identidad visual de tu marca, desde el logo hasta la estrategia completa de branding.</div>
+      </div>
+      <div class="g-card g-marketing-card reveal reveal-d1">
+        <div class="g-marketing-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="g-marketing-name">Analítica Web</div>
+        <div class="g-marketing-desc">Medimos y analizamos el rendimiento de tus campañas para optimizar continuamente tus resultados.</div>
+      </div>
+      <div class="g-card g-marketing-card reveal reveal-d2">
+        <div class="g-marketing-icon"><i class="fas fa-envelope"></i></div>
+        <div class="g-marketing-name">Email Marketing</div>
+        <div class="g-marketing-desc">Campañas de email personalizadas que nutren leads y fidelizan clientes con contenido de valor.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EQUIPO ────────────────────────────────────────────────────────────── -->
+<section class="g-team-section" id="equipo">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label">Equipo</div>
+      <h2 class="sh-title">Nuestro equipo<br>de innovadores</h2>
+    </div>
+    <p class="g-team-desc">Conoce al talentoso equipo que hace posible nuestras soluciones tecnológicas. Cada uno comprometido con el éxito de tu proyecto.</p>
+
+    <div class="g-team-carousel-wrap">
+      <div class="g-team-carousel" id="teamCarousel">
+
+        <div class="g-team-slide active">
+          <div class="g-team-member">
+            <div class="g-team-avatar-wrap">
+              <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín" class="g-team-avatar">
             </div>
             <div>
-              <h3 class="title__card">Desarrollo Web</h3>
-              <p>Desarrollamos sitios web optimizados y modernos que te ayudarán a mejorar la presencia digital de tu empresa.</p>
+              <div class="g-team-badge"><i class="fas fa-star"></i> Constelación Central</div>
+              <div class="g-team-name">Sebastián Pulgarín</div>
+              <div class="g-team-title">CEO / Director de Innovación</div>
+              <p class="g-team-quote">"Hola, soy Sebastián, el fundador de GEMS Innovations. Mi pasión es impulsar la innovación tecnológica para transformar la forma en que operan las empresas. Me encantaría conocer tus desafíos tecnológicos y conversar sobre cómo podemos potenciar tu negocio juntos."</p>
+              <ul class="g-team-social">
+                <li><a href="https://www.linkedin.com/in/sebastián-pulgarín-gómez-4b76471aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/sebastianpulgaring/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
             </div>
-          </article>
-          <article class="solutions__item reveal reveal-delay-1">
-            <div class="solutions__gif">
-              <img src="./assets/images/app.webp" alt="Icono de Aplicaciones Móviles">
+          </div>
+        </div>
+
+        <div class="g-team-slide">
+          <div class="g-team-member">
+            <div class="g-team-avatar-wrap">
+              <div class="g-team-avatar-placeholder"><i class="fas fa-globe"></i></div>
             </div>
             <div>
-              <h3 class="title__card">Aplicaciones Móviles</h3>
-              <p>Nuestras aplicaciones móviles personalizadas proporcionan soluciones a medida para optimizar tus procesos y llegar a más clientes.</p>
+              <div class="g-team-badge"><i class="fas fa-globe"></i> Órbita Estratégica</div>
+              <div class="g-team-name">Jacobo</div>
+              <div class="g-team-title">Subdirector General</div>
+              <p class="g-team-quote">"Mi trabajo es conectar todas las piezas para que tu proyecto fluya sin obstáculos. Como enlace entre todas las áreas, me aseguro que la comunicación sea clara y que cada aspecto de tu solución reciba la atención que merece."</p>
+              <ul class="g-team-social">
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
             </div>
-          </article>
-          <article class="solutions__item reveal reveal-delay-2">
-            <div class="solutions__gif">
-              <img src="assets/images/auto.webp" alt="Icono de Automatización">
+          </div>
+        </div>
+
+        <div class="g-team-slide">
+          <div class="g-team-member">
+            <div class="g-team-avatar-wrap">
+              <img src="assets/images/gems_luisa.webp" alt="Luisa" class="g-team-avatar">
             </div>
             <div>
-              <h3 class="title__card">Automatización</h3>
-              <p>Automatizamos procesos empresariales clave, mejorando la eficiencia y reduciendo costos operativos.</p>
+              <div class="g-team-badge"><i class="fas fa-rocket"></i> Torre de Control</div>
+              <div class="g-team-name">Luisa</div>
+              <div class="g-team-title">PMO — Oficina de Proyectos</div>
+              <p class="g-team-quote">"Como líder de la oficina de proyectos, mi compromiso es planificar, organizar y dar seguimiento detallado a cada fase de tu proyecto. Mi objetivo es convertir tu visión en una realidad tangible y exitosa."</p>
+              <ul class="g-team-social">
+                <li><a href="https://www.linkedin.com/in/luisa-estrada-52b225298/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/le3ey_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
             </div>
-          </article>
-          <article class="solutions__item reveal reveal-delay-3">
-            <div class="solutions__gif">
-              <img src="assets/images/marketing.webp" alt="Icono de Marketing Digital">
+          </div>
+        </div>
+
+        <div class="g-team-slide">
+          <div class="g-team-member">
+            <div class="g-team-avatar-wrap">
+              <div class="g-team-avatar-placeholder"><i class="fas fa-meteor"></i></div>
             </div>
             <div>
-              <h3 class="title__card">Marketing Digital</h3>
-              <p>Impulsamos tu negocio a través de estrategias que conectan con tu público objetivo.</p>
-            </div>
-          </article>
-        </section>
-      </section>
-
-      <section class="container products">
-        <h2 class="title">Nuestros Productos</h2>
-        <section class="products__container">
-
-          <article class="products__item reveal">
-            <div class="products__image">
-              <img src="assets/images/whatsapp-bot.svg" alt="Gems Sales Assistant - Bot de WhatsApp con IA">
-            </div>
-            <div class="products__content">
-              <div class="product-badge"><i class="fas fa-robot"></i> IA · WhatsApp</div>
-              <h3 class="title__card">Gems Sales Assistant</h3>
-              <p class="products__description">
-                Asistente de ventas inteligente para WhatsApp Business. Automatiza respuestas, gestiona conversaciones y aumenta tus ventas con IA personalizada para tu negocio.
-              </p>
-              <div class="products__features">
-                <ul>
-                  <li><i class="fas fa-check"></i> Bot de IA personalizado</li>
-                  <li><i class="fas fa-check"></i> Gestión multi-cliente</li>
-                  <li><i class="fas fa-check"></i> Base de conocimiento</li>
-                  <li><i class="fas fa-check"></i> Respuestas automáticas 24/7</li>
-                </ul>
-              </div>
-              <div class="products__actions">
-                <a href="./gems-sales-assistant.html" class="button">Ver Más Detalles</a>
-                <a href="https://walink.co/c802b5" target="_blank" class="button button--secondary">Solicitar Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="products__item reveal reveal-delay-1">
-            <div class="products__image">
-              <img src="assets/images/icons/gemslms.png" alt="GEMS LMS - Plataforma educativa con IA">
-            </div>
-            <div class="products__content">
-              <div class="product-badge badge-new"><i class="fas fa-graduation-cap"></i> Educación · IA</div>
-              <h3 class="title__card">GEMS LMS</h3>
-              <p class="products__description">
-                Plataforma educativa de vanguardia que reinventa la experiencia de aprendizaje digital. Combina diseño moderno con potentes herramientas de inteligencia artificial.
-              </p>
-              <div class="products__features">
-                <ul>
-                  <li><i class="fas fa-check"></i> Gestión curricular avanzada</li>
-                  <li><i class="fas fa-check"></i> Herramientas para educadores</li>
-                  <li><i class="fas fa-check"></i> Interacción colaborativa</li>
-                  <li><i class="fas fa-check"></i> Personalización con IA</li>
-                </ul>
-              </div>
-              <div class="products__actions">
-                <a href="./gems-lms.html" class="button">Ver Más Detalles</a>
-                <a href="https://walink.co/c802b5" target="_blank" class="button button--secondary">Solicitar Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="products__item reveal reveal-delay-2">
-            <div class="products__image">
-              <div style="width:100px;height:100px;background:linear-gradient(135deg,#7c3aed,#9f60f7);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:42px;box-shadow:0 12px 32px rgba(124,58,237,0.35);transition:transform 0.35s ease,box-shadow 0.35s ease;">
-                <i class="fas fa-gem" style="color:white;"></i>
-              </div>
-            </div>
-            <div class="products__content">
-              <div class="product-badge badge-hub"><i class="fas fa-bolt"></i> CRM · Operaciones</div>
-              <h3 class="title__card">GEMS Hub</h3>
-              <p class="products__description">
-                El sistema operativo de tu equipo de servicio. Centraliza clientes, tickets, tareas y comunicación en una sola plataforma. Sin los precios de HubSpot.
-              </p>
-              <div class="products__features">
-                <ul>
-                  <li><i class="fas fa-check"></i> Clientes, tickets y tareas</li>
-                  <li><i class="fas fa-check"></i> Chat interno del equipo</li>
-                  <li><i class="fas fa-check"></i> Reportes en tiempo real</li>
-                  <li><i class="fas fa-check"></i> IA integrada desde $0</li>
-                </ul>
-              </div>
-              <div class="products__actions">
-                <a href="./gems-hub.html" class="button">Ver Más Detalles</a>
-                <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20una%20demo%20de%20GEMS%20Hub" target="_blank" class="button button--secondary">Solicitar Demo</a>
-              </div>
-            </div>
-          </article>
-
-        </section>
-      </section>
-
-      <section class="marketing-services">
-        <div class="container">
-          <h2 class="title">Servicios de Marketing Digital</h2>
-          <p class="marketing-description">
-            Potenciamos tu presencia digital con estrategias integrales que impulsan el crecimiento de tu negocio
-          </p>
-          <div class="marketing-grid">
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fab fa-facebook-f"></i>
-              </div>
-              <h3>Gestión de Redes Sociales</h3>
-              <p>Creamos y gestionamos contenido atractivo para todas tus plataformas sociales, aumentando tu engagement y comunidad.</p>
-            </div>
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fas fa-bullhorn"></i>
-              </div>
-              <h3>Publicidad Digital</h3>
-              <p>Campañas publicitarias efectivas en Google Ads, Facebook Ads e Instagram que maximizan tu retorno de inversión.</p>
-            </div>
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fas fa-palette"></i>
-              </div>
-              <h3>Diseño Gráfico</h3>
-              <p>Diseños creativos y profesionales para todas tus necesidades: posts, banners, flyers y material promocional.</p>
-            </div>
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fas fa-stamp"></i>
-              </div>
-              <h3>Branding</h3>
-              <p>Desarrollamos la identidad visual de tu marca, desde el logo hasta la estrategia completa de branding.</p>
-            </div>
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h3>Analítica Web</h3>
-              <p>Medimos y analizamos el rendimiento de tus campañas para optimizar continuamente tus resultados.</p>
-            </div>
-            <div class="marketing-item">
-              <div class="marketing-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <h3>Email Marketing</h3>
-              <p>Campañas de email personalizadas que nutren leads y fidelizan clientes con contenido de valor.</p>
+              <div class="g-team-badge"><i class="fas fa-meteor"></i> Ingeniera del Cosmos</div>
+              <div class="g-team-name">Mariana</div>
+              <div class="g-team-title">Líder de Desarrollo</div>
+              <p class="g-team-quote">"Al frente del equipo de desarrollo, mi pasión es transformar ideas innovadoras en soluciones tecnológicas robustas. Me mantengo a la vanguardia de las nuevas tecnologías para ofrecerte siempre las herramientas más adecuadas."</p>
+              <ul class="g-team-social">
+                <li><a href="https://www.linkedin.com/in/mauricio-ciro-394738250/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Sección de testimonios eliminada temporalmente -->
-
-      <section class="container team-section">
-        <h2 class="title">Nuestro Equipo de Innovadores</h2>
-        <p class="team-description">Conoce al talentoso equipo que hace posible nuestras soluciones tecnológicas. Cada uno de nosotros está comprometido con el éxito de tu proyecto.</p>
-        
-        <div class="team-carousel-container">
-          <!-- Controles del carrusel -->
-          <div class="team-carousel-controls">
-            <button class="team-carousel-prev" aria-label="Anterior miembro del equipo">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="team-carousel-next" aria-label="Siguiente miembro del equipo">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
-          
-          <!-- Carrusel principal -->
-          <div class="team-carousel">
-            <!-- CEO / Director de Innovación y Comercial -->
-            <div class="team-slide active" aria-hidden="false">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín Gómez">
-                    <div class="team-member__badge" title="Constelación Central">
-                      <i class="fas fa-star"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">Sebastián Pulgarín</h3>
-                  <p class="team-member__title">Constelación Central <span class="team-member__official-title">CEO / Director de Innovación</span></p>
-                  <div class="team-member__message">
-                    <p>"Hola, soy Sebastián, el fundador de GEMS Innovations. Mi pasión es impulsar la innovación tecnológica para transformar la forma en que operan las empresas. Mi visión es crear soluciones que realmente impacten y generen valor. Me encantaría conocer tus desafíos tecnológicos y conversar sobre cómo podemos potenciar tu negocio juntos."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="https://www.linkedin.com/in/sebastián-pulgarín-gómez-4b76471aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.instagram.com/sebastianpulgaring/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
+        <div class="g-team-slide">
+          <div class="g-team-member">
+            <div class="g-team-avatar-wrap">
+              <img src="assets/images/gems_david.webp" alt="David" class="g-team-avatar">
             </div>
-            
-            <!-- Subdirector General -->
-            <div class="team-slide" aria-hidden="true">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/default-avatar.png" alt="Jacobo">
-                    <div class="team-member__badge" title="Órbita Estratégica">
-                      <i class="fas fa-globe"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">Jacobo</h3>
-                  <p class="team-member__title">Órbita Estratégica <span class="team-member__official-title">Subdirector General</span></p>
-                  <div class="team-member__message">
-                    <p>"Mi trabajo es conectar todas las piezas para que tu proyecto fluya sin obstáculos. Como enlace entre todas las áreas, me aseguro que la comunicación sea clara y que cada aspecto de tu solución reciba la atención que merece. Estaré acompañándote en cada etapa para garantizar que tus objetivos se cumplan de manera eficiente."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <!-- PMO -->
-            <div class="team-slide" aria-hidden="true">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/gems_luisa.webp" alt="Luisa">
-                    <div class="team-member__badge" title="Torre de Control">
-                      <i class="fas fa-rocket"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">Luisa</h3>
-                  <p class="team-member__title">Torre de Control <span class="team-member__official-title">PMO (Oficina de Proyectos)</span></p>
-                  <div class="team-member__message">
-                    <p>"Como líder de la oficina de proyectos, mi compromiso es planificar, organizar y dar seguimiento detallado a cada fase de tu proyecto. Me encargo de que todo avance según lo planeado, con los recursos adecuados y manteniendo los más altos estándares de calidad. Mi objetivo es convertir tu visión en una realidad tangible y exitosa."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="https://www.linkedin.com/in/luisa-estrada-52b225298/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.instagram.com/le3ey_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Líder de Desarrollo -->
-            <div class="team-slide" aria-hidden="true">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/default-avatar.png" alt="Mariana">
-                    <div class="team-member__badge" title="Ingeniera del Cosmos">
-                      <i class="fas fa-meteor"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">Mariana</h3>
-                  <p class="team-member__title">Ingeniera del Cosmos <span class="team-member__official-title">Líder de Desarrollo</span></p>
-                  <div class="team-member__message">
-                    <p>"Al frente del equipo de desarrollo, mi pasión es transformar ideas innovadoras en soluciones tecnológicas robustas. Superviso cada línea de código para garantizar que tu solución sea escalable, segura y eficiente. Me mantengo a la vanguardia de las nuevas tecnologías para ofrecerte siempre las herramientas más adecuadas para tu negocio."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="https://www.linkedin.com/in/mauricio-ciro-394738250/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.instagram.com/mauro08.12/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Administración General -->
-            <div class="team-slide" aria-hidden="true">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/default-avatar.png" alt="Isabella">
-                    <div class="team-member__badge" title="Base Estelar">
-                      <i class="fas fa-space-shuttle"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">Isabella</h3>
-                  <p class="team-member__title">Base Estelar <span class="team-member__official-title">Administración General</span></p>
-                  <div class="team-member__message">
-                    <p>"Mi rol es asegurar que todos los aspectos administrativos y financieros funcionen sin problemas. Me encargo de que cada proyecto cuente con los recursos necesarios, los contratos estén en orden y los procesos administrativos sean eficientes. Esto permite que el resto del equipo pueda enfocarse en lo que mejor saben hacer: crear soluciones innovadoras para tu negocio."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Director de Marketing -->
-            <div class="team-slide" aria-hidden="true">
-              <div class="team-member">
-                <div class="team-member__avatar-container">
-                  <div class="team-member__avatar">
-                    <img src="assets/images/gems_david.webp" alt="David">
-                    <div class="team-member__badge" title="Faro Cósmico">
-                      <i class="fas fa-lightbulb"></i>
-                    </div>
-                  </div>
-                </div>
-                <div class="team-member__info">
-                  <h3 class="team-member__name">David</h3>
-                  <p class="team-member__title">Faro Cósmico <span class="team-member__official-title">Director de Marketing</span></p>
-                  <div class="team-member__message">
-                    <p>"Como creativo visual y estratega de marketing, mi pasión es dar vida a la identidad de GEMS y ayudar a comunicar el valor de nuestras soluciones. Desde el diseño gráfico hasta las campañas digitales, trabajo para que cada interacción con nuestra marca sea memorable. Estoy aquí para asegurar que tu proyecto no solo funcione perfectamente, sino que también se vea y se comunique de manera espectacular."</p>
-                  </div>
-                  <ul class="team-member__social">
-                    <li><a href="https://www.linkedin.com/in/david-perez-b13494257" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    <li><a href="https://www.instagram.com/alvarez_david_02/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Indicadores de posición del carrusel -->
-          <div class="team-carousel-indicators">
-            <button class="team-carousel-indicator active" aria-selected="true"></button>
-            <button class="team-carousel-indicator" aria-selected="false"></button>
-            <button class="team-carousel-indicator" aria-selected="false"></button>
-            <button class="team-carousel-indicator" aria-selected="false"></button>
-            <button class="team-carousel-indicator" aria-selected="false"></button>
-            <button class="team-carousel-indicator" aria-selected="false"></button>
-          </div>
-        </div>
-      </section>
-
-      <section class="technologies-section background">
-        <div class="container">
-          <h2 class="title">Tecnologías que Usamos</h2>
-          <div class="technologies-carousel">
-            <div class="technologies-grid">
-              <div class="technology-item">
-                <img src="assets/images/icons/python-original.svg" alt="Python">
-                <p>Python</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/nodejs-original.svg" alt="Node.js">
-                <p>Node.js</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/express-original.svg" alt="Express.js">
-                <p>Express.js</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/wordpress-logo-svgrepo-com.svg" alt="WordPress">
-                <p>WordPress</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/javascript-original.svg" alt="JavaScript">
-                <p>JavaScript</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/react-original.svg" alt="React">
-                <p>React</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/angularjs-original.svg" alt="Angular">
-                <p>Angular</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/html5-original.svg" alt="HTML5">
-                <p>HTML5</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/css3-original.svg" alt="CSS3">
-                <p>CSS3</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/java-original.svg" alt="Java">
-                <p>Java</p>
-              </div>
-              <div class="technology-item">
-                <img src="assets/images/icons/csharp-original.svg" alt="C#">
-                <p>C#</p>
-              </div>
+            <div>
+              <div class="g-team-badge"><i class="fas fa-lightbulb"></i> Faro Cósmico</div>
+              <div class="g-team-name">David</div>
+              <div class="g-team-title">Director de Marketing</div>
+              <p class="g-team-quote">"Como creativo visual y estratega de marketing, mi pasión es dar vida a la identidad de GEMS. Trabajo para que cada interacción con nuestra marca sea memorable y comunicada de manera espectacular."</p>
+              <ul class="g-team-social">
+                <li><a href="https://www.linkedin.com/in/david-perez-b13494257" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.instagram.com/alvarez_david_02/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </section>
-      
 
-      <script src="assets/js/carrousel-tech.js"></script>
-      <script src="assets/js/team-carousel.js"></script>
-      <script src="assets/js/cosmos-effects.js"></script>
-      <script>
-        // Scroll reveal
-        const revealObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              revealObserver.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+      </div><!-- /g-team-carousel -->
 
-        // Products icon hover
-        document.querySelectorAll('.products__item').forEach(card => {
-          const icon = card.querySelector('.products__image div');
-          if (icon) {
-            card.addEventListener('mouseenter', () => {
-              icon.style.transform = 'scale(1.12) translateY(-6px)';
-              icon.style.boxShadow = '0 18px 40px rgba(124,58,237,0.45)';
-            });
-            card.addEventListener('mouseleave', () => {
-              icon.style.transform = '';
-              icon.style.boxShadow = '0 12px 32px rgba(124,58,237,0.35)';
-            });
-          }
-        });
-      </script>
-      <footer class="footer">
-        <div class="footer__content container">
-          <!-- Footer Brand Section -->
-          <div class="footer__brand">
-            <h3>Gems Innovations</h3>
-            <p>Soluciones tecnológicas para la optimización de procesos empresariales y el crecimiento de tu negocio.</p>
-            <ul class="social-icons">
-              <li><a href="https://www.facebook.com/profile.php?id=61566125934892" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="https://www.instagram.com/gemsinnovations/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              <li><a href="https://www.linkedin.com/company/gems-innovations/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-            <p>2025 &copy; Todos los derechos reservados</p>
-          </div>
-
-          <!-- Footer Links Section 1 -->
-          <div class="footer__links">
-            <ul>
-              <li><a href="#">Sobre nosotros</a></li>
-              <li><a href="#">Nuestra misión</a></li>
-              <li><a href="#">Política de privacidad</a></li>
-              <li><a href="#">Términos del servicio</a></li>
-            </ul>
-          </div>
-
-          <!-- Footer Links Section 2 -->
-          <div class="footer__links">
-            <ul>
-              <li><a href="#">Servicios</a></li>
-              <li><a href="#">Productos</a></li>
-              <li><a href="#">Únete a nuestro equipo</a></li>
-              <li><a href="#">Asóciate con nosotros</a></li>
-            </ul>
-          </div>
+      <div class="g-team-controls">
+        <button class="g-team-btn" id="teamPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="g-team-dots" id="teamDots">
+          <button class="g-team-dot active"></button>
+          <button class="g-team-dot"></button>
+          <button class="g-team-dot"></button>
+          <button class="g-team-dot"></button>
+          <button class="g-team-dot"></button>
         </div>
+        <button class="g-team-btn" id="teamNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <!-- Footer Bottom -->
-        <div class="footer__bottom">
-          <p>Desarrollado por <a href="https://gems-innovations.com">@gemsinnovations</a></p>
+<!-- ── TECNOLOGÍAS ──────────────────────────────────────────────────────── -->
+<section class="section section--alt" id="tecnologias">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label">Stack</div>
+      <h2 class="sh-title">Tecnologías que usamos</h2>
+    </div>
+    <div class="g-tech-grid">
+      <div class="g-tech-item reveal"><img src="assets/images/icons/python-original.svg" alt="Python"><p>Python</p></div>
+      <div class="g-tech-item reveal reveal-d1"><img src="assets/images/icons/nodejs-original.svg" alt="Node.js"><p>Node.js</p></div>
+      <div class="g-tech-item reveal reveal-d1"><img src="assets/images/icons/express-original.svg" alt="Express.js"><p>Express.js</p></div>
+      <div class="g-tech-item reveal reveal-d2"><img src="assets/images/icons/react-original.svg" alt="React"><p>React</p></div>
+      <div class="g-tech-item reveal reveal-d2"><img src="assets/images/icons/angularjs-original.svg" alt="Angular"><p>Angular</p></div>
+      <div class="g-tech-item reveal reveal-d3"><img src="assets/images/icons/javascript-original.svg" alt="JavaScript"><p>JavaScript</p></div>
+      <div class="g-tech-item reveal"><img src="assets/images/icons/html5-original.svg" alt="HTML5"><p>HTML5</p></div>
+      <div class="g-tech-item reveal reveal-d1"><img src="assets/images/icons/css3-original.svg" alt="CSS3"><p>CSS3</p></div>
+      <div class="g-tech-item reveal reveal-d1"><img src="assets/images/icons/java-original.svg" alt="Java"><p>Java</p></div>
+      <div class="g-tech-item reveal reveal-d2"><img src="assets/images/icons/csharp-original.svg" alt="C#"><p>C#</p></div>
+      <div class="g-tech-item reveal reveal-d2"><img src="assets/images/icons/wordpress-logo-svgrepo-com.svg" alt="WordPress"><p>WordPress</p></div>
+      <div class="g-tech-item reveal reveal-d3"><img src="assets/images/icons/python-original.svg" alt="FastAPI"><p>FastAPI</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ──────────────────────────────────────────────────────────────── -->
+<section class="section g-cta">
+  <div class="g-cta-blob"></div>
+  <div class="container">
+    <div class="g-cta-inner">
+      <h2 class="g-cta-title">¿Listo para crecer<br>con tecnología?</h2>
+      <p class="g-cta-sub">Cuéntanos tu proyecto. En 24 horas tienes una propuesta real, sin compromisos.</p>
+      <div class="g-cta-actions">
+        <a href="https://walink.co/c802b5" target="_blank" class="btn btn-primary btn-lg">
+          <i class="fas fa-rocket"></i> Empezar ahora
+        </a>
+        <a href="https://walink.co/c802b5" target="_blank" class="btn btn-ghost btn-lg">
+          <i class="fab fa-whatsapp"></i> WhatsApp directo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
+<footer class="g-footer">
+  <div class="container">
+    <div class="g-footer-grid">
+      <div>
+        <div class="g-footer-brand-name">GEMS Innovations</div>
+        <p class="g-footer-brand-desc">Soluciones tecnológicas para empresas que quieren crecer. Productos propios, desarrollo a medida y marketing digital.</p>
+        <div class="g-footer-socials">
+          <a href="https://www.linkedin.com/company/gems-innovations/" target="_blank" class="g-social-link"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/gemsinnovations/" target="_blank" class="g-social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61566125934892" target="_blank" class="g-social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://walink.co/c802b5" target="_blank" class="g-social-link"><i class="fab fa-whatsapp"></i></a>
         </div>
-      </footer>
+      </div>
+      <div>
+        <div class="g-footer-col-title">Productos</div>
+        <ul class="g-footer-links">
+          <li><a href="./gems-hub.html">GEMS Hub</a></li>
+          <li><a href="./gems-lms.html">GEMS LMS</a></li>
+          <li><a href="./gems-sales-assistant.html">Sales Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-footer-col-title">Empresa</div>
+        <ul class="g-footer-links">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#equipo">Sobre nosotros</a></li>
+          <li><a href="https://walink.co/c802b5" target="_blank">Contacto</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="g-footer-bottom">
+      <p>© 2026 <span>GEMS Innovations</span>. Todos los derechos reservados.</p>
+      <p>Hecho en Colombia 🇨🇴</p>
+    </div>
+  </div>
+</footer>
 
-      <!-- Inserta aquí el script de Google Analytics y otros scripts necesarios -->
+<script>
+  // Navbar scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 300);
+  });
 
-    </main>
+  // Scroll to top
+  document.getElementById('scrollTop').addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 
-    <script>
-      (function(d, w, c) {
-          w.ChatraID = 'ceRAE47tRGAzSEyRv';
-          var s = d.createElement('script');
-          w[c] = w[c] || function() {
-              (w[c].q = w[c].q || []).push(arguments);
-          };
-          s.async = true;
-          s.src = 'https://call.chatra.io/chatra.js';
-          if (d.head) d.head.appendChild(s);
-      })(document, window, 'Chatra');
-  </script>
-  </body>
+  // Scroll reveal
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Team carousel
+  const slides = document.querySelectorAll('.g-team-slide');
+  const dots   = document.querySelectorAll('.g-team-dot');
+  let current  = 0;
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+  document.getElementById('teamPrev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('teamNext').addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+</script>
+
+<script>
+  (function(d,w,c){w.ChatraID='ceRAE47tRGAzSEyRv';var s=d.createElement('script');w[c]=w[c]||function(){(w[c].q=w[c].q||[]).push(arguments)};s.async=true;s.src='https://call.chatra.io/chatra.js';if(d.head)d.head.appendChild(s)})(document,window,'Chatra');
+</script>
+
+</body>
 </html>
