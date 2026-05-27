@@ -129,8 +129,6 @@
     .hub-faq-inner { padding: 0 24px 20px; font-size: 14px; color: var(--text-2); line-height: 1.8; }
 
     /* WhatsApp float */
-    .hub-wa-float { position: fixed; bottom: 80px; right: 28px; z-index: 89; width: 50px; height: 50px; border-radius: 50%; background: #16a34a; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 22px; box-shadow: 0 8px 24px rgba(22,163,74,0.4); text-decoration: none; transition: transform 0.2s; }
-    .hub-wa-float:hover { transform: scale(1.1); }
 
     @media (max-width: 1024px) {
       .hub-hero-inner { grid-template-columns: 1fr; }
@@ -143,7 +141,10 @@
 </head>
 <body>
 
-<button class="g-scroll-top" id="scrollTop" aria-label="Ir al inicio"><i class="fas fa-chevron-up"></i></button>
+<div class="g-fab-group">
+  <a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20saber%20más%20sobre%20GEMS%20Hub" target="_blank" class="g-wa-fab" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  <button class="g-scroll-top" id="scrollTop" aria-label="Ir al inicio"><i class="fas fa-arrow-up"></i></button>
+</div>
 
 <!-- ── NAVBAR ──────────────────────────────────────────────────────────── -->
 <nav class="g-nav" id="nav">
@@ -383,7 +384,6 @@
   </div>
 </section>
 
-<a href="https://wa.me/573001382542?text=Hola%2C%20quiero%20saber%20más%20sobre%20GEMS%20Hub" target="_blank" class="hub-wa-float" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
 <!-- ── FOOTER ────────────────────────────────────────────────────────────── -->
 <footer class="g-footer">
