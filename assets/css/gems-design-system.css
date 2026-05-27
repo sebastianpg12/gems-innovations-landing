@@ -90,6 +90,7 @@ body::before {
   width: 34px; height: 34px;
   object-fit: contain; border-radius: 8px;
   flex-shrink: 0;
+  mix-blend-mode: screen;
 }
 .g-nav__links {
   display: flex; align-items: center; gap: 36px; list-style: none;
