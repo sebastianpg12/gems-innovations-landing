@@ -68,14 +68,15 @@
     .hub-pain-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 24px; transition: all 0.3s var(--ease); }
     .hub-pain-card:hover { border-color: var(--border-hover); transform: translateY(-3px); }
     .hub-pain-solution { border-color: rgba(139,92,246,0.25); background: rgba(139,92,246,0.05); }
-    .hub-pain-emoji { font-size: 24px; margin-bottom: 12px; }
+    .hub-pain-icon { width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 14px; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.2); color: #f87171; }
+    .hub-pain-solution .hub-pain-icon { background: var(--purple-dim); border-color: rgba(139,92,246,0.25); color: var(--purple-light); }
     .hub-pain-text { font-size: 14px; color: var(--text-2); line-height: 1.7; }
 
     /* Modules */
     .hub-modules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
     .hub-module-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 24px; transition: all 0.3s var(--ease); }
     .hub-module-card:hover { border-color: var(--border-hover); background: rgba(139,92,246,0.04); transform: translateY(-3px); }
-    .hub-module-emoji { font-size: 28px; margin-bottom: 14px; }
+    .hub-module-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; background: var(--purple-dim); border: 1px solid rgba(139,92,246,0.2); color: var(--purple-light); }
     .hub-module-name { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
     .hub-module-desc { font-size: 13px; color: var(--text-2); line-height: 1.7; }
 
@@ -83,7 +84,7 @@
     .hub-forwhom-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .hub-forwhom-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 36px 28px; transition: all 0.3s var(--ease); }
     .hub-forwhom-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
-    .hub-forwhom-icon { font-size: 32px; margin-bottom: 16px; }
+    .hub-forwhom-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 20px; background: var(--purple-dim); border: 1px solid rgba(139,92,246,0.2); color: var(--purple-light); }
     .hub-forwhom-title { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
     .hub-forwhom-desc { font-size: 14px; color: var(--text-2); line-height: 1.75; }
 
@@ -260,12 +261,12 @@
   <div class="container">
     <div class="sh center"><div class="sh-label">El problema</div><h2 class="sh-title">¿Te suena familiar?</h2><p class="sh-sub">Si diriges un equipo de servicio, probablemente ya viviste alguno de estos escenarios.</p></div>
     <div class="hub-pain-grid">
-      <div class="hub-pain-card reveal"><div class="hub-pain-emoji">❌</div><p class="hub-pain-text">Tus clientes preguntan por WhatsApp y <strong>nadie sabe el estado de nada</strong></p></div>
-      <div class="hub-pain-card reveal reveal-d1"><div class="hub-pain-emoji">❌</div><p class="hub-pain-text">Las tareas viven en un Excel que <strong>"nadie actualiza"</strong></p></div>
-      <div class="hub-pain-card reveal reveal-d2"><div class="hub-pain-emoji">❌</div><p class="hub-pain-text">Cada proyecto tiene su propio grupo de WhatsApp con <strong>400 mensajes sin leer</strong></p></div>
-      <div class="hub-pain-card reveal"><div class="hub-pain-emoji">❌</div><p class="hub-pain-text">Ya <strong>perdiste un cliente</strong> porque se pasó una entrega</p></div>
-      <div class="hub-pain-card reveal reveal-d1"><div class="hub-pain-emoji">❌</div><p class="hub-pain-text">Pagas <strong>$800/mes por HubSpot</strong> y usas el 10% de lo que ofrece</p></div>
-      <div class="hub-pain-card hub-pain-solution reveal reveal-d2"><div class="hub-pain-emoji">✨</div><p class="hub-pain-text"><strong style="color:var(--purple-light)">GEMS Hub lo resuelve todo</strong> — en una sola plataforma, diseñada para tu equipo de servicio.</p></div>
+      <div class="hub-pain-card reveal"><div class="hub-pain-icon"><i class="fas fa-triangle-exclamation"></i></div><p class="hub-pain-text">Tus clientes preguntan por WhatsApp y <strong>nadie sabe el estado de nada</strong></p></div>
+      <div class="hub-pain-card reveal reveal-d1"><div class="hub-pain-icon"><i class="fas fa-table"></i></div><p class="hub-pain-text">Las tareas viven en un Excel que <strong>"nadie actualiza"</strong></p></div>
+      <div class="hub-pain-card reveal reveal-d2"><div class="hub-pain-icon"><i class="fab fa-whatsapp"></i></div><p class="hub-pain-text">Cada proyecto tiene su propio grupo de WhatsApp con <strong>400 mensajes sin leer</strong></p></div>
+      <div class="hub-pain-card reveal"><div class="hub-pain-icon"><i class="fas fa-user-minus"></i></div><p class="hub-pain-text">Ya <strong>perdiste un cliente</strong> porque se pasó una entrega</p></div>
+      <div class="hub-pain-card reveal reveal-d1"><div class="hub-pain-icon"><i class="fas fa-money-bill-wave"></i></div><p class="hub-pain-text">Pagas <strong>demasiado por un CRM</strong> y usas el 10% de lo que ofrece</p></div>
+      <div class="hub-pain-card hub-pain-solution reveal reveal-d2"><div class="hub-pain-icon"><i class="fas fa-bolt"></i></div><p class="hub-pain-text"><strong style="color:var(--purple-light)">GEMS Hub lo resuelve todo</strong> — en una sola plataforma, diseñada para tu equipo de servicio.</p></div>
     </div>
   </div>
 </section>
@@ -275,15 +276,15 @@
   <div class="container">
     <div class="sh center"><div class="sh-label">La solución</div><h2 class="sh-title">Todo lo que tu equipo necesita,<br>en un solo lugar</h2><p class="sh-sub">9 módulos integrados diseñados para equipos de servicio que ejecutan.</p></div>
     <div class="hub-modules-grid">
-      <div class="hub-module-card reveal"><div class="hub-module-emoji">👥</div><div class="hub-module-name">Clientes</div><div class="hub-module-desc">Ficha completa, historial de interacciones, contactos y toda la información de cada cliente en un solo perfil.</div></div>
-      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-emoji">🎫</div><div class="hub-module-name">Tickets</div><div class="hub-module-desc">Soporte externo e interno unificado. Prioriza, asigna y resuelve solicitudes sin perder ninguna.</div></div>
-      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-emoji">✅</div><div class="hub-module-name">Tareas</div><div class="hub-module-desc">Kanban visual por proyecto o equipo. Sabes quién hace qué y cuándo, en tiempo real.</div></div>
-      <div class="hub-module-card reveal"><div class="hub-module-emoji">📁</div><div class="hub-module-name">Casos</div><div class="hub-module-desc">Gestión de incidencias internas con trazabilidad completa. Nada se cae entre las grietas.</div></div>
-      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-emoji">💬</div><div class="hub-module-name">Chat</div><div class="hub-module-desc">Comunicación del equipo sin salir de la plataforma. Adiós a los grupos de WhatsApp infinitos.</div></div>
-      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-emoji">📊</div><div class="hub-module-name">Reportes</div><div class="hub-module-desc">Visibilidad del rendimiento en tiempo real. KPIs por persona, por equipo y por cliente.</div></div>
-      <div class="hub-module-card reveal"><div class="hub-module-emoji">📅</div><div class="hub-module-name">Seguimientos</div><div class="hub-module-desc">Actividades y recordatorios por cliente. Nunca más olvides una llamada o una entrega.</div></div>
-      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-emoji">🤖</div><div class="hub-module-name">IA Integrada</div><div class="hub-module-desc">Propuestas, resúmenes y próximos pasos generados con IA directamente en tu flujo de trabajo.</div></div>
-      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-emoji">🧾</div><div class="hub-module-name">Minutas</div><div class="hub-module-desc">Documentos y actas centralizadas. Todo el historial escrito, accesible para todo el equipo.</div></div>
+      <div class="hub-module-card reveal"><div class="hub-module-icon"><i class="fas fa-users"></i></div><div class="hub-module-name">Clientes</div><div class="hub-module-desc">Ficha completa, historial de interacciones, contactos y toda la información de cada cliente en un solo perfil.</div></div>
+      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-icon"><i class="fas fa-ticket"></i></div><div class="hub-module-name">Tickets</div><div class="hub-module-desc">Soporte externo e interno unificado. Prioriza, asigna y resuelve solicitudes sin perder ninguna.</div></div>
+      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-icon"><i class="fas fa-list-check"></i></div><div class="hub-module-name">Tareas</div><div class="hub-module-desc">Kanban visual por proyecto o equipo. Sabes quién hace qué y cuándo, en tiempo real.</div></div>
+      <div class="hub-module-card reveal"><div class="hub-module-icon"><i class="fas fa-folder-open"></i></div><div class="hub-module-name">Casos</div><div class="hub-module-desc">Gestión de incidencias internas con trazabilidad completa. Nada se cae entre las grietas.</div></div>
+      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-icon"><i class="fas fa-comments"></i></div><div class="hub-module-name">Chat</div><div class="hub-module-desc">Comunicación del equipo sin salir de la plataforma. Adiós a los grupos de WhatsApp infinitos.</div></div>
+      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-icon"><i class="fas fa-chart-bar"></i></div><div class="hub-module-name">Reportes</div><div class="hub-module-desc">Visibilidad del rendimiento en tiempo real. KPIs por persona, por equipo y por cliente.</div></div>
+      <div class="hub-module-card reveal"><div class="hub-module-icon"><i class="fas fa-calendar-check"></i></div><div class="hub-module-name">Seguimientos</div><div class="hub-module-desc">Actividades y recordatorios por cliente. Nunca más olvides una llamada o una entrega.</div></div>
+      <div class="hub-module-card reveal reveal-d1"><div class="hub-module-icon"><i class="fas fa-robot"></i></div><div class="hub-module-name">IA Integrada</div><div class="hub-module-desc">Propuestas, resúmenes y próximos pasos generados con IA directamente en tu flujo de trabajo.</div></div>
+      <div class="hub-module-card reveal reveal-d2"><div class="hub-module-icon"><i class="fas fa-file-lines"></i></div><div class="hub-module-name">Minutas</div><div class="hub-module-desc">Documentos y actas centralizadas. Todo el historial escrito, accesible para todo el equipo.</div></div>
     </div>
   </div>
 </section>
@@ -293,9 +294,9 @@
   <div class="container">
     <div class="sh center"><div class="sh-label">Para quién es</div><h2 class="sh-title">Hecho para equipos<br>que ejecutan</h2><p class="sh-sub">GEMS Hub está diseñado para operaciones reales que necesitan orden, velocidad y visibilidad.</p></div>
     <div class="hub-forwhom-grid">
-      <div class="hub-forwhom-card reveal"><div class="hub-forwhom-icon">🎨</div><h3 class="hub-forwhom-title">Agencias Creativas</h3><p class="hub-forwhom-desc">Diseño, marketing digital, contenido, branding. Gestiona clientes, entregables y comunicación sin caos. Centraliza briefings, aprobaciones y feedbacks en un solo lugar.</p></div>
-      <div class="hub-forwhom-card reveal reveal-d1"><div class="hub-forwhom-icon">💻</div><h3 class="hub-forwhom-title">Empresas de TI / MSP</h3><p class="hub-forwhom-desc">Tickets, casos y clientes en un solo sistema. Sin pagar Zendesk + HubSpot + Slack por separado. Todo el soporte técnico en una plataforma pensada para equipos tech.</p></div>
-      <div class="hub-forwhom-card reveal reveal-d2"><div class="hub-forwhom-icon">🔧</div><h3 class="hub-forwhom-title">Mantenimiento &amp; Field Service</h3><p class="hub-forwhom-desc">Órdenes de trabajo, historial de servicio y seguimiento de técnicos sin papel ni WhatsApp. Gestiona en campo y en oficina con la misma plataforma.</p></div>
+      <div class="hub-forwhom-card reveal"><div class="hub-forwhom-icon"><i class="fas fa-paint-brush"></i></div><h3 class="hub-forwhom-title">Agencias Creativas</h3><p class="hub-forwhom-desc">Diseño, marketing digital, contenido, branding. Gestiona clientes, entregables y comunicación sin caos. Centraliza briefings, aprobaciones y feedbacks en un solo lugar.</p></div>
+      <div class="hub-forwhom-card reveal reveal-d1"><div class="hub-forwhom-icon"><i class="fas fa-laptop-code"></i></div><h3 class="hub-forwhom-title">Empresas de TI / MSP</h3><p class="hub-forwhom-desc">Tickets, casos y clientes en un solo sistema. Sin pagar Zendesk + HubSpot + Slack por separado. Todo el soporte técnico en una plataforma pensada para equipos tech.</p></div>
+      <div class="hub-forwhom-card reveal reveal-d2"><div class="hub-forwhom-icon"><i class="fas fa-screwdriver-wrench"></i></div><h3 class="hub-forwhom-title">Mantenimiento &amp; Field Service</h3><p class="hub-forwhom-desc">Órdenes de trabajo, historial de servicio y seguimiento de técnicos sin papel ni WhatsApp. Gestiona en campo y en oficina con la misma plataforma.</p></div>
     </div>
   </div>
 </section>
