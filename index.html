@@ -21,6 +21,80 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Organization","name":"Gems Innovations","url":"https://gems-innovations.com","sameAs":["https://www.facebook.com/profile.php?id=61566125934892","https://www.instagram.com/gemsinnovations/","https://www.linkedin.com/company/gems-innovations/"]}
   </script>
+<style>
+/* ── TEAM SECTION ── */
+.team-stats-row {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 16px; margin-bottom: 48px;
+}
+.team-stat-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 28px 20px; text-align: center;
+  transition: border-color 0.2s;
+}
+.team-stat-item:hover { border-color: var(--border-hover); }
+.team-stat-n {
+  font-size: 40px; font-weight: 900; letter-spacing: -2px;
+  background: linear-gradient(135deg, var(--purple-light), var(--indigo));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1; margin-bottom: 8px;
+}
+.team-stat-l { font-size: 13px; color: var(--text-2); font-weight: 500; }
+
+.team-comp-grid {
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 16px; margin-bottom: 56px;
+}
+.team-comp-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 28px 24px;
+  transition: all 0.25s; cursor: default;
+}
+.team-comp-card:hover {
+  border-color: var(--border-hover); background: var(--purple-dim);
+  transform: translateY(-3px);
+}
+.team-comp-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: var(--purple-dim); border: 1px solid rgba(139,92,246,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; color: var(--purple-light);
+  margin-bottom: 16px;
+}
+.team-comp-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.team-comp-desc  { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+.team-avatars-row {
+  display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
+}
+.team-avatar-item { text-align: center; }
+.team-avatar-img {
+  width: 72px; height: 72px; border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(139,92,246,0.35);
+  box-shadow: 0 0 20px rgba(139,92,246,0.2);
+  margin-bottom: 10px; display: block;
+}
+.team-avatar-ph {
+  width: 72px; height: 72px; border-radius: 50%;
+  background: var(--purple-dim); border: 2px solid rgba(139,92,246,0.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; color: var(--purple-light);
+  margin-bottom: 10px;
+}
+.team-avatar-name { font-size: 14px; font-weight: 700; color: var(--text); }
+.team-avatar-role { font-size: 12px; color: var(--text-2); margin-top: 2px; }
+
+@media (max-width: 768px) {
+  .team-stats-row  { grid-template-columns: repeat(2,1fr); }
+  .team-comp-grid  { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .team-stats-row  { grid-template-columns: repeat(2,1fr); gap: 10px; }
+  .team-comp-grid  { grid-template-columns: 1fr; }
+  .team-avatars-row { gap: 20px; }
+}
+</style>
 </head>
 <body>
 
@@ -290,119 +364,100 @@
 </section>
 
 <!-- ── EQUIPO ────────────────────────────────────────────────────────────── -->
-<section class="g-team-section" id="equipo">
+<section class="g-team-section section--alt" id="equipo">
   <div class="container">
+
     <div class="sh center">
       <div class="sh-label">Equipo</div>
-      <h2 class="sh-title">Nuestro equipo<br>de innovadores</h2>
+      <h2 class="sh-title">Capacitados para<br>lo que otros no resuelven</h2>
     </div>
-    <p class="g-team-desc">Conoce al talentoso equipo que hace posible nuestras soluciones tecnológicas. Cada uno comprometido con el éxito de tu proyecto.</p>
+    <p class="g-team-desc" style="text-align:center;max-width:580px;margin:0 auto 56px;">
+      Un equipo multidisciplinar con formación en ingeniería, diseño, marketing y estrategia. Dominamos las tecnologías que más importan hoy.
+    </p>
 
-    <div class="g-team-carousel-wrap">
-      <div class="g-team-carousel" id="teamCarousel">
-
-        <div class="g-team-slide active">
-          <div class="g-team-member">
-            <div class="g-team-avatar-wrap">
-              <img src="assets/images/gems_sebas.webp" alt="Sebastián Pulgarín" class="g-team-avatar">
-            </div>
-            <div>
-              <div class="g-team-badge"><i class="fas fa-star"></i> Constelación Central</div>
-              <div class="g-team-name">Sebastián Pulgarín</div>
-              <div class="g-team-title">CEO / Director de Innovación</div>
-              <p class="g-team-quote">"Hola, soy Sebastián, el fundador de GEMS Innovations. Mi pasión es impulsar la innovación tecnológica para transformar la forma en que operan las empresas. Me encantaría conocer tus desafíos tecnológicos y conversar sobre cómo podemos potenciar tu negocio juntos."</p>
-              <ul class="g-team-social">
-                <li><a href="https://www.linkedin.com/in/sebastián-pulgarín-gómez-4b76471aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.instagram.com/sebastianpulgaring/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-team-slide">
-          <div class="g-team-member">
-            <div class="g-team-avatar-wrap">
-              <div class="g-team-avatar-placeholder"><i class="fas fa-globe"></i></div>
-            </div>
-            <div>
-              <div class="g-team-badge"><i class="fas fa-globe"></i> Órbita Estratégica</div>
-              <div class="g-team-name">Jacobo</div>
-              <div class="g-team-title">Subdirector General</div>
-              <p class="g-team-quote">"Mi trabajo es conectar todas las piezas para que tu proyecto fluya sin obstáculos. Como enlace entre todas las áreas, me aseguro que la comunicación sea clara y que cada aspecto de tu solución reciba la atención que merece."</p>
-              <ul class="g-team-social">
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-team-slide">
-          <div class="g-team-member">
-            <div class="g-team-avatar-wrap">
-              <img src="assets/images/gems_luisa.webp" alt="Luisa" class="g-team-avatar">
-            </div>
-            <div>
-              <div class="g-team-badge"><i class="fas fa-rocket"></i> Torre de Control</div>
-              <div class="g-team-name">Luisa</div>
-              <div class="g-team-title">PMO — Oficina de Proyectos</div>
-              <p class="g-team-quote">"Como líder de la oficina de proyectos, mi compromiso es planificar, organizar y dar seguimiento detallado a cada fase de tu proyecto. Mi objetivo es convertir tu visión en una realidad tangible y exitosa."</p>
-              <ul class="g-team-social">
-                <li><a href="https://www.linkedin.com/in/luisa-estrada-52b225298/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.instagram.com/le3ey_/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-team-slide">
-          <div class="g-team-member">
-            <div class="g-team-avatar-wrap">
-              <div class="g-team-avatar-placeholder"><i class="fas fa-meteor"></i></div>
-            </div>
-            <div>
-              <div class="g-team-badge"><i class="fas fa-meteor"></i> Ingeniera del Cosmos</div>
-              <div class="g-team-name">Mariana</div>
-              <div class="g-team-title">Líder de Desarrollo</div>
-              <p class="g-team-quote">"Al frente del equipo de desarrollo, mi pasión es transformar ideas innovadoras en soluciones tecnológicas robustas. Me mantengo a la vanguardia de las nuevas tecnologías para ofrecerte siempre las herramientas más adecuadas."</p>
-              <ul class="g-team-social">
-                <li><a href="https://www.linkedin.com/in/mauricio-ciro-394738250/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="g-team-slide">
-          <div class="g-team-member">
-            <div class="g-team-avatar-wrap">
-              <img src="assets/images/gems_david.webp" alt="David" class="g-team-avatar">
-            </div>
-            <div>
-              <div class="g-team-badge"><i class="fas fa-lightbulb"></i> Faro Cósmico</div>
-              <div class="g-team-name">David</div>
-              <div class="g-team-title">Director de Marketing</div>
-              <p class="g-team-quote">"Como creativo visual y estratega de marketing, mi pasión es dar vida a la identidad de GEMS. Trabajo para que cada interacción con nuestra marca sea memorable y comunicada de manera espectacular."</p>
-              <ul class="g-team-social">
-                <li><a href="https://www.linkedin.com/in/david-perez-b13494257" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.instagram.com/alvarez_david_02/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div><!-- /g-team-carousel -->
-
-      <div class="g-team-controls">
-        <button class="g-team-btn" id="teamPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
-        <div class="g-team-dots" id="teamDots">
-          <button class="g-team-dot active"></button>
-          <button class="g-team-dot"></button>
-          <button class="g-team-dot"></button>
-          <button class="g-team-dot"></button>
-          <button class="g-team-dot"></button>
-        </div>
-        <button class="g-team-btn" id="teamNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+    <!-- Stats del equipo -->
+    <div class="team-stats-row reveal">
+      <div class="team-stat-item">
+        <div class="team-stat-n">5</div>
+        <div class="team-stat-l">Especialistas</div>
+      </div>
+      <div class="team-stat-item">
+        <div class="team-stat-n">15+</div>
+        <div class="team-stat-l">Tecnologías dominadas</div>
+      </div>
+      <div class="team-stat-item">
+        <div class="team-stat-n">3+</div>
+        <div class="team-stat-l">Productos propios</div>
+      </div>
+      <div class="team-stat-item">
+        <div class="team-stat-n">100%</div>
+        <div class="team-stat-l">En español · Colombia</div>
       </div>
     </div>
+
+    <!-- Grid de competencias -->
+    <div class="team-comp-grid reveal reveal-d1">
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-code"></i></div>
+        <div class="team-comp-title">Desarrollo Full Stack</div>
+        <div class="team-comp-desc">React, Node.js, Python, Angular, .NET — construimos desde el frontend hasta la base de datos.</div>
+      </div>
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-robot"></i></div>
+        <div class="team-comp-title">IA & Automatización</div>
+        <div class="team-comp-desc">Bots inteligentes, lenguaje natural e integración de modelos de IA en productos reales que funcionan hoy.</div>
+      </div>
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-bullhorn"></i></div>
+        <div class="team-comp-title">Marketing Digital</div>
+        <div class="team-comp-desc">Estrategia de contenido, pauta, branding y SEO orientados a resultados medibles — no a vanity metrics.</div>
+      </div>
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-diagram-project"></i></div>
+        <div class="team-comp-title">Gestión de Proyectos</div>
+        <div class="team-comp-desc">PMO certificada, metodologías ágiles y seguimiento detallado para que cada proyecto llegue a tiempo.</div>
+      </div>
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-palette"></i></div>
+        <div class="team-comp-title">Diseño UX / UI</div>
+        <div class="team-comp-desc">Interfaces limpias y optimizadas para conversión. El diseño como ventaja competitiva real.</div>
+      </div>
+      <div class="team-comp-card">
+        <div class="team-comp-icon"><i class="fas fa-cloud"></i></div>
+        <div class="team-comp-title">Infraestructura Cloud</div>
+        <div class="team-comp-desc">Despliegue en la nube, APIs robustas y arquitecturas que escalan con tu negocio sin dolores de cabeza.</div>
+      </div>
+    </div>
+
+    <!-- Avatares del equipo -->
+    <div class="team-avatars-row reveal reveal-d2">
+      <div class="team-avatar-item">
+        <img src="assets/images/gems_sebas.webp" alt="Sebastián" class="team-avatar-img">
+        <div class="team-avatar-name">Sebastián</div>
+        <div class="team-avatar-role">CEO · Innovación</div>
+      </div>
+      <div class="team-avatar-item">
+        <div class="team-avatar-ph"><i class="fas fa-user"></i></div>
+        <div class="team-avatar-name">Jacobo</div>
+        <div class="team-avatar-role">Subdirector</div>
+      </div>
+      <div class="team-avatar-item">
+        <img src="assets/images/gems_luisa.webp" alt="Luisa" class="team-avatar-img">
+        <div class="team-avatar-name">Luisa</div>
+        <div class="team-avatar-role">PMO · Proyectos</div>
+      </div>
+      <div class="team-avatar-item">
+        <div class="team-avatar-ph"><i class="fas fa-user"></i></div>
+        <div class="team-avatar-name">Mariana</div>
+        <div class="team-avatar-role">Dev Lead</div>
+      </div>
+      <div class="team-avatar-item">
+        <img src="assets/images/gems_david.webp" alt="David" class="team-avatar-img">
+        <div class="team-avatar-name">David</div>
+        <div class="team-avatar-role">Marketing</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -520,20 +575,6 @@
   }, {threshold: 0.1});
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
-  // Team carousel
-  const slides = document.querySelectorAll('.g-team-slide');
-  const dots   = document.querySelectorAll('.g-team-dot');
-  let current  = 0;
-  function goTo(n) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (n + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
-  document.getElementById('teamPrev').addEventListener('click', () => goTo(current - 1));
-  document.getElementById('teamNext').addEventListener('click', () => goTo(current + 1));
-  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
 </script>
 
 <script>
