@@ -86,6 +86,11 @@ body::before {
   font-size: 14px;
   flex-shrink: 0;
 }
+.g-nav__logo-img {
+  width: 34px; height: 34px;
+  object-fit: contain; border-radius: 8px;
+  flex-shrink: 0;
+}
 .g-nav__links {
   display: flex; align-items: center; gap: 36px; list-style: none;
 }
@@ -619,19 +624,60 @@ body::before {
   .g-nav__cta       { display: none; }
   .g-nav__hamburger { display: flex; }
 
-  /* Content */
-  .g-services-grid  { grid-template-columns: 1fr; }
+  /* Layout */
+  .container        { padding: 0 20px; }
+  .section          { padding: 72px 0; }
+
+  /* Grids */
+  .g-services-grid  { grid-template-columns: 1fr; gap: 14px; }
   .g-products-grid  { grid-template-columns: 1fr; }
-  .g-marketing-grid { grid-template-columns: 1fr; }
-  .g-tech-grid      { grid-template-columns: repeat(3, 1fr); }
+  .g-marketing-grid { grid-template-columns: 1fr; gap: 14px; }
+  .g-tech-grid      { grid-template-columns: repeat(3, 1fr); gap: 10px; }
   .g-footer-grid    { grid-template-columns: 1fr; gap: 32px; }
-  .g-stats          { grid-template-columns: 1fr; }
-  .g-team-member    { flex-direction: column; padding: 28px 24px; }
+
+  /* Stats: 3 columns side by side on tablet */
+  .g-stats          { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .g-stat-number    { font-size: 32px; }
+
+  /* Hero */
   .g-hero-title     { letter-spacing: -1.5px; }
   .g-hero-sub       { font-size: 16px; }
-  .section          { padding: 80px 0; }
+  .g-hero-actions   { flex-direction: column; gap: 12px; }
+  .g-hero-actions .btn { width: 100%; justify-content: center; }
+  .g-hero-proof     { flex-wrap: wrap; gap: 10px; justify-content: center; }
+
+  /* Team */
+  .g-team-member    { flex-direction: column; padding: 28px 24px; }
+
+  /* Footer */
+  .g-footer-bottom  { flex-direction: column; gap: 12px; text-align: center; }
+
+  /* Product cards: make actions row */
+  .g-product-actions { flex-direction: row; }
 }
 @media (max-width: 480px) {
-  .g-hero-title     { font-size: clamp(32px, 10vw, 48px); letter-spacing: -1px; }
+  .container        { padding: 0 16px; }
+  .section          { padding: 56px 0; }
+
+  /* Hero */
+  .g-hero-title     { font-size: clamp(30px, 9vw, 44px); letter-spacing: -1px; }
+  .g-hero-sub       { font-size: 15px; }
+
+  /* Stats stacked on tiny screens */
+  .g-stats          { grid-template-columns: 1fr; gap: 10px; }
+  .g-stat           { padding: 20px; display: flex; align-items: center; justify-content: space-between; }
+  .g-stat-number    { font-size: 36px; }
+
+  /* Tech grid */
   .g-tech-grid      { grid-template-columns: repeat(2, 1fr); }
+
+  /* Nav logo — hide text on very small screens */
+  .g-nav__logo-name { display: none; }
+
+  /* CTA section */
+  .g-cta-actions    { flex-direction: column; }
+  .g-cta-actions .btn { width: 100%; justify-content: center; }
+
+  /* Section header */
+  .sh-eyebrow       { font-size: 10px; }
 }
