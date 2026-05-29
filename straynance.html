@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Straynance — Tu dinero, bajo control</title>
+  <meta name="description" content="Aplicación de finanzas personales diseñada para no expertos. Controla tus gastos, asigna presupuestos y visualiza el estado real de tu dinero.">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/gems-design-system.css">
+  <style>
+    /* ── STRAYNANCE SPECIFIC ─────────────────────────────────────────────── */
+    :root {
+      --stray-green: #10b981;
+      --stray-green-dark: #059669;
+      --stray-green-light: #34d399;
+      --stray-green-dim: rgba(16, 185, 129, 0.1);
+    }
+    
+    .stray-hero { min-height: 100vh; padding: 140px 0 80px; position: relative; overflow: hidden; display: flex; align-items: center; }
+    .stray-hero-blob-1 { position: absolute; top: -150px; left: -100px; width: 800px; height: 700px; background: radial-gradient(ellipse, rgba(16,185,129,0.1) 0%, transparent 65%); pointer-events: none; }
+    .stray-hero-blob-2 { position: absolute; bottom: -100px; right: -50px; width: 500px; height: 500px; background: radial-gradient(ellipse, rgba(52,211,153,0.12) 0%, transparent 65%); pointer-events: none; }
+    .stray-hero-grid { position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.055) 1px, transparent 1px); background-size: 44px 44px; mask-image: radial-gradient(ellipse 80% 80% at 40% 50%, black 20%, transparent 100%); pointer-events: none; }
+    .stray-hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; position: relative; z-index: 1; }
+    .stray-hero-content .g-eyebrow { margin-bottom: 28px; color: var(--stray-green-light); border-color: var(--stray-green-dim); background: rgba(16,185,129,0.05); }
+    .stray-hero-content .g-eyebrow-dot { background: var(--stray-green); }
+    .stray-hero-title { font-size: clamp(32px, 4.5vw, 60px); font-weight: 900; line-height: 1.08; letter-spacing: -2px; color: var(--text); margin-bottom: 20px; }
+    .stray-hero-title .accent { background: linear-gradient(135deg, var(--stray-green-light), var(--stray-green), #047857); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .stray-hero-sub { font-size: 17px; line-height: 1.75; color: var(--text-2); margin-bottom: 36px; }
+    .stray-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+    .stray-hero-proof { display: flex; flex-direction: column; gap: 8px; }
+    .stray-proof-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-3); }
+    .stray-proof-item i { color: var(--stray-green); }
+
+    .btn-stray { background: var(--stray-green); color: #fff; border: 1px solid var(--stray-green); }
+    .btn-stray:hover { background: var(--stray-green-dark); border-color: var(--stray-green-dark); }
+
+    /* Mockup */
+    .stray-mockup { background: rgba(8,7,26,0.9); border: 1px solid rgba(16,185,129,0.2); border-radius: 16px; overflow: hidden; box-shadow: 0 32px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(16,185,129,0.1); }
+    .stray-mock-topbar { background: rgba(16,185,129,0.08); border-bottom: 1px solid rgba(16,185,129,0.12); padding: 10px 16px; display: flex; align-items: center; gap: 12px; }
+    .stray-mock-dots { display: flex; gap: 6px; }
+    .stray-mock-dots span { width: 10px; height: 10px; border-radius: 50%; background: rgba(255,255,255,0.12); }
+    .stray-mock-url { font-size: 11px; color: var(--text-3); font-family: 'Inter', monospace; }
+    .stray-mock-body { display: flex; padding: 20px; flex-direction: column; gap: 16px; }
+    
+    .stray-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .stray-kpi { background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.1); border-radius: 10px; padding: 12px; }
+    .stray-kpi-label { font-size: 10px; color: var(--text-3); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stray-kpi-val { font-size: 18px; font-weight: 800; color: var(--text); }
+    .stray-kpi-val.green { color: var(--stray-green); }
+
+    .stray-list { display: flex; flex-direction: column; gap: 8px; }
+    .stray-list-item { display: flex; align-items: center; justify-content: space-between; padding: 12px; background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); }
+    .stray-li-left { display: flex; align-items: center; gap: 12px; }
+    .stray-li-icon { width: 32px; height: 32px; border-radius: 8px; background: rgba(16,185,129,0.1); color: var(--stray-green); display: flex; align-items: center; justify-content: center; font-size: 14px; }
+    .stray-li-title { font-size: 13px; font-weight: 600; color: var(--text); }
+    .stray-li-sub { font-size: 11px; color: var(--text-3); }
+    .stray-li-amount { font-size: 14px; font-weight: 700; }
+    .stray-li-amount.out { color: var(--text); }
+    .stray-li-amount.in { color: var(--stray-green); }
+
+    /* Modules */
+    .stray-modules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px;}
+    .stray-module-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 28px 24px; transition: all 0.3s var(--ease); }
+    .stray-module-card:hover { border-color: var(--stray-green); background: rgba(16,185,129,0.02); transform: translateY(-3px); }
+    .stray-module-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; background: var(--stray-green-dim); border: 1px solid rgba(16,185,129,0.2); color: var(--stray-green); }
+    .stray-module-name { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .stray-module-desc { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+    @media (max-width: 1024px) {
+      .stray-hero-inner { grid-template-columns: 1fr; }
+      .stray-modules-grid { grid-template-columns: repeat(2, 1fr); }
+      .stray-kpis { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .stray-modules-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="g-nav" id="nav">
+  <div class="container">
+    <div class="g-nav__inner">
+      <a href="./index.html" class="g-nav__logo">
+        <img src="assets/images/stray.png" alt="Straynance" class="g-nav__logo-img" style="border-radius:6px;">
+        <span class="g-nav__logo-name">Straynance</span>
+      </a>
+      <ul class="g-nav__links">
+        <li><a href="./index.html">Volver a GEMS</a></li>
+        <li><a href="#funciones">Funcionalidades</a></li>
+      </ul>
+      <div class="g-nav__cta">
+        <a href="#" class="btn btn-stray">Próximamente</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="stray-hero">
+  <div class="stray-hero-blob-1"></div>
+  <div class="stray-hero-blob-2"></div>
+  <div class="stray-hero-grid"></div>
+  <div class="container">
+    <div class="stray-hero-inner">
+      <div class="stray-hero-content">
+        <div class="g-eyebrow">
+          <span class="g-eyebrow-dot"></span>
+          Finanzas Personales Simples
+        </div>
+        <h1 class="stray-hero-title">
+          Tu dinero,<br>
+          <span class="accent">bajo control</span>
+        </h1>
+        <p class="stray-hero-sub">
+          Aplicación de finanzas personales diseñada para no expertos. Controla tus gastos, asigna presupuestos y visualiza el estado real de tu dinero al instante.
+        </p>
+        <div class="stray-hero-actions">
+          <a href="#" class="btn btn-stray btn-lg"><i class="fas fa-rocket"></i> Próximamente</a>
+        </div>
+        <div class="stray-hero-proof">
+          <div class="stray-proof-item"><i class="fas fa-check-circle"></i> Diseño moderno y sin tecnicismos</div>
+          <div class="stray-proof-item"><i class="fas fa-check-circle"></i> Compara presupuestos vs gastos reales</div>
+          <div class="stray-proof-item"><i class="fas fa-check-circle"></i> KPIs financieros en tiempo real</div>
+        </div>
+      </div>
+
+      <div class="stray-mockup">
+        <div class="stray-mock-topbar">
+          <div class="stray-mock-dots"><span></span><span></span><span></span></div>
+          <div class="stray-mock-url">app.straynance.com/resumen</div>
+        </div>
+        <div class="stray-mock-body">
+          <div style="font-size:16px; font-weight:700; margin-bottom:4px;">Tu Resumen Mensual</div>
+          <div class="stray-kpis">
+            <div class="stray-kpi"><div class="stray-kpi-label">Ingresos</div><div class="stray-kpi-val green">$4,500</div></div>
+            <div class="stray-kpi"><div class="stray-kpi-label">Presupuestado</div><div class="stray-kpi-val">$3,200</div></div>
+            <div class="stray-kpi"><div class="stray-kpi-label">Gastado</div><div class="stray-kpi-val">$2,150</div></div>
+            <div class="stray-kpi"><div class="stray-kpi-label">Disponible</div><div class="stray-kpi-val green">$2,350</div></div>
+          </div>
+          <div style="font-size:13px; font-weight:600; margin-top:8px; margin-bottom:4px; color:var(--text-2);">Transacciones Recientes</div>
+          <div class="stray-list">
+            <div class="stray-list-item">
+              <div class="stray-li-left">
+                <div class="stray-li-icon"><i class="fas fa-shopping-cart"></i></div>
+                <div><div class="stray-li-title">Mercado</div><div class="stray-li-sub">Gasto Variable • Pagado</div></div>
+              </div>
+              <div class="stray-li-amount out">-$120.00</div>
+            </div>
+            <div class="stray-list-item">
+              <div class="stray-li-left">
+                <div class="stray-li-icon"><i class="fas fa-bolt"></i></div>
+                <div><div class="stray-li-title">Servicio Eléctrico</div><div class="stray-li-sub">Gasto Fijo • Pagado</div></div>
+              </div>
+              <div class="stray-li-amount out">-$65.50</div>
+            </div>
+            <div class="stray-list-item">
+              <div class="stray-li-left">
+                <div class="stray-li-icon"><i class="fas fa-briefcase"></i></div>
+                <div><div class="stray-li-title">Sueldo Quincena</div><div class="stray-li-sub">Entrada • Recibido</div></div>
+              </div>
+              <div class="stray-li-amount in">+$2,250.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="funciones">
+  <div class="container">
+    <div class="sh center">
+      <div class="sh-label" style="color:var(--stray-green); background:rgba(16,185,129,0.1); border-color:rgba(16,185,129,0.2);">Funcionalidades</div>
+      <h2 class="sh-title">Todo lo que necesitas<br>para cuidar tu economía</h2>
+      <p class="sh-sub">Sin complicaciones ni términos financieros difíciles. Straynance hace el trabajo duro por ti.</p>
+    </div>
+    
+    <div class="stray-modules-grid">
+      <div class="stray-module-card reveal">
+        <div class="stray-module-icon"><i class="fas fa-exchange-alt"></i></div>
+        <div class="stray-module-name">Gestión de Transacciones</div>
+        <div class="stray-module-desc">Registra entradas y salidas fácilmente. Clasifica en: Sueldo, Gasto Fijo, Gasto Variable, Ahorro o Entretenimiento.</div>
+      </div>
+      <div class="stray-module-card reveal reveal-d1">
+        <div class="stray-module-icon"><i class="fas fa-balance-scale"></i></div>
+        <div class="stray-module-name">Presupuesto vs Real</div>
+        <div class="stray-module-desc">Compara al instante cuánto planeaste gastar en el mes contra cuánto has gastado realmente para evitar sorpresas.</div>
+      </div>
+      <div class="stray-module-card reveal reveal-d2">
+        <div class="stray-module-icon"><i class="fas fa-calendar-alt"></i></div>
+        <div class="stray-module-name">Pagos Recurrentes</div>
+        <div class="stray-module-desc">Programa tus movimientos fijos por frecuencia (semanal, mensual, anual) y márcalos como pagados o pendientes.</div>
+      </div>
+      <div class="stray-module-card reveal">
+        <div class="stray-module-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="stray-module-name">KPIs en Tiempo Real</div>
+        <div class="stray-module-desc">Visualiza de forma rápida el total de ingresos, tu presupuesto asignado, lo que has gastado y tu dinero disponible.</div>
+      </div>
+      <div class="stray-module-card reveal reveal-d1">
+        <div class="stray-module-icon"><i class="fas fa-history"></i></div>
+        <div class="stray-module-name">Resumen Anual</div>
+        <div class="stray-module-desc">Mira el comportamiento de tu economía a lo largo de todo el año, agrupado mes a mes de forma visual y atractiva.</div>
+      </div>
+      <div class="stray-module-card reveal reveal-d2">
+        <div class="stray-module-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="stray-module-name">Tecnología Segura</div>
+        <div class="stray-module-desc">Desarrollada bajo estándares modernos y limpios para asegurar que la app sea rápida y tus datos estén seguros.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="g-footer">
+  <div class="container">
+    <div class="g-footer-grid">
+      <div>
+        <div class="g-footer-brand-name" style="display:flex;align-items:center;gap:10px;">
+          <img src="assets/images/stray.png" alt="Straynance" style="width:28px;height:28px;object-fit:contain;border-radius:4px;">
+          Straynance
+        </div>
+        <p class="g-footer-brand-desc">Tu dinero, bajo control. Una plataforma diseñada por GEMS Innovations.</p>
+      </div>
+      <div>
+        <div class="g-footer-col-title">Straynance</div>
+        <ul class="g-footer-links">
+          <li><a href="#funciones">Funcionalidades</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="g-footer-col-title">Ecosistema GEMS</div>
+        <ul class="g-footer-links">
+          <li><a href="./index.html">GEMS Innovations</a></li>
+          <li><a href="./gems-hub.html">GEMS Hub</a></li>
+          <li><a href="./gems-lms.html">GEMS LMS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="g-footer-bottom">
+      <p>© 2026 <span>Straynance / GEMS Innovations</span>. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+  
+  const ro = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+  }, {threshold: 0.1});
+  document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
